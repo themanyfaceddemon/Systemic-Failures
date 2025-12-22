@@ -64,13 +64,13 @@
         </StatusEffect>
         -->
             </Effect>
-            <icon texture="%ModDir:3114087512%/Content/UI/IR-IconsAtlas.png" sourcerect="128,128,128,128" color="195,136,60,255" origin="0,0" />
+            <icon texture="%ModDir%/Content/UI/IR-IconsAtlas.png" sourcerect="128,128,128,128" color="195,136,60,255" origin="0,0" />
         </Oily>
         <Affliction name="Welder's Eye Immunity" identifier="welderseyeimmunity" description="You're immune to welder's eye" type="none" isbuff="true" limbspecific="false" indicatorlimb="Head" maxstrength="1" showiconthreshold="0" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" iconcolors="0,255,150,255" hideiconafterdelay="true" healableinmedicalclinic="false">
             <Effect minstrength="0" maxstrength="1" strengthchange="0" resistancefor="applywelderseye,welderseye" minresistance="1" maxresistance="1" multiplybymaxvitality="true">
                 <StatusEffect type="OnActive" target="Character" tags="hasweldingmask" duration="0.2" interval="0.1" />
             </Effect>
-            <icon texture="%ModDir:3114087512%/Content/UI/IR-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
+            <icon texture="%ModDir%/Content/UI/IR-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
         </Affliction>
         <Affliction name="Shocked" identifier="shocked" description="Bzzzzt" type="debuff" maxstrength="20" limbspecific="false" indicatorlimb="Head" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
             <Effect minstrength="0" maxstrength="20" strengthchange="-1">
@@ -82,25 +82,25 @@
                 </StatusEffect>
                 <StatusEffect target="Character" interval="1" duration="1.1">
                     <Conditional IsLocalPlayer="true" />
-                    <Sound file="%ModDir:3114087512%/Content/Sounds/Ambient/ShockLoop.ogg" volume="5" loop="true" dontmuffle="true" />
+                    <Sound file="%ModDir%/Content/Sounds/Ambient/ShockLoop.ogg" volume="5" loop="true" dontmuffle="true" />
                 </StatusEffect>
             </Effect>
         </Affliction>
         <Affliction identifier="shock1" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="false">
             <Effect minstrength="0" maxstrength="100" strengthchange="-300" MinAfflictionOverlayAlphaMultiplier="0.0" MaxAfflictionOverlayAlphaMultiplier="0.3" />
-            <AfflictionOverlay texture="%ModDir:3114087512%/Content/UI/Shock1.png" color="255,255,255,100" />
+            <AfflictionOverlay texture="%ModDir%/Content/UI/Shock1.png" color="255,255,255,100" />
         </Affliction>
         <Affliction identifier="shock2" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="false">
             <Effect minstrength="0" maxstrength="100" strengthchange="-300" MinAfflictionOverlayAlphaMultiplier="0.0" MaxAfflictionOverlayAlphaMultiplier="0.3" />
-            <AfflictionOverlay texture="%ModDir:3114087512%/Content/UI/Shock2.png" color="255,255,255,100" />
+            <AfflictionOverlay texture="%ModDir%/Content/UI/Shock2.png" color="255,255,255,100" />
         </Affliction>
         <Affliction identifier="shock3" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="false">
             <Effect minstrength="0" maxstrength="100" strengthchange="-300" MinAfflictionOverlayAlphaMultiplier="0.0" MaxAfflictionOverlayAlphaMultiplier="0.3" />
-            <AfflictionOverlay texture="%ModDir:3114087512%/Content/UI/Shock3.png" color="255,255,255,100" />
+            <AfflictionOverlay texture="%ModDir%/Content/UI/Shock3.png" color="255,255,255,100" />
         </Affliction>
         <Affliction identifier="shock4" showiconthreshold="1000" showinhealthscannerthreshold="1000" maxstrength="100" afflictionoverlayalphaislinear="false">
             <Effect minstrength="0" maxstrength="100" strengthchange="-300" MinAfflictionOverlayAlphaMultiplier="0.0" MaxAfflictionOverlayAlphaMultiplier="0.3" />
-            <AfflictionOverlay texture="%ModDir:3114087512%/Content/UI/Shock4.png" color="255,255,255,100" />
+            <AfflictionOverlay texture="%ModDir%/Content/UI/Shock4.png" color="255,255,255,100" />
         </Affliction>
         <Affliction name="Shocked" identifier="junctionshocked" description="Bzzzzt" type="debuff" maxstrength="20" limbspecific="false" indicatorlimb="Head" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" healableinmedicalclinic="false">
             <Effect minstrength="0" maxstrength="20" strengthchange="-1">
@@ -112,7 +112,7 @@
                 </StatusEffect>
                 <StatusEffect target="Character" interval="1" duration="1.1">
                     <Conditional IsLocalPlayer="true" />
-                    <Sound file="%ModDir:3114087512%/Content/Sounds/Ambient/ShockLoop.ogg" volume="5" loop="true" dontmuffle="true" />
+                    <Sound file="%ModDir%/Content/Sounds/Ambient/ShockLoop.ogg" volume="5" loop="true" dontmuffle="true" />
                 </StatusEffect>
                 <StatusEffect target="Character" interval="0.8">
                     <Conditional InWater="eq false" />
@@ -187,7 +187,7 @@
                     <ReduceAffliction identifier="applywelderseye" amount="1000" />
                 </StatusEffect>
             </Effect>
-            <icon texture="%ModDir:3114087512%/Content/UI/IR-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
+            <icon texture="%ModDir%/Content/UI/IR-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
         </Affliction>
         <Affliction name="Welder's Eye" description="Welding without a welding mask might've not been a good idea. It'll take some time for the eyesight to recover." identifier="welderseye" limbspecific="false" indicatorlimb="Head" showiconthreshold="10" showicontoothersthreshold="1000" showinhealthscannerthreshold="5" maxstrength="100" afflictionoverlayalphaislinear="false" healableinmedicalclinic="true" healcostmultiplier="15" MedicalSkillGain="0.0">
             <Effect minstrength="0" maxstrength="10" strengthchange="-0.05" minscreenblur="0.0" maxscreenblur="0.05" minradialdistort="0.0" maxradialdistort="0.05" minchromaticaberration="0.0" maxchromaticaberration="0.3" MinAfflictionOverlayAlphaMultiplier="0" MaxAfflictionOverlayAlphaMultiplier="0">
@@ -226,8 +226,8 @@
                     <ReduceAffliction identifier="welderseye" amount="0.45" />
                 </StatusEffect>
             </Effect>
-            <AfflictionOverlay texture="%ModDir:3114087512%/Content/UI/WeldersEyeOverlay.png" />
-            <icon texture="%ModDir:3114087512%/Content/UI/IR-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
+            <AfflictionOverlay texture="%ModDir%/Content/UI/WeldersEyeOverlay.png" />
+            <icon texture="%ModDir%/Content/UI/IR-IconsAtlas.png" sourcerect="0,128,128,128" origin="0,0" />
         </Affliction>
         <Affliction name="Heat Stroke Risk" identifier="overheating" description="You're sweating. The surrouning air is way too hot. Better not stay here for too long!" type="burn" showiconthreshold="0" showinhealthscannerthreshold="0" causeofdeathdescription="Burned to death" selfcauseofdeathdescription="You have burned to death." limbspecific="false" indicatorlimb="Head" maxstrength="10" healableinmedicalclinic="false">
             <Description textidentifier="afflictiondescription.overheating.self" target="Self" minstrength="0" maxstrength="10" />
@@ -252,7 +252,7 @@
                     <ParticleEmitter particle="waterdrop" colormultiplier="255,255,255" copyentityangle="true" particlespersecond="3" anglemin="0" anglemax="360" distancemin="0" distancemax="15" scalemin="0.4" scalemax="0.8" velocitymin="0" velocitymax="10" highqualitycollisiondetection="false" />
                 </StatusEffect>
             </Effect>
-            <icon texture="%ModDir:3114087512%/Content/UI/OverheatingIcon.png" sourcerect="0,0,128,128" color="195,104,60,255" origin="0,0" />
+            <icon texture="%ModDir%/Content/UI/OverheatingIcon.png" sourcerect="0,0,128,128" color="195,104,60,255" origin="0,0" />
         </Affliction>
         <Affliction name="Overheating 2" identifier="applyburn" description="You're sweating. The air in here is way too hot." type="burn" showiconthreshold="1000" showicontoothersthreshold="1000" showinhealthscannerthreshold="1000" causeofdeathdescription="Burned to death" selfcauseofdeathdescription="You have burned to death." limbspecific="false" indicatorlimb="Head" maxstrength="100" healableinmedicalclinic="false">
             <Description textidentifier="afflictiondescription.overheating.low" minstrength="0" maxstrength="30" />

@@ -129,7 +129,7 @@
             <!-- inventory slot for engine oil -->
             <ItemContainer canbeselected="true" selectkey="Select" capacity="1" maxstacksize="1" hideitems="true">
                 <GuiFrame style="ItemUI" absoluteoffset="0,1" anchor="Center" relativesize="0.1,0.15" />
-                <SlotIcon slotindex="0" texture="%ModDir:3114087512%/Content/UI/IR-IconsAtlas.png" sourcerect="0,0,85,85" origin="0.5,0.5" />
+                <SlotIcon slotindex="0" texture="%ModDir%/Content/UI/IR-IconsAtlas.png" sourcerect="0,0,85,85" origin="0.5,0.5" />
                 <Containable items="oil">
                     <!-- tag the engine with "oiled" if oil is contained to prevent certain StatusEffects from triggering -->
                     <StatusEffect type="OnContaining" target="This" tags="oiled" setvalue="true" duration="0.1">
@@ -158,7 +158,7 @@
                     <Affliction identifier="burn" strength="5" />
                 </StatusEffect>
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir:3114087512%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
                 </StatusEffect>
                 <RequiredItem items="screwdriver" type="Equipped" />
                 <input name="power_in" displayname="connection.powerin" />
@@ -450,7 +450,7 @@
             <!-- inventory slot for engine oil -->
             <ItemContainer canbeselected="true" selectkey="Select" capacity="1" maxstacksize="1" hideitems="true">
                 <GuiFrame style="ItemUI" absoluteoffset="0,1" anchor="Center" relativesize="0.1,0.15" />
-                <SlotIcon slotindex="0" texture="%ModDir:3114087512%/Content/UI/IR-IconsAtlas.png" sourcerect="0,0,85,85" origin="0.5,0.5" />
+                <SlotIcon slotindex="0" texture="%ModDir%/Content/UI/IR-IconsAtlas.png" sourcerect="0,0,85,85" origin="0.5,0.5" />
                 <Containable items="oil">
                     <!-- tag the engine with "oiled" if oil is contained to prevent certain StatusEffects from triggering -->
                     <StatusEffect type="OnContaining" target="This" tags="oiled" setvalue="true" duration="0.1">
@@ -484,7 +484,7 @@
                     <Affliction identifier="burn" strength="5" />
                 </StatusEffect>
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir:3114087512%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
                 </StatusEffect>
                 <RequiredItem items="screwdriver" type="Equipped" />
                 <input name="power_in" displayname="connection.powerin" />
@@ -770,7 +770,7 @@
             <!-- inventory slot for engine oil -->
             <ItemContainer canbeselected="true" selectkey="Select" capacity="1" maxstacksize="1" hideitems="true">
                 <GuiFrame style="ItemUI" absoluteoffset="0,1" anchor="Center" relativesize="0.1,0.15" />
-                <SlotIcon slotindex="0" texture="%ModDir:3114087512%/Content/UI/IR-IconsAtlas.png" sourcerect="0,0,85,85" origin="0.5,0.5" />
+                <SlotIcon slotindex="0" texture="%ModDir%/Content/UI/IR-IconsAtlas.png" sourcerect="0,0,85,85" origin="0.5,0.5" />
                 <Containable items="oil">
                     <!-- tag the engine with "oiled" if oil is contained to prevent certain StatusEffects from triggering -->
                     <StatusEffect type="OnContaining" target="This" tags="oiled" setvalue="true" duration="0.1">
@@ -799,7 +799,7 @@
                     <Affliction identifier="burn" strength="5" />
                 </StatusEffect>
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir:3114087512%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
                 </StatusEffect>
                 <RequiredItem items="screwdriver" type="Equipped" />
                 <input name="power_in" displayname="connection.powerin" />
@@ -960,7 +960,7 @@
             </Repairable>
         </Item>
         <Item name="Engine Oil" identifier="engineoil" tags="engineoil,oil,smallitem" maxstacksize="8" category="Misc" scale="0.5" health="100" canflipx="false">
-            <Sprite texture="%ModDir:3114087512%/Content/items/IR-ItemsAtlas.png" sourcerect="206,752,85,120" depth="0.55" origin="0.5,0.5" />
+            <Sprite texture="%ModDir%/Content/items/IR-ItemsAtlas.png" sourcerect="206,752,85,120" depth="0.55" origin="0.5,0.5" />
             <Price baseprice="450" minleveldifficulty="1">
                 <Price storeidentifier="merchantoutpost" minavailable="2" maxavailable="4" />
                 <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="6" maxavailable="10" />
@@ -1006,7 +1006,7 @@
         </Item>
         <!-- premium oil has double the item health -->
         <Item name="Premium Engine Oil" identifier="premiumengineoil" tags="engineoil,oil,smallitem" maxstacksize="8" category="Misc" scale="0.5" health="200" canflipx="false">
-            <Sprite texture="%ModDir:3114087512%/Content/items/IR-ItemsAtlas.png" sourcerect="291,752,85,120" depth="0.55" origin="0.5,0.5" />
+            <Sprite texture="%ModDir%/Content/items/IR-ItemsAtlas.png" sourcerect="291,752,85,120" depth="0.55" origin="0.5,0.5" />
             <Price baseprice="600" sold="false" minleveldifficulty="1">
                 <Price storeidentifier="merchantoutpost" minavailable="1" />
                 <Price storeidentifier="merchantcity" multiplier="1.2" minavailable="1" />

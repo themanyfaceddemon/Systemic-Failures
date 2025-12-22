@@ -2,11 +2,11 @@
 <Override>
     <Items>
         <Item name="Decontamination Shower" identifier="deconshower" allowattachitems="false" width="463" height="398" texturescale="1.0,1.0" scale="0.5" category="Machine" isshootable="true" requireaimtouse="true">
-            <sprite texture="%ModDir:3045796581%/Content/Items/Misc/DeconShower.png" sourcerect="0,0,187,414" depth="0.761" premultiplyalpha="false" origin="0.5,0.5" />
-            <DecorativeSprite texture="%ModDir:3045796581%/Content/Items/Misc/DeconShower.png" sourcerect="188,0,187,414" depth="0.76" origin="0.5,0.5">
+            <sprite texture="%ModDir%/Content/Items/Misc/DeconShower.png" sourcerect="0,0,187,414" depth="0.761" premultiplyalpha="false" origin="0.5,0.5" />
+            <DecorativeSprite texture="%ModDir%/Content/Items/Misc/DeconShower.png" sourcerect="188,0,187,414" depth="0.76" origin="0.5,0.5">
                 <IsActiveConditional HasTag="deconsol" targetcontaineditem="true" />
             </DecorativeSprite>
-            <DecorativeSprite texture="%ModDir:3045796581%/Content/Items/Misc/DeconShower.png" sourcerect="376,0,187,414" depth="0.77" origin="0.5,0.5" />
+            <DecorativeSprite texture="%ModDir%/Content/Items/Misc/DeconShower.png" sourcerect="376,0,187,414" depth="0.77" origin="0.5,0.5" />
             <Price baseprice="180">
                 <Price storeidentifier="merchantengineering" maxavailable="1" />
             </Price>
@@ -58,7 +58,7 @@
             </ItemContainer>
         </Item>
         <Item hideinmenus="true" name="Radioactive Waste" identifier="radioactivewaste" tags="radioactive" category="Misc" Scale="0.5" sonarsize="30">
-            <Sprite texture="%ModDir:3045796581%/Content/Items/ER-ItemsAtlas.png" sourcerect="191,360,85,142" depth="0.65" origin="0.5,0.5" />
+            <Sprite texture="%ModDir%/Content/Items/ER-ItemsAtlas.png" sourcerect="191,360,85,142" depth="0.65" origin="0.5,0.5" />
             <Body width="80" height="136" density="25" friction="0.8" />
             <Holdable canbepicked="true" slots="RightHand+LeftHand" holdpos="40,-40" handle1="0,53" handle2="0,53" holdangle="3" aimable="false" msg="ItemMsgPickUpSelect">
                 <StatusEffect type="Always" target="This" range="250" interval="0.3" disabledeltatime="true">
@@ -80,12 +80,12 @@
                 <IsActiveConditional InPlayerSubmarine="false" />
             </LightComponent>
             <LightComponent LightColor="30,100,120,255" range="50" IsOn="true" pulseamount="0.2" pulsefrequency="0.2" offset="0,0" allowingameediting="false">
-                <sprite texture="%ModDir:3045796581%/Content/Items/ER-ItemsAtlas.png" sourcerect="277,360,85,142" origin="0.5,0.5" />
+                <sprite texture="%ModDir%/Content/Items/ER-ItemsAtlas.png" sourcerect="277,360,85,142" origin="0.5,0.5" />
             </LightComponent>
             <AiTarget Soundrange="2000" sonardisruption="0.2" />
         </Item>
         <Item hideinmenus="true" name="Radioactive bubble" identifier="radioactivewastebubble" tags="radioactive" category="Misc" Scale="0.5" noninteractable="true" sonarsize="5" health="10">
-            <Sprite texture="%ModDir:3045796581%/Content/Items/ER-ItemsAtlas.png" sourcerect="0,0,1,1" depth="0.66" origin="0.5,0.5" />
+            <Sprite texture="%ModDir%/Content/Items/ER-ItemsAtlas.png" sourcerect="0,0,1,1" depth="0.66" origin="0.5,0.5" />
             <Body radius="10" density="2.5" />
             <Itemcomponent>
                 <StatusEffect type="Always" target="This,NearbyCharacters" range="250" interval="0.3" condition="-0.333" disabledeltatime="true">

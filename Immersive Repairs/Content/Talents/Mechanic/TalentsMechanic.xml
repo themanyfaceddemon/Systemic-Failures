@@ -2,7 +2,7 @@
 <Override>
     <Talents>
         <Talent identifier="firefighter">
-            <Icon texture="%ModDir:3114087512%/Content/UI/IR-IconsAtlas.png" sourcerect="0,257,119,119" />
+            <Icon texture="%ModDir%/Content/UI/IR-IconsAtlas.png" sourcerect="0,257,119,119" />
             <Description tag="talentdescription.firefighter">
                 <Replace tag="[itemname1]" value="entityname.firefightersuit" color="gui.orange" />
                 <Replace tag="[itemname2]" value="entityname.firefighterhelmet" color="gui.orange" />

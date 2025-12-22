@@ -38,7 +38,7 @@
             <OxygenGenerator powerconsumption="1000.0" minvoltage="0.5" canbeselected="true" msg="ItemMsgInteractSelect" comparison="And">
                 <ActiveConditional HasStatusTag="hasfilter" />
                 <poweronsound file="Content/Items/PowerOnLight2.ogg" range="1500" loop="false" />
-                <sound file="%ModDir:3114087512%/Content/Items/OxygenGenerator/OxygenGenerator.ogg" type="OnActive" range="1000.0" volumeproperty="CurrFlow" volume="0.001" loop="true" />
+                <sound file="%ModDir%/Content/Items/OxygenGenerator/OxygenGenerator.ogg" type="OnActive" range="1000.0" volumeproperty="CurrFlow" volume="0.001" loop="true" />
                 <StatusEffect type="OnFire" target="This" Condition="-0.5" tags="onfire" interval="1" duration="1.1" />
                 <StatusEffect type="OnBroken" targettype="This" disabledeltatime="true">
                     <sound file="Content/Items/Weapons/ExplosionMedium1.ogg" range="3000" />
@@ -64,7 +64,7 @@
                 <SlotIcon slotindex="2" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
                 <SlotIcon slotindex="3" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
                 <SlotIcon slotindex="4" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
-                <SlotIcon slotindex="5" texture="%ModDir:3114087512%/Content/UI/IR-IconsAtlas.png" sourcerect="340,0,85,85" origin="0.5,0.5" />
+                <SlotIcon slotindex="5" texture="%ModDir%/Content/UI/IR-IconsAtlas.png" sourcerect="340,0,85,85" origin="0.5,0.5" />
                 <Containable items="oxygensource,weldingfuel" excludebroken="false" excludefullcondition="true">
                     <StatusEffect type="OnContaining" targettype="Contained" Condition="2.0" Comparison="And">
                         <Conditional Voltage="gt 0.1" targetcontainer="true" targetitemcomponent="OxygenGenerator" />
@@ -102,7 +102,7 @@
                 <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
                 <RequiredItem items="screwdriver" type="Equipped" />
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir:3114087512%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
                 </StatusEffect>
                 <input name="power_in" displayname="connection.powerin" />
                 <output name="condition_out" displayname="connection.conditionout" />
@@ -158,7 +158,7 @@
             <OxygenGenerator powerconsumption="1000.0" minvoltage="0.5" canbeselected="true" msg="ItemMsgInteractSelect" comparison="And">
                 <ActiveConditional HasStatusTag="hasfilter" />
                 <poweronsound file="Content/Items/PowerOnLight1.ogg" range="1000" loop="false" />
-                <sound file="%ModDir:3114087512%/Content/Items/OxygenGenerator/OxygenGenerator.ogg" type="OnActive" range="1000.0" volumeproperty="CurrFlow" volume="0.001" loop="true" />
+                <sound file="%ModDir%/Content/Items/OxygenGenerator/OxygenGenerator.ogg" type="OnActive" range="1000.0" volumeproperty="CurrFlow" volume="0.001" loop="true" />
                 <StatusEffect type="OnFire" target="This" Condition="-0.5" tags="onfire" interval="1" duration="1.1" />
                 <StatusEffect type="OnBroken" targettype="This" disabledeltatime="true">
                     <sound file="Content/Items/Weapons/ExplosionMedium1.ogg" range="3000" />
@@ -181,7 +181,7 @@
                 <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
                 <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
                 <SlotIcon slotindex="2" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
-                <SlotIcon slotindex="3" texture="%ModDir:3114087512%/Content/UI/IR-IconsAtlas.png" sourcerect="340,0,85,85" origin="0.5,0.5" />
+                <SlotIcon slotindex="3" texture="%ModDir%/Content/UI/IR-IconsAtlas.png" sourcerect="340,0,85,85" origin="0.5,0.5" />
                 <Containable items="oxygensource,weldingfuel" excludebroken="false" excludefullcondition="true">
                     <StatusEffect type="OnContaining" targettype="Contained" Condition="2.0" Comparison="And">
                         <Conditional Voltage="gt 0.1" targetcontainer="true" targetitemcomponent="OxygenGenerator" />
@@ -225,7 +225,7 @@
                     <Affliction identifier="burn" strength="5" />
                 </StatusEffect>
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir:3114087512%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
                 </StatusEffect>
                 <RequiredItem items="screwdriver" type="Equipped" />
                 <input name="power_in" displayname="connection.powerin" />
@@ -277,7 +277,7 @@
                 <SlotIcon slotindex="2" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
                 <SlotIcon slotindex="3" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
                 <SlotIcon slotindex="4" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
-                <SlotIcon slotindex="5" texture="%ModDir:3114087512%/Content/UI/IR-IconsAtlas.png" sourcerect="340,0,85,85" origin="0.5,0.5" />
+                <SlotIcon slotindex="5" texture="%ModDir%/Content/UI/IR-IconsAtlas.png" sourcerect="340,0,85,85" origin="0.5,0.5" />
                 <Containable items="oxygensource,weldingfuel" excludebroken="false" excludefullcondition="true">
                     <StatusEffect type="OnContaining" targettype="Contained" Condition="2.0" Comparison="And">
                         <Conditional Voltage="gt 0.1" targetcontainer="true" targetitemcomponent="OxygenGenerator" />
@@ -315,7 +315,7 @@
                 <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
                 <RequiredItem items="screwdriver" type="Equipped" />
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir:3114087512%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
                 </StatusEffect>
                 <input name="power_in" displayname="connection.powerin" />
                 <output name="condition_out" displayname="connection.conditionout" />
@@ -348,7 +348,7 @@
             <DecorativeSprite texture="Content/Map/Reticles.png" depth="0.921" sourcerect="0,0,90,90" origin="0.46,0.46" comparison="And" />
             <Vent>
                 <ActiveConditional HasTag="ventblade" condition="gt 0" targetcontaineditem="true" />
-                <sound file="%ModDir:3114087512%/Content/Items/OxygenGenerator/Ventilation.ogg" type="OnActive" range="400.0" volumeproperty="OxygenFlow" volume="0.0015f" loop="true" />
+                <sound file="%ModDir%/Content/Items/OxygenGenerator/Ventilation.ogg" type="OnActive" range="400.0" volumeproperty="OxygenFlow" volume="0.0015f" loop="true" />
                 <!--<StatusEffect type="OnActive" target="Contained" condition="-0.01" />-->
                 <StatusEffect type="InWater" target="Contained" targetslot="0" condition="-0.125" comparison="And">
                     <Conditional nonplayerteaminteractable="false" />
@@ -363,11 +363,11 @@
             <GreaterComponent canbeselected="false" allowingameediting="false" timeframe="0" />
             <ItemContainer capacity="1" maxstacksize="1" canbeselected="true" selectkey="Select" hideitems="true" allowdraganddrop="false" msg="ItemMsgInteractSelect">
                 <GuiFrame relativesize="0.11,0.17" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
-                <SlotIcon slotindex="0" texture="%ModDir:3114087512%/Content/UI/IR-IconsAtlas.png" sourcerect="255,0,85,85" origin="0.5,0.5" />
+                <SlotIcon slotindex="0" texture="%ModDir%/Content/UI/IR-IconsAtlas.png" sourcerect="255,0,85,85" origin="0.5,0.5" />
                 <Containable items="ventblade" />
                 <!-- play interaction sound when opening the vent -->
                 <StatusEffect type="OnPicked" target="this" stackable="true">
-                    <Sound file="%ModDir:3114087512%/Content/Items/OxygenGenerator/vent_open.ogg" volume="1" range="350" />
+                    <Sound file="%ModDir%/Content/Items/OxygenGenerator/vent_open.ogg" volume="1" range="350" />
                 </StatusEffect>
             </ItemContainer>
         </Item>
@@ -388,7 +388,7 @@
             <DecorativeSprite texture="Content/Map/Reticles.png" depth="0.921" sourcerect="0,0,90,90" origin="0.46,0.46" comparison="And" />
             <Vent comparison="And">
                 <ActiveConditional HasTag="ventblade" condition="gt 0" targetslot="0" targetcontaineditem="true" />
-                <sound file="%ModDir:3114087512%/Content/Items/OxygenGenerator/Ventilation.ogg" type="OnActive" range="400.0" volumeproperty="OxygenFlow" volume="0.0015f" loop="true" />
+                <sound file="%ModDir%/Content/Items/OxygenGenerator/Ventilation.ogg" type="OnActive" range="400.0" volumeproperty="OxygenFlow" volume="0.0015f" loop="true" />
                 <!--<StatusEffect type="OnActive" target="Contained" targetslot="0" condition="-0.01" />-->
                 <StatusEffect type="InWater" target="Contained" targets="ventblade" condition="-0.125" comparison="And">
                     <Conditional nonplayerteaminteractable="false" />
@@ -402,7 +402,7 @@
             </Vent>
             <GreaterComponent canbeselected="false" allowingameediting="false" timeframe="0" />
             <ItemContainer capacity="1" maxstacksize="64" canbeselected="true" selectkey="Action" hideitem="true" allowdraganddrop="false">
-                <SlotIcon slotindex="0" texture="%ModDir:3114087512%/Content/UI/IR-IconsAtlas.png" sourcerect="255,0,85,85" origin="0.5,0.5" />
+                <SlotIcon slotindex="0" texture="%ModDir%/Content/UI/IR-IconsAtlas.png" sourcerect="255,0,85,85" origin="0.5,0.5" />
                 <GuiFrame relativesize="0.11,0.17" anchor="BottomCenter" minsize="140,170" maxsize="280,280" style="ItemUI" />
                 <RequiredItem items="crowbar" type="Equipped" />
                 <Containable items="smallitem,mediumitem" excludeditems="ventblade" />
@@ -412,14 +412,14 @@
                 <Containable items="ventblade" />
                 <!-- play interaction sound when opening the vent -->
                 <StatusEffect type="OnPicked" target="this" stackable="true">
-                    <Sound file="%ModDir:3114087512%/Content/Items/OxygenGenerator/vent_open.ogg" volume="1" range="350" />
+                    <Sound file="%ModDir%/Content/Items/OxygenGenerator/vent_open.ogg" volume="1" range="350" />
                 </StatusEffect>
             </ItemContainer>
         </Item>
         <!-- PARTS -->
         <Item name="Vent Blade" identifier="ventblade" tags="ventblade,mediumitem,tool" description="The blades in the vent go round and round. Deteriorates in water and takes damage from impacts when dropped or thrown." category="Machine" cargocontaineridentifier="metalcrate" scale="0.5" impacttolerance="1" impactsoundtag="impact_metal_heavy" donttransferbetweensubs="false">
-            <Sprite texture="%ModDir:3114087512%/Content/Items/IR-ItemsAtlas.png" depth="0.6" sourcerect="746,270,94,94" origin="0.5,0.5" />
-            <BrokenSprite texture="%ModDir:3114087512%/Content/Items/IR-ItemsAtlas.png" depth="0.6" sourcerect="841,270,94,94" fadein="true" maxcondition="80" />
+            <Sprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" depth="0.6" sourcerect="746,270,94,94" origin="0.5,0.5" />
+            <BrokenSprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" depth="0.6" sourcerect="841,270,94,94" fadein="true" maxcondition="80" />
             <PreferredContainer primary="vent" amount="1" spawnprobability="1" allowtransfershere="true" transferonlyonepercontainer="true" quality="0" />
             <PreferredContainer secondary="storagecab,engcab" allowtransfershere="true" />
             <Body radius="46" density="20" restitution="0.5" angulardamping="1.0" />
@@ -465,10 +465,10 @@
             </Quality>
         </Item>
         <Item name="Air Filter" identifier="airfilter" tags="airfilter,mediumitem" description="A standard air filter for all types of oxygen generators. Can be cleaned with ethanol and reused as long as it isn't fully broken so maintenance is key!" category="Machine" scale="0.5" impacttolerance="1" impactsoundtag="impact_metal_light" isshootable="true" requireaimtouse="true" donttransferbetweensubs="false">
-            <Sprite texture="%ModDir:3114087512%/Content/Items/IR-ItemsAtlas.png" depth="0.6" sourcerect="746,146,123,123" origin="0.5,0.5" />
-            <InventoryIcon texture="%ModDir:3114087512%/Content/Items/IR-ItemsAtlas.png" sourcerect="746,146,123,123" origin="0.5,0.5" />
-            <ContainedSprite allowedcontainertags="oxygengenerator" texture="%ModDir:3114087512%/Content/Items/IR-ItemsAtlas.png" sourcerect="746,146,1,1" origin="0.5,0.5" />
-            <BrokenSprite texture="%ModDir:3114087512%/Content/Items/IR-ItemsAtlas.png" depth="0.6" sourcerect="870,146,123,123" fadein="true" maxcondition="80" />
+            <Sprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" depth="0.6" sourcerect="746,146,123,123" origin="0.5,0.5" />
+            <InventoryIcon texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="746,146,123,123" origin="0.5,0.5" />
+            <ContainedSprite allowedcontainertags="oxygengenerator" texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="746,146,1,1" origin="0.5,0.5" />
+            <BrokenSprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" depth="0.6" sourcerect="870,146,123,123" fadein="true" maxcondition="80" />
             <PreferredContainer primary="oxygengenerator" spawnprobability="1" allowtransfershere="true" transferonlyonepercontainer="true" />
             <PreferredContainer secondary="storagecab,engcab" allowtransfershere="true" />
             <Body width="120" height="120" density="20" />
@@ -499,7 +499,7 @@
                 <!-- play cleaning sound and spawn water drop particles when using the item, if the condition is less than 100 -->
                 <StatusEffect type="OnUse" target="This" duration="0.1" stackable="true">
                     <Conditional conditionpercentage="lt 100" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/OxygenGenerator/CleanAirFilter.ogg" volume="2" range="600" loop="true" />
+                    <Sound file="%ModDir%/Content/Items/OxygenGenerator/CleanAirFilter.ogg" volume="2" range="600" loop="true" />
                     <ParticleEmitter particle="waterdrop" colormultiplier="255,255,255" copyentityangle="true" particlespersecond="3" anglemin="0" anglemax="360" distancemin="0" distancemax="30" scalemin="0.4" scalemax="0.8" velocitymin="0" velocitymax="10" highqualitycollisiondetection="false" />
                 </StatusEffect>
                 <!-- increase the item condition when using the item, if the condition is less than 100 -->
@@ -515,7 +515,7 @@
                 <QualityStat stattype="Condition" value="0.2" />
             </Quality>
             <ItemContainer capacity="1" maxstacksize="1" canbeselected="false" allowaccess="true" allowdraganddrop="true" hideitems="true" drawinventory="true" ShowConditionInContainedStateIndicator="false" ShowContainedStateIndicator="false" removecontaineditemsondeconstruct="true">
-                <SlotIcon slotindex="0" texture="%ModDir:3114087512%/Content/UI/IR-IconsAtlas.png" sourcerect="425,0,85,85" origin="0.5,0.5" />
+                <SlotIcon slotindex="0" texture="%ModDir%/Content/UI/IR-IconsAtlas.png" sourcerect="425,0,85,85" origin="0.5,0.5" />
                 <Containable items="ethanol" />
             </ItemContainer>
         </Item>

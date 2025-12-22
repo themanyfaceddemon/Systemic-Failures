@@ -24,4 +24,3 @@
     <Text file="%ModDir%/Content/Texts/English.xml" />
     <UpgradeModules file="%ModDir%/Content/Upgrades/Upgrades.xml" />
 </contentpackage>
-

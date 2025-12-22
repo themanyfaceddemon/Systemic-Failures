@@ -9,10 +9,10 @@
             <BrokenSprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="488,1,110,176" depth="0.8" maxcondition="0" />
             <InfectedSprite texture="Content/Items/Gardening/ballastflora.png" sourcerect="8,260,149,170" origin="0.5,0.5" />
             <DamagedInfectedSprite texture="Content/Items/Gardening/ballastflora.png" sourcerect="157,260,149,170" origin="0.5,0.5" />
-            <DecorativeSprite texture="%ModDir:3114087512%/Content/Items/IR-ItemsAtlas.png" sourcerect="379,752,90,104" depth="0.799" origin="0.5,0.75">
+            <DecorativeSprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="379,752,90,104" depth="0.799" origin="0.5,0.75">
                 <Conditional HasStatusTag="opened" />
             </DecorativeSprite>
-            <DecorativeSprite texture="%ModDir:3114087512%/Content/Items/IR-ItemsAtlas.png" sourcerect="472,752,99,113" depth="0.798" origin="-0.5,0.69">
+            <DecorativeSprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="472,752,99,113" depth="0.798" origin="-0.5,0.69">
                 <Conditional HasStatusTag="opened" />
             </DecorativeSprite>
             <!-- ItemComponent is only used as a workaround to play a sound if someone stopped interacting with the junction box since that can't really be done otherwise other than with "Always" StatusEffects which drain performance nonstop instead of only when interaction is happening. -->
@@ -20,7 +20,7 @@
                 <!-- play a closing sound and disable the ItemComponent, stopping to execute the check for the "opened" tag which gets applied while someone is interacting with the junction box -->
                 <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true" forceplaysounds="true">
                     <Conditional HasStatusTag="neq opened" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Electricity/junctionbox_close.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_close.ogg" volume="1" range="300" />
                 </StatusEffect>
             </ItemComponent>
             <!-- Controller to check if someone is interacting with the junction box -->
@@ -28,7 +28,7 @@
                 <!-- play an opening sound when starting to interact with the junction box -->
                 <StatusEffect type="OnActive" target="this" forceplaysounds="true">
                     <Conditional HasStatusTag="neq opened" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Electricity/junctionbox_open.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_open.ogg" volume="1" range="300" />
                 </StatusEffect>
                 <!-- tag the junction box with "opened" if the controller is active, meaning someone is interacting with it -->
                 <StatusEffect type="OnActive" target="This" tags="opened" duration="0.1" />
@@ -48,7 +48,7 @@
                 <!-- play an opening sound when starting to interact with the junction box -->
                 <StatusEffect type="OnPicked" target="this" forceplaysounds="true">
                     <Conditional HasStatusTag="neq opened" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Electricity/junctionbox_open.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_open.ogg" volume="1" range="300" />
                 </StatusEffect>
             </Controller>
             <PowerTransfer canbeselected="true" msg="ItemMsgInteractSelect">
@@ -165,10 +165,10 @@
             <BrokenSprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="488,1,110,176" depth="0.8" maxcondition="0" />
             <InfectedSprite texture="Content/Items/Gardening/ballastflora.png" sourcerect="8,260,149,170" origin="0.5,0.5" />
             <DamagedInfectedSprite texture="Content/Items/Gardening/ballastflora.png" sourcerect="157,260,149,170" origin="0.5,0.5" />
-            <DecorativeSprite texture="%ModDir:3114087512%/Content/Items/IR-ItemsAtlas.png" sourcerect="379,752,90,104" depth="0.799" origin="0.5,0.75">
+            <DecorativeSprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="379,752,90,104" depth="0.799" origin="0.5,0.75">
                 <Conditional HasStatusTag="opened" />
             </DecorativeSprite>
-            <DecorativeSprite texture="%ModDir:3114087512%/Content/Items/IR-ItemsAtlas.png" sourcerect="472,866,99,113" depth="0.798" origin="-0.5,0.69">
+            <DecorativeSprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="472,866,99,113" depth="0.798" origin="-0.5,0.69">
                 <Conditional HasStatusTag="opened" />
             </DecorativeSprite>
             <!-- ItemComponent is only used as a workaround to play a sound if someone stopped interacting with the junction box since that can't really be done otherwise other than with "Always" StatusEffects which drain performance nonstop instead of only when interaction is happening. -->
@@ -176,7 +176,7 @@
                 <!-- play a closing sound and disable the ItemComponent, stopping to execute the check for the "opened" tag which gets applied while someone is interacting with the junction box -->
                 <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true" forceplaysounds="true">
                     <Conditional HasStatusTag="neq opened" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Electricity/junctionbox_close.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_close.ogg" volume="1" range="300" />
                 </StatusEffect>
             </ItemComponent>
             <!-- Controller to check if someone is interacting with the junction box -->
@@ -184,7 +184,7 @@
                 <!-- play an opening sound when starting to interact with the junction box -->
                 <StatusEffect type="OnActive" target="this" forceplaysounds="true">
                     <Conditional HasStatusTag="neq opened" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Electricity/junctionbox_open.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_open.ogg" volume="1" range="300" />
                 </StatusEffect>
                 <!-- tag the junction box with "opened" if the controller is active, meaning someone is interacting with it -->
                 <StatusEffect type="OnActive" target="This" tags="opened" duration="0.1" />
@@ -204,7 +204,7 @@
                 <!-- play an opening sound when starting to interact with the junction box -->
                 <StatusEffect type="OnPicked" target="this" forceplaysounds="true">
                     <Conditional HasStatusTag="neq opened" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Electricity/junctionbox_open.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_open.ogg" volume="1" range="300" />
                 </StatusEffect>
             </Controller>
             <PowerTransfer canbeselected="true" msg="ItemMsgInteractSelect">
@@ -272,7 +272,7 @@
             <Sprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="604,0,118,159" depth="0.8" />
             <BrokenSprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="722,0,118,159" depth="0.8" maxcondition="80" fadein="true" />
             <BrokenSprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="840,0,118,159" depth="0.8" maxcondition="0" />
-            <DecorativeSprite texture="%ModDir:3114087512%/Content/Items/IR-ItemsAtlas.png" sourcerect="746,752,100,73" depth="0.799" origin="0.5,-0.05">
+            <DecorativeSprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="746,752,100,73" depth="0.799" origin="0.5,-0.05">
                 <Conditional HasStatusTag="opened" />
             </DecorativeSprite>
             <!-- ItemComponent is only used as a workaround to play a sound if someone stopped interacting with the junction box since that can't really be done otherwise other than with "Always" StatusEffects which drain performance nonstop instead of only when interaction is happening. -->
@@ -280,7 +280,7 @@
                 <!-- play a closing sound and disable the ItemComponent, stopping to execute the check for the "opened" tag which gets applied while someone is interacting with the junction box -->
                 <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true" forceplaysounds="true">
                     <Conditional HasStatusTag="neq opened" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Electricity/junctionbox_close.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_close.ogg" volume="1" range="300" />
                 </StatusEffect>
             </ItemComponent>
             <!-- Controller to check if someone is interacting with the junction box -->
@@ -288,7 +288,7 @@
                 <!-- play an opening sound when starting to interact with the junction box -->
                 <StatusEffect type="OnActive" target="this" forceplaysounds="true">
                     <Conditional HasStatusTag="neq opened" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Electricity/junctionbox_open.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_open.ogg" volume="1" range="300" />
                 </StatusEffect>
                 <!-- tag the junction box with "opened" if the controller is active, meaning someone is interacting with it -->
                 <StatusEffect type="OnActive" target="This" tags="opened" duration="0.1" />
@@ -308,7 +308,7 @@
                 <!-- play an opening sound when starting to interact with the junction box -->
                 <StatusEffect type="OnPicked" target="this" forceplaysounds="true">
                     <Conditional HasStatusTag="neq opened" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Electricity/junctionbox_open.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_open.ogg" volume="1" range="300" />
                 </StatusEffect>
             </Controller>
             <PowerContainer capacity="2000.0" maxrechargespeed="500.0" maxoutput="1000.0" canbeselected="true" indicatorposition="65,33" indicatorsize="34,46" ishorizontal="false" msg="ItemMsgInteractSelect">
@@ -429,7 +429,7 @@
             <Sprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="604,207,118,124" depth="0.8" />
             <BrokenSprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="722,207,118,124" depth="0.8" maxcondition="80" fadein="true" />
             <BrokenSprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="840,207,118,124" depth="0.8" maxcondition="0" />
-            <DecorativeSprite texture="%ModDir:3114087512%/Content/Items/IR-ItemsAtlas.png" sourcerect="644,752,101,119" depth="0.799" origin="0.422,0.5">
+            <DecorativeSprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="644,752,101,119" depth="0.799" origin="0.422,0.5">
                 <Conditional HasStatusTag="opened" />
             </DecorativeSprite>
             <!-- ItemComponent is only used as a workaround to play a sound if someone stopped interacting with the junction box since that can't really be done otherwise other than with "Always" StatusEffects which drain performance nonstop instead of only when interaction is happening. -->
@@ -437,7 +437,7 @@
                 <!-- play a closing sound and disable the ItemComponent, stopping to execute the check for the "opened" tag which gets applied while someone is interacting with the junction box -->
                 <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true" forceplaysounds="true">
                     <Conditional HasStatusTag="neq opened" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Electricity/junctionbox_close.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_close.ogg" volume="1" range="300" />
                 </StatusEffect>
             </ItemComponent>
             <!-- Controller to check if someone is interacting with the junction box -->
@@ -445,7 +445,7 @@
                 <!-- play an opening sound when starting to interact with the junction box -->
                 <StatusEffect type="OnActive" target="this" forceplaysounds="true">
                     <Conditional HasStatusTag="neq opened" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Electricity/junctionbox_open.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_open.ogg" volume="1" range="300" />
                 </StatusEffect>
                 <!-- tag the junction box with "opened" if the controller is active, meaning someone is interacting with it -->
                 <StatusEffect type="OnActive" target="This" tags="opened" duration="0.1" />
@@ -459,7 +459,7 @@
                 <!-- play an opening sound when starting to interact with the junction box -->
                 <StatusEffect type="OnActive" target="this" forceplaysounds="true">
                     <Conditional HasStatusTag="neq opened" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Electricity/junctionbox_open.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_open.ogg" volume="1" range="300" />
                 </StatusEffect>
                 <!-- tag the junction box with "opened" if the controller is active, meaning someone is interacting with it -->
                 <StatusEffect type="OnActive" target="This" tags="opened" duration="0.1" />
@@ -510,10 +510,10 @@
             <Sprite texture="Content/Items/Electricity/signalcomp.png" depth="0.8" sourcerect="512,334,154,160" />
             <BrokenSprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="667,334,155,161" depth="0.8" maxcondition="80" fadein="true" />
             <BrokenSprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="821,334,155,161" depth="0.8" maxcondition="0" />
-            <DecorativeSprite texture="%ModDir:3114087512%/Content/Items/IR-ItemsAtlas.png" sourcerect="572,752,63,43" depth="0.799" origin="0.52,1.05">
+            <DecorativeSprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="572,752,63,43" depth="0.799" origin="0.52,1.05">
                 <Conditional HasStatusTag="opened" />
             </DecorativeSprite>
-            <DecorativeSprite texture="%ModDir:3114087512%/Content/Items/IR-ItemsAtlas.png" sourcerect="572,796,71,78" depth="0.798" origin="0.09,0.15">
+            <DecorativeSprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="572,796,71,78" depth="0.798" origin="0.09,0.15">
                 <Conditional HasStatusTag="opened" />
             </DecorativeSprite>
             <!-- ItemComponent is only used as a workaround to play a sound if someone stopped interacting with the junction box since that can't really be done otherwise other than with "Always" StatusEffects which drain performance nonstop instead of only when interaction is happening. -->
@@ -521,7 +521,7 @@
                 <!-- play a closing sound and disable the ItemComponent, stopping to execute the check for the "opened" tag which gets applied while someone is interacting with the junction box -->
                 <StatusEffect type="OnActive" target="This" targetitemcomponent="ItemComponent" IsActive="false" setvalue="true" forceplaysounds="true">
                     <Conditional HasStatusTag="neq opened" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Electricity/junctionbox_close.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_close.ogg" volume="1" range="300" />
                 </StatusEffect>
             </ItemComponent>
             <!-- Controller to check if someone is interacting with the junction box -->
@@ -529,7 +529,7 @@
                 <!-- play an opening sound when starting to interact with the junction box -->
                 <StatusEffect type="OnActive" target="this" forceplaysounds="true">
                     <Conditional HasStatusTag="neq opened" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Electricity/junctionbox_open.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_open.ogg" volume="1" range="300" />
                 </StatusEffect>
                 <!-- tag the junction box with "opened" if the controller is active, meaning someone is interacting with it -->
                 <StatusEffect type="OnActive" target="This" tags="opened" duration="0.1" />
@@ -549,7 +549,7 @@
                 <!-- play an opening sound when starting to interact with the junction box -->
                 <StatusEffect type="OnPicked" target="this" forceplaysounds="true">
                     <Conditional HasStatusTag="neq opened" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Electricity/junctionbox_open.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_open.ogg" volume="1" range="300" />
                 </StatusEffect>
             </Controller>
             <PowerContainer capacity="20.0" rechargespeed="0" maxrechargespeed="1000.0" maxoutput="20000000.0" efficiency="0.1" exponentialrechargespeed="true" rechargeadjustspeed="0.1" rechargewarningindicatorlow="0.5" rechargewarningindicatorhigh="0.75" canbeselected="true" indicatorposition="53,11" indicatorsize="47,10" ishorizontal="true" msg="ItemMsgInteractSelect">

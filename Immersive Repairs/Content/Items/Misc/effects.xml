@@ -199,7 +199,7 @@
                 </StatusEffect>
                 <StatusEffect type="Always" target="Parent">
                     <ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Reactor/ReactorAlarmCritical.ogg" volume="3.0" range="4000" loop="true" />
+                    <Sound file="%ModDir%/Content/Items/Reactor/ReactorAlarmCritical.ogg" volume="3.0" range="4000" loop="true" />
                 </StatusEffect>
                 <StatusEffect type="Always" target="this" interval="0.5" spawnitemrandomly="true">
                     <SpawnItem identifier="effect_none" spawnposition="This" />
@@ -268,7 +268,7 @@
       the StatusEffect was previously on the vents themselves, but this caused a performance impact since all vents would constantly check if they needed to execute the effect.
     -->
         <Item name="" identifier="effect_smokingvents" Category="Hidden" Tags="effect,ventsmoke" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" spritecolor="255,255,255,0" noninteractable="true" hideinmenus="true">
-            <sprite texture="%ModDir:3114087512%/Content/Items/Tools/LadderBlank.png" sourcerect="0,0,95,364" depth="0.501" premultiplyalpha="false" origin="0.5,0.5" />
+            <sprite texture="%ModDir%/Content/Items/Tools/LadderBlank.png" sourcerect="0,0,95,364" depth="0.501" premultiplyalpha="false" origin="0.5,0.5" />
             <Body width="161" height="364" bodytype="Static" />
             <trigger x="1" y="1" width="0" />
             <Ladder canbeselected="false" msg="ItemMsgClimbSelect" />

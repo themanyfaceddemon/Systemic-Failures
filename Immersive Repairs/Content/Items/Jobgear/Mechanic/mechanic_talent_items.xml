@@ -23,11 +23,11 @@
             </Fabricate>
             <AiTarget sight="500" staticsight="true" />
             <!--Holdable slots="Any,RightHand,LeftHand" holdangle="30" handle1="-10,0" msg="ItemMsgPickUpSelect" /-->
-            <InventoryIcon texture="%ModDir:3114087512%/Content/Items/Tools/tools.png" sourcerect="512,0,86,50" origin="0.5,0.5" />
-            <Sprite name="Welding Mask" texture="%ModDir:3114087512%/Content/Items/Tools/tools.png" depth="0.55" sourcerect="512,0,86,50" origin="0.5,0.5" />
+            <InventoryIcon texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="512,0,86,50" origin="0.5,0.5" />
+            <Sprite name="Welding Mask" texture="%ModDir%/Content/Items/Tools/tools.png" depth="0.55" sourcerect="512,0,86,50" origin="0.5,0.5" />
             <Body width="60" radius="20" density="15" />
             <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
-                <sprite name="Welding Mask Wearable" texture="%ModDir:3114087512%/Content/Items/Tools/tools.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hidelimb="false" hideotherwearables="false" sourcerect="599,0,85,82" origin="0.55,0.4" hidewearablesoftype="moustache,beard" />
+                <sprite name="Welding Mask Wearable" texture="%ModDir%/Content/Items/Tools/tools.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hidelimb="false" hideotherwearables="false" sourcerect="599,0,85,82" origin="0.55,0.4" hidewearablesoftype="moustache,beard" />
                 <StatusEffect type="OnWearing" target="Character" tags="hasweldingmask" ObstructVision="true" HideFace="true" setvalue="true" disabledeltatime="true" duration="0.1" />
                 <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="welderseye" damagemultiplier="0.0" />
                 <damagemodifier afflictionidentifiers="lacerations, bitewounds" armorsector="0.0,180.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
@@ -60,7 +60,7 @@
       <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="251,1,56,57" origin="0.5,0.5" />
       <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="113,239,57,19" depth="0.55" origin="0.5,0.5" />
       -->
-            <Sprite texture="%ModDir:3114087512%/Content/Items/Tools/tools.png" sourcerect="145,291,107,70" depth="0.55" origin="0.5,0.5" />
+            <Sprite texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="145,291,107,70" depth="0.55" origin="0.5,0.5" />
             <Body width="75" radius="32" density="30" />
             <Holdable slots="Any,RightHand,LeftHand" holdpos="30,-30" aimpos="70,5" handle1="-28,-18" aimable="true" controlpose="true" msg="ItemMsgPickUpSelect">
                 <!-- Reduce the condition of the item when using it in the health menu | Not currently used -->
@@ -80,7 +80,7 @@
                 <!-- In a 50cm range from the item's center, repair all items with those listed tags and play a repair sound, if their condition is below 100 -->
                 <StatusEffect type="OnUse" target="NearbyItems" targettags="repairablecabinet,fabricator,deconstructor,geneticresearchstation,medicalfabricator,junctionbox,batterycellrecharger,oxygengenerator,reactor,engine,pump,command,turretammosource,turret,door,hydroponicplanter,kitchenfabricator,toilet" range="50" condition="10" duration="0.1">
                     <Conditional condition="lt 100" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Jobgear/Mechanic/MultiTool.ogg" volume="1.5" loop="true" range="500" />
+                    <Sound file="%ModDir%/Content/Items/Jobgear/Mechanic/MultiTool.ogg" volume="1.5" loop="true" range="500" />
                 </StatusEffect>
                 <!-- Spawn spark particles while repairing items while their condition is less than 100 -->
                 <StatusEffect type="OnUse" target="NearbyItems" targettags="repairablecabinet,fabricator,deconstructor,geneticresearchstation,medicalfabricator,junctionbox,batterycellrecharger,oxygengenerator,reactor,engine,pump,command,turretammosource,turret,door,hydroponicplanter,kitchenfabricator,toilet" range="50">
@@ -91,7 +91,7 @@
                 <StatusEffect type="OnUse" target="This" condition="-6" />
             </Holdable>
             <ItemContainer capacity="1" maxstacksize="1" hideitems="true" canbeselected="false" allowdraganddrop="true" showcontainedstateindicator="false" allowaccess="false" locked="true" drawinventory="false">
-                <SlotIcon slotindex="0" texture="%ModDir:3114087512%/Content/UI/IR-IconsAtlas.png" sourcerect="0,86,40,40" origin="0.5,0.5" />
+                <SlotIcon slotindex="0" texture="%ModDir%/Content/UI/IR-IconsAtlas.png" sourcerect="0,86,40,40" origin="0.5,0.5" />
                 <Containable items="fpgacircuit">
                     <!-- When inserting the fpga circuit, repair the item and disable access to its inventory -->
                     <StatusEffect type="OnInserted" target="This" condition="100" allowaccess="false" locked="true" drawinventory="false" setvalue="true" interval="1">
@@ -171,8 +171,8 @@
                 <RequiredItem identifier="sodium" />
                 <RequiredItem identifier="phosphorus" />
             </Fabricate>
-            <InventoryIcon texture="%ModDir:3114087512%/Content/Items/Tools/tools.png" sourcerect="254,321,58,63" />
-            <Sprite texture="%ModDir:3114087512%/Content/Items/Tools/tools.png" depth="0.54" sourcerect="408,83,24,63" origin="0.5,0.5" />
+            <InventoryIcon texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="254,321,58,63" />
+            <Sprite texture="%ModDir%/Content/Items/Tools/tools.png" depth="0.54" sourcerect="408,83,24,63" origin="0.5,0.5" />
             <Body width="20" height="65" density="9.7" />
             <ItemContainer hideitems="true" capacity="1" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true" removecontaineditemsondeconstruct="true" containedstateindicatorstyle="tank">
                 <Containable items="fixfoamprojectile" />
@@ -208,8 +208,8 @@
             </Projectile>
         </Item>
         <Item name="" identifier="fixfoamitem" category="Equipment" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="explosivecrate" allowasextracargo="true" tags="smallitem,fixfoam" Scale="1.5" noninteractable="true" hideinmenus="true">
-            <Sprite texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/FixFoam.png" sourcerect="0,0,106,109" depth="0.853" origin="0.5,0.5" />
-            <BrokenSprite texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/FixFoamBroken.png" sourcerect="0,0,106,109" depth="0.853" origin="0.5,0.5" maxcondition="50" fadein="true" />
+            <Sprite texture="%ModDir%/Content/Items/JobGear/Mechanic/FixFoam.png" sourcerect="0,0,106,109" depth="0.853" origin="0.5,0.5" />
+            <BrokenSprite texture="%ModDir%/Content/Items/JobGear/Mechanic/FixFoamBroken.png" sourcerect="0,0,106,109" depth="0.853" origin="0.5,0.5" maxcondition="50" fadein="true" />
             <Body radius="5" density="10" bodytype="static" />
             <ItemComponent characterusable="false">
                 <!-- If the item was spawned outside of a hull, remove it immediately as it would otherwise collide with the submarine and block it from moving -->
@@ -275,8 +275,8 @@
                 <RequiredItem identifier="iron" amount="1" />
                 <RequiredItem identifier="steel" amount="1" />
             </Fabricate>
-            <InventoryIcon texture="%ModDir:3114087512%/Content/Items/IR-ItemsAtlas.png" sourcerect="564,346,90,90" origin="0.5,0.5" />
-            <Sprite texture="%ModDir:3114087512%/Content/Items/IR-ItemsAtlas.png" sourcerect="392,447,162,60" depth="0.55" origin="0.5,0.5" />
+            <InventoryIcon texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="564,346,90,90" origin="0.5,0.5" />
+            <Sprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="392,447,162,60" depth="0.55" origin="0.5,0.5" />
             <Body width="160" height="20" density="30" />
             <MeleeWeapon slots="RightHand+LeftHand" controlpose="true" aimpos="45,10" handle1="-10,0" handle2="0,5" holdangle="60" reload="1" range="100" combatpriority="50" msg="ItemMsgPickUpSelect">
                 <Attack structuredamage="8" itemdamage="8" targetimpulse="10">
@@ -312,8 +312,8 @@
                 <RequiredSkill identifier="mechanical" level="20" />
                 <RequiredItem identifier="steel" amount="1" />
             </Fabricate>
-            <InventoryIcon texture="%ModDir:3114087512%/Content/Items/IR-ItemsAtlas.png" sourcerect="655,347,90,90" origin="0.5,0.5" />
-            <Sprite texture="%ModDir:3114087512%/Content/Items/IR-ItemsAtlas.png" sourcerect="392,508,169,32" depth="0.55" origin="0.5,0.7" />
+            <InventoryIcon texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="655,347,90,90" origin="0.5,0.5" />
+            <Sprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="392,508,169,32" depth="0.55" origin="0.5,0.7" />
             <Body width="166" height="20" density="30" />
             <MeleeWeapon slots="RightHand+LeftHand,Any" controlpose="true" aimpos="45,10" handle1="-10,0" handle2="0,5" holdangle="60" reload="0.9" range="100" combatpriority="20" msg="ItemMsgPickUpSelect">
                 <Attack structuredamage="8" itemdamage="16" targetimpulse="13">
@@ -352,8 +352,8 @@
                 <RequiredItem identifier="sodium" />
                 <RequiredItem identifier="sodium" />
             </Fabricate>
-            <InventoryIcon texture="%ModDir:3114087512%/Content/Items/IR-ItemsAtlas.png" sourcerect="555,446,62,62" origin="0.5,0.5" />
-            <Sprite texture="%ModDir:3114087512%/Content/Items/IR-ItemsAtlas.png" sourcerect="618,446,28,61" depth="0.55" origin="0.5,0.5" />
+            <InventoryIcon texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="555,446,62,62" origin="0.5,0.5" />
+            <Sprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="618,446,28,61" depth="0.55" origin="0.5,0.5" />
             <Body width="26" height="60" density="15" />
             <ItemComponent characterusable="false">
                 <!-- set the condition to 0 if the item was used (triggered) in a detonator -->
@@ -414,9 +414,9 @@
             </RepairTool>
         </Item>
         <Item name="Firefighter Suit" identifier="firefightersuit" category="Equipment" tags="mediumitem,fireequipment,firefightersuit,provocative" description="A must-wear for all firefighters. It fully protects you from fires, but it requires regular repairs to do so." scale="0.5" fireproof="false" allowdroppingonswapwith="clothing" impactsoundtag="impact_metal_heavy">
-            <Sprite name="Firefighter Suit" texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/firefightersuit.png" sourcerect="613,168,155,88" depth="0.55" origin="0.5,0.5" />
-            <ContainedSprite name="Firefighter Suit Behind Window" allowedcontainertags="gearcontainerwindow" texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/firefightersuit.png" sourcerect="522,30,78,209" depth="0.55" origin="-0.12,-0.14" />
-            <InventoryIcon texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/firefightersuit.png" sourcerect="620,22,108,113" origin="0.5,0.5" />
+            <Sprite name="Firefighter Suit" texture="%ModDir%/Content/Items/JobGear/Mechanic/firefightersuit.png" sourcerect="613,168,155,88" depth="0.55" origin="0.5,0.5" />
+            <ContainedSprite name="Firefighter Suit Behind Window" allowedcontainertags="gearcontainerwindow" texture="%ModDir%/Content/Items/JobGear/Mechanic/firefightersuit.png" sourcerect="522,30,78,209" depth="0.55" origin="-0.12,-0.14" />
+            <InventoryIcon texture="%ModDir%/Content/Items/JobGear/Mechanic/firefightersuit.png" sourcerect="620,22,108,113" origin="0.5,0.5" />
             <Body radius="45" width="34" density="15" />
             <Price baseprice="350" sold="false">
                 <Price storeidentifier="merchantoutpost" multiplier="0.9" minavailable="1" />
@@ -499,20 +499,20 @@
                 </StatusEffect>
             </GreaterComponent>
             <Wearable slots="InnerClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
-                <sprite name="Firefighter Suit Torso" texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" inheritsourcerect="false" origin="0.6,0.5" sourcerect="154,20,104,160" />
-                <sprite name="Firefighter Suit Right Hand" texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" inheritsourcerect="false" sourcerect="288,164,30,34" />
-                <sprite name="Firefighter Suit Left Hand" texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" inheritsourcerect="false" sourcerect="352,164,30,34" />
-                <sprite name="Firefighter Suit Right Lower Arm" texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" inheritsourcerect="false" sourcerect="284,8,40,80" />
-                <sprite name="Firefighter Suit Left Lower Arm" texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritsourcerect="false" sourcerect="345,8,40,80" spritecolor="255,255,255,255" />
-                <sprite name="Firefighter Suit Right Upper Arm" texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" inheritsourcerect="false" sourcerect="284,94,38,70" />
-                <sprite name="Firefighter Suit Left Upper Arm" texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" inheritsourcerect="false" sourcerect="346,94,38,70" />
-                <sprite name="Firefighter Suit Waist" texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" spritecolor="255,255,255,255" />
-                <sprite name="Firefighter Suit Right Thigh" texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" inheritsourcerect="false" sourcerect="10,4,64,114" />
-                <sprite name="Firefighter Suit Left Thigh" texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" rinheritorigin="false" inheritsourcerect="false" sourcerect="88,4,64,114" />
-                <sprite name="Firefighter Suit Right Leg" texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" rinheritorigin="false" inheritsourcerect="false" sourcerect="16,138,48,112" />
-                <sprite name="Firefighter Suit Left Leg" texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" rinheritorigin="false" inheritsourcerect="false" sourcerect="92,138,48,112" />
-                <sprite name="Firefighter Suit Left Shoe" texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="LeftFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" rinheritorigin="false" inheritsourcerect="false" sourcerect="274,220,60,32" />
-                <sprite name="Firefighter Suit Right Shoe" texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="RightFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" rinheritorigin="false" inheritsourcerect="false" sourcerect="340,220,60,32" />
+                <sprite name="Firefighter Suit Torso" texture="%ModDir%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" inheritsourcerect="false" origin="0.6,0.5" sourcerect="154,20,104,160" />
+                <sprite name="Firefighter Suit Right Hand" texture="%ModDir%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" inheritsourcerect="false" sourcerect="288,164,30,34" />
+                <sprite name="Firefighter Suit Left Hand" texture="%ModDir%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" inheritsourcerect="false" sourcerect="352,164,30,34" />
+                <sprite name="Firefighter Suit Right Lower Arm" texture="%ModDir%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" inheritsourcerect="false" sourcerect="284,8,40,80" />
+                <sprite name="Firefighter Suit Left Lower Arm" texture="%ModDir%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritsourcerect="false" sourcerect="345,8,40,80" spritecolor="255,255,255,255" />
+                <sprite name="Firefighter Suit Right Upper Arm" texture="%ModDir%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" inheritsourcerect="false" sourcerect="284,94,38,70" />
+                <sprite name="Firefighter Suit Left Upper Arm" texture="%ModDir%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" inheritsourcerect="false" sourcerect="346,94,38,70" />
+                <sprite name="Firefighter Suit Waist" texture="%ModDir%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="Waist" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" spritecolor="255,255,255,255" />
+                <sprite name="Firefighter Suit Right Thigh" texture="%ModDir%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="false" inheritsourcerect="false" sourcerect="10,4,64,114" />
+                <sprite name="Firefighter Suit Left Thigh" texture="%ModDir%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" rinheritorigin="false" inheritsourcerect="false" sourcerect="88,4,64,114" />
+                <sprite name="Firefighter Suit Right Leg" texture="%ModDir%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" rinheritorigin="false" inheritsourcerect="false" sourcerect="16,138,48,112" />
+                <sprite name="Firefighter Suit Left Leg" texture="%ModDir%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" rinheritorigin="false" inheritsourcerect="false" sourcerect="92,138,48,112" />
+                <sprite name="Firefighter Suit Left Shoe" texture="%ModDir%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="LeftFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" rinheritorigin="false" inheritsourcerect="false" sourcerect="274,220,60,32" />
+                <sprite name="Firefighter Suit Right Shoe" texture="%ModDir%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="RightFoot" sound="footstep_armor_heavy" hidelimb="true" inherittexturescale="true" hideotherwearables="true" rinheritorigin="false" inheritsourcerect="false" sourcerect="340,220,60,32" />
                 <damagemodifier armorsector="0.0,360.0" afflictiontypes="burn" damagemultiplier="0.0" damagesound="" deflectprojectiles="true" />
                 <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="radiationsickness,lethalradiation" damagemultiplier="0.80" damagesound="LimbArmor" />
                 <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,lacerations,bitewounds" damagemultiplier="0.8" />
@@ -536,9 +536,9 @@
             <!-- SUIT INVENTORY -->
             <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="tank" containedstateindicatorslot="0">
                 <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
-                <SlotIcon slotindex="1" texture="%ModDir:3114087512%/Content/UI/IR-IconsAtlas.png" sourcerect="765,0,85,85" origin="0.5,0.5" />
-                <SlotIcon slotindex="2" texture="%ModDir:3114087512%/Content/UI/IR-IconsAtlas.png" sourcerect="913,0,111,118" origin="0.5,0.5" />
-                <SlotIcon slotindex="3" texture="%ModDir:3114087512%/Content/UI/IR-IconsAtlas.png" sourcerect="913,0,111,118" origin="0.5,0.5" />
+                <SlotIcon slotindex="1" texture="%ModDir%/Content/UI/IR-IconsAtlas.png" sourcerect="765,0,85,85" origin="0.5,0.5" />
+                <SlotIcon slotindex="2" texture="%ModDir%/Content/UI/IR-IconsAtlas.png" sourcerect="913,0,111,118" origin="0.5,0.5" />
+                <SlotIcon slotindex="3" texture="%ModDir%/Content/UI/IR-IconsAtlas.png" sourcerect="913,0,111,118" origin="0.5,0.5" />
                 <Containable items="weldingtoolfuel" excludeditems="oxygenitetank" />
                 <Containable items="oxygensource" excludeditems="oxygenitetank">
                     <StatusEffect type="OnWearing" target="Contained">
@@ -562,10 +562,10 @@
             <aitarget maxsightrange="1500" />
         </Item>
         <Item name="Firefighter Helmet" identifier="firefighterhelmet" category="Equipment" tags="mediumitem,fireequipment,firefighterhelmet,provocative" scale="0.5" fireproof="false" description="A must-wear for all firefighters. It fully protects your head from fires, but it requires regular repairs to do so." allowdroppingonswapwith="diving" impactsoundtag="impact_metal_light" botpriority="1" hideinmenus="false">
-            <Sprite name="Helmet Item" texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/firefightersuit.png" sourcerect="396,16,82,82" depth="0.55" origin="0.5,0.5" />
+            <Sprite name="Helmet Item" texture="%ModDir%/Content/Items/JobGear/Mechanic/firefightersuit.png" sourcerect="396,16,82,82" depth="0.55" origin="0.5,0.5" />
             <!-- Sprite that makes the helmet invisible when contained in diving suit lockers to prevent it showing up floating in mid-air -->
             <ContainedSprite name="Helmet Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="Content/Items/Jobgear/headgears.png" sourcerect="0,0,1,1" depth="0.55" origin="-0.12,-0.13" />
-            <InventoryIcon texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/firefightersuit.png" sourcerect="396,16,82,82" origin="0.5,0.5" />
+            <InventoryIcon texture="%ModDir%/Content/Items/JobGear/Mechanic/firefightersuit.png" sourcerect="396,16,82,82" origin="0.5,0.5" />
             <Price baseprice="120" sold="false">
                 <Price storeidentifier="merchantoutpost" multiplier="0.9" minavailable="1" />
                 <Price storeidentifier="merchantcity" multiplier="0.85" minavailable="1" />
@@ -612,10 +612,10 @@
                 <StatusEffect type="OnWearing" target="limb" targetlimb="head" interval="6" duration="0.5" comparison="And">
                     <Conditional InWater="true" />
                     <Conditional IsDead="false" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Diving/DivingSuitBreathUnderwater1.ogg" range="400" volume="1.5" selectionmode="Random" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Diving/DivingSuitBreathUnderwater2.ogg" range="400" volume="1.5" selectionmode="Random" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Diving/DivingSuitBreathUnderwater3.ogg" range="400" volume="1.5" selectionmode="Random" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Diving/DivingSuitBreathUnderwater4.ogg" range="400" volume="1.5" selectionmode="Random" />
+                    <Sound file="%ModDir%/Content/Items/Diving/DivingSuitBreathUnderwater1.ogg" range="400" volume="1.5" selectionmode="Random" />
+                    <Sound file="%ModDir%/Content/Items/Diving/DivingSuitBreathUnderwater2.ogg" range="400" volume="1.5" selectionmode="Random" />
+                    <Sound file="%ModDir%/Content/Items/Diving/DivingSuitBreathUnderwater3.ogg" range="400" volume="1.5" selectionmode="Random" />
+                    <Sound file="%ModDir%/Content/Items/Diving/DivingSuitBreathUnderwater4.ogg" range="400" volume="1.5" selectionmode="Random" />
                     <ParticleEmitter particle="risingbubbles" velocitymin="10.0" velocitymax="10.0" scalemin="0.6" scalemax="0.6" particlespersecond="20" />
                 </StatusEffect>
                 <!-- damage the seal over time if the suit is sealed -->
@@ -639,14 +639,14 @@
                     <Conditional timeframe="eq 1" />
                     <Conditional InWater="false" />
                     <Conditional vitality="lte 0" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Diving/OpenValve.ogg" volume="3.5" range="150" />
+                    <Sound file="%ModDir%/Content/Items/Diving/OpenValve.ogg" volume="3.5" range="150" />
                 </StatusEffect>
                 <!-- open the pressure valve if the wearer is unconcious while not in water and the pressure valve is closed | NT compatibility -->
                 <StatusEffect type="OnWearing" target="This,Character" timeframe="0" setvalue="true" interval="0.1" comparison="And">
                     <Conditional timeframe="eq 1" />
                     <Conditional InWater="false" />
                     <Conditional sym_unconsciousness="gt 0" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Diving/OpenValve.ogg" volume="3.5" range="150" />
+                    <Sound file="%ModDir%/Content/Items/Diving/OpenValve.ogg" volume="3.5" range="150" />
                 </StatusEffect>
             </GreaterComponent>
             <!-- Helmet Light Interface -->
@@ -663,13 +663,13 @@
                 <Button text="interaction.switchtohulloxygen">
                     <StatusEffect type="OnUse" target="This" timeframe="0" setvalue="true">
                         <Conditional timeframe="eq 1" />
-                        <Sound file="%ModDir:3114087512%/Content/Items/Diving/OpenValve.ogg" volume="3.5" range="150" />
+                        <Sound file="%ModDir%/Content/Items/Diving/OpenValve.ogg" volume="3.5" range="150" />
                     </StatusEffect>
                 </Button>
                 <Button text="interaction.switchtosuitoxygen">
                     <StatusEffect type="OnUse" target="This" timeframe="1" setvalue="true">
                         <Conditional timeframe="eq 0" />
-                        <Sound file="%ModDir:3114087512%/Content/Items/Diving/CloseValve.ogg" volume="3.5" range="150" />
+                        <Sound file="%ModDir%/Content/Items/Diving/CloseValve.ogg" volume="3.5" range="150" />
                     </StatusEffect>
                 </Button>
             </CustomInterface>
@@ -700,7 +700,7 @@
                 </StatusEffect>
             </Projectile>
             <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
-                <sprite name="Firefighter Suit Helmet Wearable" texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="Head" inheritlimbdepth="true" depth="0.51" inheritscale="true" ignorelimbscale="true" scale="1.0" hidelimb="true" hideotherwearables="true" inheritsourcerect="false" sourcerect="396,16,82,82" origin="0.5,0.5" spritecolor="255,255,255,255">
+                <sprite name="Firefighter Suit Helmet Wearable" texture="%ModDir%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="Head" inheritlimbdepth="true" depth="0.51" inheritscale="true" ignorelimbscale="true" scale="1.0" hidelimb="true" hideotherwearables="true" inheritsourcerect="false" sourcerect="396,16,82,82" origin="0.5,0.5" spritecolor="255,255,255,255">
                     <LightComponent range="700.0" lightcolor="250,224,165,175" powerconsumption="10" IsOn="false" allowingameediting="false">
                         <Upgrade gameversion="0.1300.0.3" allowingameediting="false" />
                         <StatusEffect type="OnWearing" target="This" Voltage="1.0" targetslot="0" setvalue="true">
@@ -735,8 +735,8 @@
             <aitarget maxsightrange="1500" />
         </Item>
         <Item name="Bot Firefighter Helmet" identifier="botfirefighterhelmet" scale="0.3" fireproof="true" description="" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_light" botpriority="1" hideinmenus="true" noninteractable="true">
-            <InventoryIcon texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/firefightersuit.png" sourcerect="396,16,82,82" origin="0.5,0.5" />
-            <Sprite name="Helmet Item" texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/firefightersuit.png" sourcerect="396,16,82,82" depth="0.55" origin="0.5,0.5" />
+            <InventoryIcon texture="%ModDir%/Content/Items/JobGear/Mechanic/firefightersuit.png" sourcerect="396,16,82,82" origin="0.5,0.5" />
+            <Sprite name="Helmet Item" texture="%ModDir%/Content/Items/JobGear/Mechanic/firefightersuit.png" sourcerect="396,16,82,82" depth="0.55" origin="0.5,0.5" />
             <ContainedSprite name="Firefighter Helmet Behind Window" allowedcontainertags="divingsuitcontainerwindow" texture="Content/Items/Jobgear/headgears.png" sourcerect="0,0,1,1" depth="0.55" origin="-0.12,-0.13" />
             <Body radius="45" width="34" density="20" />
             <ItemComponent canbeselected="false" allowingameediting="false">
@@ -752,17 +752,17 @@
                 <!-- play underwater breathing sound and create bubbles when in water -->
                 <StatusEffect type="OnWearing" target="limb" targetlimb="head" interval="6" duration="0.5">
                     <Conditional InWater="true" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Diving/DivingSuitBreathUnderwater1.ogg" range="400" volume="1.5" selectionmode="Random" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Diving/DivingSuitBreathUnderwater2.ogg" range="400" volume="1.5" selectionmode="Random" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Diving/DivingSuitBreathUnderwater3.ogg" range="400" volume="1.5" selectionmode="Random" />
-                    <Sound file="%ModDir:3114087512%/Content/Items/Diving/DivingSuitBreathUnderwater4.ogg" range="400" volume="1.5" selectionmode="Random" />
+                    <Sound file="%ModDir%/Content/Items/Diving/DivingSuitBreathUnderwater1.ogg" range="400" volume="1.5" selectionmode="Random" />
+                    <Sound file="%ModDir%/Content/Items/Diving/DivingSuitBreathUnderwater2.ogg" range="400" volume="1.5" selectionmode="Random" />
+                    <Sound file="%ModDir%/Content/Items/Diving/DivingSuitBreathUnderwater3.ogg" range="400" volume="1.5" selectionmode="Random" />
+                    <Sound file="%ModDir%/Content/Items/Diving/DivingSuitBreathUnderwater4.ogg" range="400" volume="1.5" selectionmode="Random" />
                     <ParticleEmitter particle="risingbubbles" velocitymin="10.0" velocitymax="10.0" scalemin="0.6" scalemax="0.6" particlespersecond="20" />
                 </StatusEffect>
             </ItemComponent>
             <!-- GreaterComponent used to toggle between releasing or building up pressure by changing and checking for the timeframe value (1 = closed valve, 0 = open valve) -->
             <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0" />
             <Wearable slots="OuterClothes" msg="ItemMsgEquipSelect" displaycontainedstatus="true" canbeselected="false" canbepicked="true" pickkey="Select">
-                <sprite name="Firefighter Suit Helmet Wearable" texture="%ModDir:3114087512%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="Head" inheritlimbdepth="true" depth="0.51" inheritscale="true" ignorelimbscale="true" scale="1.0" hidelimb="true" hideotherwearables="true" inheritsourcerect="false" sourcerect="396,16,82,82" origin="0.5,0.5" spritecolor="255,255,255,255">
+                <sprite name="Firefighter Suit Helmet Wearable" texture="%ModDir%/Content/Items/JobGear/Mechanic/firefightersuit.png" limb="Head" inheritlimbdepth="true" depth="0.51" inheritscale="true" ignorelimbscale="true" scale="1.0" hidelimb="true" hideotherwearables="true" inheritsourcerect="false" sourcerect="396,16,82,82" origin="0.5,0.5" spritecolor="255,255,255,255">
                     <LightComponent range="700.0" lightcolor="250,224,165,175" powerconsumption="0" IsOn="true" allowingameediting="false">
                         <Upgrade gameversion="0.1300.0.3" allowingameediting="false" />
                         <LightTexture texture="Content/Lights/divinghelmetlight.png" origin="0.05, 0.5" size="1.0,1.0" />
