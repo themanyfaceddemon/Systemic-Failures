@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Immersive Repairs" steamworkshopid="3114087512" corepackage="false" modversion="1.0.35" gameversion="1.11.4.1" installtime="1765660079" expectedhash="64749708C2DF3326309807FDE79BA198">
+<contentpackage name="Immersive Repairs" corepackage="false" modversion="1.0.35" gameversion="1.11.4.1">
   <Afflictions file="%ModDir%/Content/Afflictions.xml" />
   <Item file="%ModDir%/Content/Items/Compatibility/ekutility_tools.xml" />
   <Item file="%ModDir%/Content/Items/Containers/containers.xml" />
@@ -22,8 +22,5 @@
   <Talents file="%ModDir%/Content/Talents/Mechanic/TalentsMechanic.xml" />
   <TalentTrees file="%ModDir%/Content/Talents/TalentTrees.xml" />
   <Text file="%ModDir%/Content/Texts/English.xml" />
-  <Text file="%ModDir%/Content/Texts/German.xml" />
-  <Text file="%ModDir%/Content/Texts/SimplifiedChinese.xml" />
   <UpgradeModules file="%ModDir%/Content/Upgrades/Upgrades.xml" />
-  <Submarine file="%ModDir%/Bulker - Peshu.sub" />
 </contentpackage>

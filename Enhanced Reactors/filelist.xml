@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="Enhanced Reactors" steamworkshopid="3045796581" corepackage="false" modversion="1.0.35" gameversion="1.10.7.2" installtime="1763206527" expectedhash="B773CC95F89977CC2BB0519DC84C03EE">
+<contentpackage name="Enhanced Reactors" corepackage="false" modversion="1.0.35" gameversion="1.10.7.2">
   <Afflictions file="%ModDir%/Content/Afflictions.xml" />
   <Item file="%ModDir%/Content/Items/Containers/containers.xml" />
   <Item file="%ModDir%/Content/Items/Effects/effects.xml" />
@@ -20,8 +20,5 @@
   <Sounds file="%ModDir%/Content/Sounds/sounds.xml" />
   <Talents file="%ModDir%/Content/Talents/Engineer/TalentsEngineer.xml" />
   <Text file="%ModDir%/Content/Texts/English.xml" />
-  <Text file="%ModDir%/Content/Texts/German.xml" />
   <Text file="%ModDir%/Content/Texts/Russian.xml" />
-  <Text file="%ModDir%/Content/Texts/SimplifiedChinese.xml" />
-  <Text file="%ModDir%/Content/Texts/TraditionalChinese.xml" />
 </contentpackage>
