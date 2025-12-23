@@ -354,15 +354,6 @@
                     <Conditional isPlayer="eq true" />
                     <SpawnItem identifier="effect_reactorcritical" spawnposition="ThisInventory" spawnifinventoryfull="false" spawnifcantbecontained="false" />
                 </StatusEffect>
-                <!-- explode if reactor is still outputting energy while trying to repair | DISABLED
-        <StatusEffect type="OnSuccess" target="This,Character" condition="0.0" setvalue="true" comparison="And">
-          <Conditional temperature="gt 1" />
-          <Conditional isPlayer="eq true" />
-        </StatusEffect>
-        <StatusEffect type="OnFailure" target="This,Character" condition="0.0" setvalue="true" comparison="And">
-          <Conditional temperature="gt 1" />
-          <Conditional isPlayer="eq true" />
-        </StatusEffect>-->
             </Repairable>
         </Item>
     </Override>
@@ -617,15 +608,6 @@
                     <Conditional isPlayer="eq true" />
                     <SpawnItem identifier="effect_reactorcritical" spawnposition="ThisInventory" spawnifinventoryfull="false" spawnifcantbecontained="false" />
                 </StatusEffect>
-                <!-- explode if reactor is still outputting energy while trying to repair | DISABLED
-        <StatusEffect type="OnSuccess" target="This,Character" condition="0.0" setvalue="true" comparison="And">
-          <Conditional temperature="gt 1" />
-          <Conditional isPlayer="eq true" />
-        </StatusEffect>
-        <StatusEffect type="OnFailure" target="This,Character" condition="0.0" setvalue="true" comparison="And">
-          <Conditional temperature="gt 1" />
-          <Conditional isPlayer="eq true" />
-        </StatusEffect>-->
             </Repairable>
             <SkillRequirementHint identifier="electrical" level="100" />
         </Item>
