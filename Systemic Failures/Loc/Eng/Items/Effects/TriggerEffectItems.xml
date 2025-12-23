@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+    <entityname.effect_trigger_radiation_low>Triggered Effect - Low Radiation (10m)</entityname.effect_trigger_radiation_low>
+    <entitydescription.effect_trigger_radiation_low>Gives off radiation within a 10m radius when active.Takes walls, doors and character distance from the center into account.\nRadiation and contamination per second at the center: 0.5\nCan be wired to turn it on/off.</entitydescription.effect_trigger_radiation_low>
+
+    <entityname.effect_trigger_radiation_medium>Triggered Effect - Medium Radiation (10m)</entityname.effect_trigger_radiation_medium>
+    <entitydescription.effect_trigger_radiation_medium>Gives off radiation within a 10m radius when active.\nTakes walls, doors and character distance from the center into account.\nRadiation and contamination per second at the center: 1.0\nCan be wired to turn it on/off.</entitydescription.effect_trigger_radiation_medium>
+
+    <entityname.effect_trigger_radiation_high>Triggered Effect - High Radiation (10m)</entityname.effect_trigger_radiation_high>
+    <entitydescription.effect_trigger_radiation_high>Gives off radiation within a 10m radius when active.\nTakes walls, doors and character distance from the center into account.\nRadiation and contamination per second at the center: 1.5\nCan be wired to turn it on/off.</entitydescription.effect_trigger_radiation_high>
+</infotexts>

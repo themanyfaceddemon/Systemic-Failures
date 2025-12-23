@@ -5,7 +5,16 @@
     <!-- Предметы -->
     <Item file="%ModDir%/Items/Containers/containers.xml" />
 
+    <!-- "Эффекты" -->
+    <Item file="%ModDir%/Items/Effects/effects.xml" />
+    <Item file="%ModDir%/Items/Effects/TriggerEffectItems.xml" />
+
     <!-- Локализация -->
     <!-- Английская -->
     <Text file="%ModDir%/Loc/Eng/Items/Containers/containers.xml" />
+    <Text file="%ModDir%/Loc/Eng/Items/Effects/TriggerEffectItems.xml" />
+
+    <!-- Русская -->
+    <Text file="%ModDir%/Loc/Rus/Items/Containers/containers.xml" />
+    <Text file="%ModDir%/Loc/Rus/Items/Effects/TriggerEffectItems.xml" />
 </contentpackage>
