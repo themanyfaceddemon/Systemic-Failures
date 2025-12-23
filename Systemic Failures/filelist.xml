@@ -1,4 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <contentpackage name="Systemic Failures" corepackage="false" modversion="0.0.1" gameversion="1.11.4.1">
-    <RandomEvents file="%ModDir%/Content/Events/Events.xml" />
+    <RandomEvents file="%ModDir%/Events/FixReactors.xml" />
 </contentpackage>
