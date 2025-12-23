@@ -41,4 +41,4 @@ Hook.Add("SF.Random", function(effect, deltaTime, item, targets, worldPosition, 
     end
 end)
 
-print("SF ItemHooks init done")
+print("SFRandom init done")
