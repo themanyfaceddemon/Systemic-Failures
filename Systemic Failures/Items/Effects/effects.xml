@@ -94,7 +94,7 @@
 
             <StatusEffect type="Always" target="Parent">
                 <ParticleEmitter particle="spark" particleburstamount="5" particlespersecond="5" anglemin="0" anglemax="359" velocitymin="100" velocitymax="500" particleburstinterval="2" scalemin="0.5" scalemax="1" mincondition="0.0" maxcondition="15.0" />
-                <Sound file="%ModDir%/Content/Items/Reactor/ReactorAlarmCritical.ogg" volume="3.0" range="4000" loop="true" />
+                <Sound file="%ModDir%/Items/Reactor/ReactorAlarmCritical.ogg" volume="3.0" range="4000" loop="true" />
             </StatusEffect>
 
             <StatusEffect type="Always" target="this" interval="0.5" spawnitemrandomly="true">

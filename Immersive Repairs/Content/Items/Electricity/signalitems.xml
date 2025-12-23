@@ -17,7 +17,7 @@
             </Holdable>
             <ItemComponent>
                 <StatusEffect type="OnActive" target="This">
-                    <sound file="%ModDir%/Content/Items/Electricity/ShinyMall.ogg" type="OnUse" range="500" loop="true" volume="1.0" />
+                    <sound file="%ModDir%/Items/Electricity/ShinyMall.ogg" type="OnUse" range="500" loop="true" volume="1.0" />
                 </StatusEffect>
             </ItemComponent>
             <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
@@ -44,7 +44,7 @@
             <Body radius="14" width="60" density="15" />
             <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
             <Wire>
-                <WireSprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="936,271,16,12" depth="0.855" origin="0.5,0.5" />
+                <WireSprite texture="%ModDir%/Items/IR-ItemsAtlas.png" sourcerect="936,271,16,12" depth="0.855" origin="0.5,0.5" />
             </Wire>
         </Item>
         <Item name="" identifier="redwire" category="Electrical" Tags="smallitem,wire,electricalwire" maxstacksize="32" maxstacksizecharacterinventory="8" spritecolor="254,23,17,255" InventoryIconColor="254,23,17,255" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
@@ -68,7 +68,7 @@
             <Body radius="14" width="60" density="15" />
             <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
             <Wire>
-                <WireSprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="936,271,16,12" depth="0.855" origin="0.5,0.5" />
+                <WireSprite texture="%ModDir%/Items/IR-ItemsAtlas.png" sourcerect="936,271,16,12" depth="0.855" origin="0.5,0.5" />
             </Wire>
         </Item>
         <Item name="" identifier="bluewire" category="Electrical" Tags="smallitem,wire,electricalwire" maxstacksize="32" maxstacksizecharacterinventory="8" spritecolor="51,121,173,255" InventoryIconColor="51,121,173,255" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
@@ -92,7 +92,7 @@
             <Body radius="14" width="60" density="15" />
             <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
             <Wire>
-                <WireSprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="936,271,16,12" depth="0.855" origin="0.5,0.5" />
+                <WireSprite texture="%ModDir%/Items/IR-ItemsAtlas.png" sourcerect="936,271,16,12" depth="0.855" origin="0.5,0.5" />
             </Wire>
         </Item>
         <Item name="" identifier="orangewire" category="Electrical" Tags="smallitem,wire,electricalwire" maxstacksize="32" maxstacksizecharacterinventory="8" spritecolor="255,140,13,255" InventoryIconColor="255,140,13,255" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
@@ -116,7 +116,7 @@
             <Body radius="14" width="60" density="15" />
             <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
             <Wire>
-                <WireSprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="936,271,16,12" depth="0.855" origin="0.5,0.5" />
+                <WireSprite texture="%ModDir%/Items/IR-ItemsAtlas.png" sourcerect="936,271,16,12" depth="0.855" origin="0.5,0.5" />
             </Wire>
         </Item>
         <Item name="" identifier="greenwire" category="Electrical" Tags="smallitem,wire,electricalwire" maxstacksize="32" maxstacksizecharacterinventory="8" spritecolor="56,143,111,255" InventoryIconColor="56,143,111,255" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
@@ -140,7 +140,7 @@
             <Body radius="14" width="60" density="15" />
             <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
             <Wire>
-                <WireSprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="936,271,16,12" depth="0.855" origin="0.5,0.5" />
+                <WireSprite texture="%ModDir%/Items/IR-ItemsAtlas.png" sourcerect="936,271,16,12" depth="0.855" origin="0.5,0.5" />
             </Wire>
         </Item>
         <Item name="" identifier="blackwire" category="Electrical" Tags="smallitem,wire,electricalwire" maxstacksize="32" maxstacksizecharacterinventory="8" spritecolor="50,50,50,255" InventoryIconColor="50,50,50,255" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
@@ -164,7 +164,7 @@
             <Body radius="14" width="60" density="15" />
             <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
             <Wire>
-                <WireSprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="936,271,16,12" depth="0.855" origin="0.5,0.5" />
+                <WireSprite texture="%ModDir%/Items/IR-ItemsAtlas.png" sourcerect="936,271,16,12" depth="0.855" origin="0.5,0.5" />
             </Wire>
         </Item>
         <Item name="" identifier="brownwire" category="Electrical" Tags="smallitem,wire,electricalwire" maxstacksize="32" maxstacksizecharacterinventory="8" spritecolor="123,77,62,255" InventoryIconColor="123,77,62,255" canbepicked="true" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
@@ -188,7 +188,7 @@
             <Body radius="14" width="60" density="15" />
             <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
             <Wire>
-                <WireSprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="936,271,16,12" depth="0.855" origin="0.5,0.5" />
+                <WireSprite texture="%ModDir%/Items/IR-ItemsAtlas.png" sourcerect="936,271,16,12" depth="0.855" origin="0.5,0.5" />
             </Wire>
         </Item>
     </Items>

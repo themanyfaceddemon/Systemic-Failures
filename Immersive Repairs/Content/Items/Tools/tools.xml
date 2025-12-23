@@ -21,8 +21,8 @@
                 <Item identifier="aluminium" />
                 <Item identifier="lightcomponent" />
             </Deconstruct>
-            <InventoryIcon texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="446,48,65,47" origin="0.5,0.5" />
-            <Sprite texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="446,48,65,47" depth="0.55" origin="0.5,0.5" />
+            <InventoryIcon texture="%ModDir%/Items/Tools/tools.png" sourcerect="446,48,65,47" origin="0.5,0.5" />
+            <Sprite texture="%ModDir%/Items/Tools/tools.png" sourcerect="446,48,65,47" depth="0.55" origin="0.5,0.5" />
             <Body width="64" height="46" density="10" />
             <GreaterComponent canbeselected="false" canbepicked="false" allowingameediting="false" timeframe="0" />
             <LightComponent LightColor="0.5,0.5,0.5,1.0" directional="true" Flicker="0.02" range="1000" powerconsumption="10" IsOn="true" comparison="Or">
@@ -40,7 +40,7 @@
             </LightComponent>
             <LightComponent LightColor="0.5,0.5,0.5,1.0" directional="false" Flicker="0.02" range="500" powerconsumption="10" IsOn="true" comparison="Or">
                 <ActiveConditional HasTag="radial" targetcontaineditem="true" />
-                <Sprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="280,305,65,47" origin="0.5,0.28" />
+                <Sprite texture="%ModDir%/Items/IR-ItemsAtlas.png" sourcerect="280,305,65,47" origin="0.5,0.28" />
                 <StatusEffect type="OnActive" target="This" flicker="0.8" pulsefrequency="0.1" pulseamount="0.5" setvalue="true">
                     <Conditional condition="lt 3" targetslot="0" targetcontaineditem="true" />
                 </StatusEffect>
@@ -91,10 +91,10 @@
             <Upgrade gameversion="0.10.0.0" scale="0.5" />
         </Item>
         <Item name="Safe Cracker" identifier="safecracker" category="Equipment" Tags="mediumitem,safecracker" cargocontaineridentifier="metalcrate" description="An old repurposed mining drill, modified to drill open safes and cabinets." Scale="0.5" impactsoundtag="impact_metal_heavy" isshootable="true" requireaimtouse="true">
-            <Sprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="323,648,219,100" depth="0.55" origin="0.5,0.5" />
-            <ContainedSprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" usewhenattached="true" decorativespritebehavior="HideWhenNotVisible" depth="0.55" sourcerect="206,555,117,194" origin="0.5,0.5" />
+            <Sprite texture="%ModDir%/Items/IR-ItemsAtlas.png" sourcerect="323,648,219,100" depth="0.55" origin="0.5,0.5" />
+            <ContainedSprite texture="%ModDir%/Items/IR-ItemsAtlas.png" usewhenattached="true" decorativespritebehavior="HideWhenNotVisible" depth="0.55" sourcerect="206,555,117,194" origin="0.5,0.5" />
             <!-- decorative sprite animated to shake if the device is active -->
-            <DecorativeSprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" depth="0.549" sourcerect="543,627,97,124" canflipx="true" origin="0.5,0.53" offset="5,5" offsetanim="Noise" offsetanimspeed="5.0">
+            <DecorativeSprite texture="%ModDir%/Items/IR-ItemsAtlas.png" depth="0.549" sourcerect="543,627,97,124" canflipx="true" origin="0.5,0.53" offset="5,5" offsetanim="Noise" offsetanimspeed="5.0">
                 <IsActiveConditional IsActive="true" targetitemcomponent="LightComponent" />
             </DecorativeSprite>
             <Body width="160" radius="45" density="20" />
@@ -131,7 +131,7 @@
                 <StatusEffect type="OnActive" target="Contained" condition="-0.8" interval="1" disabledeltatime="true" />
                 <!-- constantly create an explosion when active to damage the safe and play sound in a 15m range -->
                 <StatusEffect type="OnActive" target="This" interval="0.1" duration="0.11">
-                    <Sound file="%ModDir%/Content/Items/Tools/safecrackerloop.ogg" loop="true" volume="2" range="1500" />
+                    <Sound file="%ModDir%/Items/Tools/safecrackerloop.ogg" loop="true" volume="2" range="1500" />
                     <Explosion range="20.0" itemdamage="4.0" structuredamage="0" stun="0.0" force="0.1" flames="false" flash="false" shockwave="false" sparks="true" underwaterbubble="false" camerashake="0" playtinnitus="false" applyFireEffects="false" smoke="false" />
                 </StatusEffect>
                 <!-- THIS BULLSHIT TARGETS ALL ITEMS REGARDLESS OF TAGS ALL THE TIME IF THIS ITEM IS ATTACHED TO A WALL 
@@ -141,13 +141,13 @@
                 <!-- when active, check for the "crackedsafe" tag which gets applied by the safe as soon as it breaks to turn the device off if the safe was cracked open -->
                 <StatusEffect type="OnActive" target="This" IsOn="false" setvalue="true" interval="0.5" disabledeltatime="true">
                     <Conditional HasStatusTag="crackedsafe" />
-                    <Sound file="%ModDir%/Content/Items/Tools/safecrackerend.ogg" loop="false" volume="2" range="1500" />
+                    <Sound file="%ModDir%/Items/Tools/safecrackerend.ogg" loop="false" volume="2" range="1500" />
                 </StatusEffect>
                 <!-- when active, turn the device off if the battery runs out -->
                 <StatusEffect type="OnActive" target="This" IsOn="false" setvalue="true" comparison="And">
                     <Conditional IsOn="true" />
                     <Conditional Voltage="lt 0.9" />
-                    <Sound file="%ModDir%/Content/Items/Tools/safecrackerend.ogg" loop="false" volume="2" range="1500" />
+                    <Sound file="%ModDir%/Items/Tools/safecrackerend.ogg" loop="false" volume="2" range="1500" />
                 </StatusEffect>
                 <!-- trigger event to arrest players for using the device on an outpost -->
                 <StatusEffect type="OnActive" target="This" oneshot="true">
@@ -159,7 +159,7 @@
                 <StatusEffect type="OnPicked" Target="This" IsOn="false" setvalue="true" comparison="And">
                     <Conditional IsOn="true" />
                     <Conditional Voltage="gt 0" />
-                    <Sound file="%ModDir%/Content/Items/Tools/safecrackerend.ogg" loop="false" volume="2" range="1500" />
+                    <Sound file="%ModDir%/Items/Tools/safecrackerend.ogg" loop="false" volume="2" range="1500" />
                 </StatusEffect>
                 <!-- turn the device off -->
                 <StatusEffect type="OnPicked" Target="This" IsOn="false" spawnedincurrentoutpost="true" allowstealing="false" setvalue="true" />
@@ -173,7 +173,7 @@
                     <StatusEffect type="OnUse" target="This" IsOn="false" setvalue="true" comparison="And">
                         <Conditional IsOn="true" />
                         <Conditional Voltage="gt 0" />
-                        <Sound file="%ModDir%/Content/Items/Tools/safecrackerend.ogg" loop="false" volume="2" range="1500" />
+                        <Sound file="%ModDir%/Items/Tools/safecrackerend.ogg" loop="false" volume="2" range="1500" />
                     </StatusEffect>
                     <StatusEffect type="OnUse" target="This" IsOn="false" setvalue="true" />
                 </Button>
@@ -214,9 +214,9 @@
                 <RequiredItem identifier="steel" amount="2" />
                 <RequiredItem identifier="plastic" amount="2" />
             </Fabricate>
-            <InventoryIcon texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="658,548,195,195" origin="0.5,0.5" />
-            <Sprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="658,445,258,51" depth="0.55" origin="0.5,0.5" />
-            <DecorativeSprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="688,496,229,51" depth="0.551" origin="0.5,0.5" offset="8,0" offsetanim="Sine" offsetanimspeed="55.0">
+            <InventoryIcon texture="%ModDir%/Items/IR-ItemsAtlas.png" sourcerect="658,548,195,195" origin="0.5,0.5" />
+            <Sprite texture="%ModDir%/Items/IR-ItemsAtlas.png" sourcerect="658,445,258,51" depth="0.55" origin="0.5,0.5" />
+            <DecorativeSprite texture="%ModDir%/Items/IR-ItemsAtlas.png" sourcerect="688,496,229,51" depth="0.551" origin="0.5,0.5" offset="8,0" offsetanim="Sine" offsetanimspeed="55.0">
                 <AnimationConditional Voltage="gt 0.5" targetitemcomponent="LightComponent" />
             </DecorativeSprite>
             <Body radius="24" width="210" density="25" />
@@ -225,7 +225,7 @@
                 <StatusEffect type="OnActive" target="This" IsOn="false" setvalue="true" comparison="And">
                     <Conditional IsOn="true" />
                     <Conditional Voltage="lt 0.9" />
-                    <Sound file="%ModDir%/Content/Items/Tools/safecrackerend.ogg" loop="false" volume="2" range="1500" />
+                    <Sound file="%ModDir%/Items/Tools/safecrackerend.ogg" loop="false" volume="2" range="1500" />
                 </StatusEffect>
             </LightComponent>
             <Holdable slots="Any,RightHand+LeftHand" controlpose="true" aimpos="75,-5" holdpos="70,-15" holdangle="340" handle1="-80,0" handle2="-41,-10" msg="ItemMsgPickUpSelect">
@@ -249,7 +249,7 @@
                 </StatusEffect>
                 <StatusEffect type="OnUse" target="This" IsOn="true" voltage="1.0" setvalue="true" interval="0.1" duration="0.11">
                     <RequiredItem items="mobilebattery" type="Contained" />
-                    <Sound file="%ModDir%/Content/Items/Tools/safecrackerloop.ogg" loop="true" volume="2" range="1500" />
+                    <Sound file="%ModDir%/Items/Tools/safecrackerloop.ogg" loop="true" volume="2" range="1500" />
                     <Explosion range="100" force="0.5" itemdamage="0" structuredamage="0" ignorecover="true" ballastfloradamage="0" camerashake="1" camerashakerange="100" explosiondamage="0" flames="false" smoke="false" shockwave="false" sparks="false" flash="false" underwaterbubble="false" playtinnitus="false" />
                 </StatusEffect>
                 <ParticleEmitter particle="bubbles" scalemin="0.6" scalemax="0.6" particlespersecond="20" />
@@ -444,13 +444,13 @@
                 <Price storeidentifier="merchantmine" multiplier="0.9" minavailable="10" />
                 <Price storeidentifier="merchantengineering" minavailable="5" multiplier="0.9" />
             </Price>
-            <InventoryIcon texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="0,202,135,88" origin="0.5,0.5" />
+            <InventoryIcon texture="%ModDir%/Items/Tools/tools.png" sourcerect="0,202,135,88" origin="0.5,0.5" />
             <!-- Held Sprite-->
-            <Sprite texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="0,0,148,201" depth="0.55" origin="0.5,0.5" />
+            <Sprite texture="%ModDir%/Items/Tools/tools.png" sourcerect="0,0,148,201" depth="0.55" origin="0.5,0.5" />
             <!-- Vanilla Welding Tool as BrokenSprite -->
             <BrokenSprite texture="Content/Items/Tools/tools.png" sourcerect="0,3,152,88" depth="0.55" origin="0.5,0.5" maxcondition="50" fadein="false" />
             <!-- Dropped State Sprite -->
-            <BrokenSprite texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="149,0,123,71" depth="0.55" origin="0.5,0.5" maxcondition="0" fadein="false" />
+            <BrokenSprite texture="%ModDir%/Items/Tools/tools.png" sourcerect="149,0,123,71" depth="0.55" origin="0.5,0.5" maxcondition="0" fadein="false" />
             <!-- the item takes 10 seconds to break down in a deconstructor and turns into steel and plastic -->
             <Deconstruct time="10">
                 <Item identifier="steel" />
@@ -646,13 +646,13 @@
                 <Price storeidentifier="merchantmine" multiplier="0.9" minavailable="10" />
                 <Price storeidentifier="merchantengineering" minavailable="5" multiplier="0.9" />
             </Price>
-            <InventoryIcon texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="0,291,87,84" origin="0.5,0.5" />
+            <InventoryIcon texture="%ModDir%/Items/Tools/tools.png" sourcerect="0,291,87,84" origin="0.5,0.5" />
             <!-- Held Sprite -->
-            <Sprite texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="149,72,178,201" depth="0.55" origin="0.4,0.46" />
+            <Sprite texture="%ModDir%/Items/Tools/tools.png" sourcerect="149,72,178,201" depth="0.55" origin="0.4,0.46" />
             <!-- Vanilla Welding Tool as BrokenSprite -->
             <BrokenSprite texture="Content/Items/Tools/tools.png" sourcerect="0,3,152,88" depth="0.55" origin="0.5,0.5" maxcondition="50" fadein="false" />
             <!-- Dropped State Sprite -->
-            <BrokenSprite texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="328,86,79,67" depth="0.55" origin="0.5,0.5" maxcondition="0" fadein="false" />
+            <BrokenSprite texture="%ModDir%/Items/Tools/tools.png" sourcerect="328,86,79,67" depth="0.55" origin="0.5,0.5" maxcondition="0" fadein="false" />
             <!-- the item takes 10 seconds to break down in a deconstructor and turns into steel and plastic -->
             <Deconstruct time="10">
                 <Item identifier="steel" />
@@ -771,8 +771,8 @@
             </RepairTool>
             <!-- one welding fuel or oxygen tank can be contained inside the welding tool -->
             <ItemContainer capacity="1" maxstacksize="1" hideitems="false" itempos="-58,-120" containedspritedepth="0.56" containedstateindicatorstyle="tank">
-                <SlotIcon slotindex="0" texture="%ModDir%/Content/UI/IR-IconsAtlas.png" sourcerect="170,0,85,85" origin="0.5,0.5" />
-                <SlotIcon slotindex="1" texture="%ModDir%/Content/UI/IR-IconsAtlas.png" sourcerect="85,0,85,85" origin="0.5,0.5" />
+                <SlotIcon slotindex="0" texture="%ModDir%/UI/IR-IconsAtlas.png" sourcerect="170,0,85,85" origin="0.5,0.5" />
+                <SlotIcon slotindex="1" texture="%ModDir%/UI/IR-IconsAtlas.png" sourcerect="85,0,85,85" origin="0.5,0.5" />
                 <Containable items="weldingcartridge" />
                 <SubContainer capacity="1">
                     <Containable items="weldingrod" />
@@ -805,8 +805,8 @@
                 <RequiredItem identifier="weldingcartridge" />
                 <RequiredItem identifier="weldingrod" />
             </Fabricate>
-            <InventoryIcon texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="88,291,56,59" origin="0.5,0.5" />
-            <Sprite texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="88,291,56,59" depth="0.55" origin="0.5,0.5" />
+            <InventoryIcon texture="%ModDir%/Items/Tools/tools.png" sourcerect="88,291,56,59" origin="0.5,0.5" />
+            <Sprite texture="%ModDir%/Items/Tools/tools.png" sourcerect="88,291,56,59" depth="0.55" origin="0.5,0.5" />
             <Body radius="26" density="15" />
             <CustomInterface canbeselected="true" selectkey="Use" drawhudwhenequipped="false">
                 <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08" />
@@ -913,11 +913,11 @@
                 <RequiredItem identifier="carbon" />
             </Fabricate>
             <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="220" fabricationlimitmin="0" fabricationlimitmax="3" />
-            <InventoryIcon texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="273,0,86,50" origin="0.5,0.5" />
-            <Sprite name="Welding Mask" texture="%ModDir%/Content/Items/Tools/tools.png" depth="0.55" sourcerect="273,0,86,50" origin="0.5,0.5" />
+            <InventoryIcon texture="%ModDir%/Items/Tools/tools.png" sourcerect="273,0,86,50" origin="0.5,0.5" />
+            <Sprite name="Welding Mask" texture="%ModDir%/Items/Tools/tools.png" depth="0.55" sourcerect="273,0,86,50" origin="0.5,0.5" />
             <Body width="60" radius="20" density="15" />
             <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
-                <sprite name="Welding Mask Wearable" texture="%ModDir%/Content/Items/Tools/tools.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hidelimb="false" hideotherwearables="false" sourcerect="360,0,85,82" origin="0.55,0.4" hidewearablesoftype="moustache,beard" />
+                <sprite name="Welding Mask Wearable" texture="%ModDir%/Items/Tools/tools.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hidelimb="false" hideotherwearables="false" sourcerect="360,0,85,82" origin="0.55,0.4" hidewearablesoftype="moustache,beard" />
                 <StatusEffect type="OnWearing" target="Character" tags="hasweldingmask" ObstructVision="true" HideFace="true" setvalue="true" disabledeltatime="true" duration="0.1" />
                 <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="welderseye" damagemultiplier="0.0" />
                 <damagemodifier afflictionidentifiers="lacerations, bitewounds" armorsector="0.0,180.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
@@ -945,11 +945,11 @@
                 <RequiredItem identifier="redpaint" usecondition="true" mincondition="0.25" />
                 <RequiredItem identifier="blackpaint" usecondition="true" mincondition="0.10" />
             </Fabricate>
-            <InventoryIcon texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="328,154,86,50" origin="0.5,0.5" />
-            <Sprite name="Welding Mask" texture="%ModDir%/Content/Items/Tools/tools.png" depth="0.55" sourcerect="328,154,86,50" origin="0.5,0.5" />
+            <InventoryIcon texture="%ModDir%/Items/Tools/tools.png" sourcerect="328,154,86,50" origin="0.5,0.5" />
+            <Sprite name="Welding Mask" texture="%ModDir%/Items/Tools/tools.png" depth="0.55" sourcerect="328,154,86,50" origin="0.5,0.5" />
             <Body width="60" radius="20" density="15" />
             <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect">
-                <sprite name="Welding Mask Wearable" texture="%ModDir%/Content/Items/Tools/tools.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hidelimb="false" hideotherwearables="false" sourcerect="426,172,85,82" origin="0.55,0.4" hidewearablesoftype="moustache,beard" />
+                <sprite name="Welding Mask Wearable" texture="%ModDir%/Items/Tools/tools.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hidelimb="false" hideotherwearables="false" sourcerect="426,172,85,82" origin="0.55,0.4" hidewearablesoftype="moustache,beard" />
                 <StatusEffect type="OnWearing" target="Character" tags="hasweldingmask" ObstructVision="true" HideFace="true" setvalue="true" disabledeltatime="true" duration="0.1" />
                 <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="welderseye" damagemultiplier="0.0" />
                 <damagemodifier afflictionidentifiers="lacerations, bitewounds" armorsector="0.0,180.0" damagemultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
@@ -977,11 +977,11 @@
                 <RequiredItem identifier="divingmask" />
                 <RequiredItem tag="weldingmask" />
             </Fabricate>
-            <InventoryIcon texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="512,51,86,50" origin="0.5,0.5" />
-            <Sprite name="Welding Mask" texture="%ModDir%/Content/Items/Tools/tools.png" depth="0.55" sourcerect="512,51,86,50" origin="0.5,0.5" />
+            <InventoryIcon texture="%ModDir%/Items/Tools/tools.png" sourcerect="512,51,86,50" origin="0.5,0.5" />
+            <Sprite name="Welding Mask" texture="%ModDir%/Items/Tools/tools.png" depth="0.55" sourcerect="512,51,86,50" origin="0.5,0.5" />
             <Body width="60" radius="20" density="15" />
             <Wearable limbtype="Head" slots="Any,Head" msg="ItemMsgPickUpSelect" displaycontainedstatus="true">
-                <sprite name="Diving Mask Wearable" texture="%ModDir%/Content/Items/Tools/tools.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hidelimb="false" hideotherwearables="false" sourcerect="513,102,85,71" origin="0.5,0.55" hidewearablesoftype="moustache,beard" />
+                <sprite name="Diving Mask Wearable" texture="%ModDir%/Items/Tools/tools.png" limb="Head" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="true" scale="0.7" hidelimb="false" hideotherwearables="false" sourcerect="513,102,85,71" origin="0.5,0.55" hidewearablesoftype="moustache,beard" />
                 <StatusEffect type="OnWearing" target="Character" tags="hasweldingmask" ObstructVision="true" HideFace="true" setvalue="true" disabledeltatime="true" duration="0.1" />
                 <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="welderseye" damagemultiplier="0.0" />
                 <damagemodifier afflictionidentifiers="lacerations, bitewounds" armorsector="0.0,180.0" damagemultiplier="0.6" damagesound="LimbArmor" deflectprojectiles="true" />
@@ -1057,8 +1057,8 @@
                 <RequiredSkill identifier="mechanical" level="15" />
                 <RequiredItem identifier="weldingfueltank" mincondition="0.0" maxcondition="0.1" usecondition="false" />
             </Fabricate>
-            <InventoryIcon texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="454,259,58,63" origin="0.5,0.5" />
-            <Sprite texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="488,108,24,63" depth="0.55" />
+            <InventoryIcon texture="%ModDir%/Items/Tools/tools.png" sourcerect="454,259,58,63" origin="0.5,0.5" />
+            <Sprite texture="%ModDir%/Items/Tools/tools.png" sourcerect="488,108,24,63" depth="0.55" />
             <Body width="20" height="65" density="9.7" />
             <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
                 <StatusEffect type="OnFire" target="This" Condition="-10.0" tags="onfire" duration="1" stackable="false" />
@@ -1089,9 +1089,9 @@
             <Deconstruct time="10">
                 <Item identifier="aluminium" amount="3" />
             </Deconstruct>
-            <InventoryIcon texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="564,161,90,90" origin="0.5,0.5" />
-            <Sprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="392,161,56,284" depth="0.55" />
-            <DecorativeSprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="450,161,56,284" depth="0.549" comparison="And">
+            <InventoryIcon texture="%ModDir%/Items/IR-ItemsAtlas.png" sourcerect="564,161,90,90" origin="0.5,0.5" />
+            <Sprite texture="%ModDir%/Items/IR-ItemsAtlas.png" sourcerect="392,161,56,284" depth="0.55" />
+            <DecorativeSprite texture="%ModDir%/Items/IR-ItemsAtlas.png" sourcerect="450,161,56,284" depth="0.549" comparison="And">
                 <IsActiveConditional HasTag="exploded" />
                 <IsActiveConditional condition="0.0" />
             </DecorativeSprite>
@@ -1132,14 +1132,14 @@
                 <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.12,0.08" />
                 <Button text="interaction.takeone">
                     <StatusEffect type="OnUse" target="This" condition="-12.5" disabledeltatime="true">
-                        <Sound file="%ModDir%/Content/Items/Tools/OpenRodPack.ogg" loop="false" range="200" volume="5.0" />
+                        <Sound file="%ModDir%/Items/Tools/OpenRodPack.ogg" loop="false" range="200" volume="5.0" />
                         <SpawnItem identifier="weldingrod" spawnposition="SameInventory" spawnifcantbecontained="true" SpawnIfInventoryFull="true" />
                     </StatusEffect>
                 </Button>
             </CustomInterface>
-            <InventoryIcon texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="315,310,75,73" origin="0.5,0.5" />
-            <Sprite texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="458,96,53,11" depth="0.55" origin="0.5,0.5" />
-            <ContainedSprite allowedcontainertags="weldingequipment" texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
+            <InventoryIcon texture="%ModDir%/Items/Tools/tools.png" sourcerect="315,310,75,73" origin="0.5,0.5" />
+            <Sprite texture="%ModDir%/Items/Tools/tools.png" sourcerect="458,96,53,11" depth="0.55" origin="0.5,0.5" />
+            <ContainedSprite allowedcontainertags="weldingequipment" texture="%ModDir%/Items/Tools/tools.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
             <Body width="52" height="10" density="13.7" />
             <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdangle="270" holdpos="20,30" handle1="10,-10" msg="ItemMsgPickUpSelect">
                 <StatusEffect type="OnFire" target="This" Condition="-5.0" tags="onfire" duration="1" stackable="false" />
@@ -1160,9 +1160,9 @@
                 <RequiredItem identifier="silicon" amount="3" />
                 <RequiredItem identifier="carbon" />
             </Fabricate>
-            <InventoryIcon texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="391,323,60,60" origin="0.5,0.5" />
-            <Sprite texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="460,0,51,4" depth="0.55" origin="0.5,0.5" />
-            <ContainedSprite allowedcontainertags="weldingequipment" texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
+            <InventoryIcon texture="%ModDir%/Items/Tools/tools.png" sourcerect="391,323,60,60" origin="0.5,0.5" />
+            <Sprite texture="%ModDir%/Items/Tools/tools.png" sourcerect="460,0,51,4" depth="0.55" origin="0.5,0.5" />
+            <ContainedSprite allowedcontainertags="weldingequipment" texture="%ModDir%/Items/Tools/tools.png" sourcerect="0,0,1,1" depth="0.55" origin="0.5,0.5" />
             <Body width="36" height="3" density="10.7" />
             <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdangle="260" holdpos="20,30" handle1="10,-10" msg="ItemMsgPickUpSelect">
                 <StatusEffect type="OnFire" target="This" Condition="-10.0" tags="onfire" duration="1" stackable="false" />
@@ -1198,8 +1198,8 @@
                 <RequiredItem identifier="carbon" />
                 <RequiredItem identifier="plastic" />
             </Fabricate>
-            <InventoryIcon texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="452,323,59,60" origin="0.5,0.5" />
-            <Sprite texture="%ModDir%/Content/Items/Tools/tools.png" sourcerect="446,0,13,47" depth="0.55" />
+            <InventoryIcon texture="%ModDir%/Items/Tools/tools.png" sourcerect="452,323,59,60" origin="0.5,0.5" />
+            <Sprite texture="%ModDir%/Items/Tools/tools.png" sourcerect="446,0,13,47" depth="0.55" />
             <Body width="12" height="46" density="11.5" />
             <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
                 <StatusEffect type="OnFire" target="This" Condition="-10.0" tags="onfire" duration="1" stackable="false" />
@@ -1317,7 +1317,7 @@
         <Item name="Placed Ladder" nameidentifier="placeableladder" identifier="placeableladder" category="Equipment" Tags="largeitem" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_Heavy" hideinmenus="true">
             <InventoryIcon texture="Content/Map/Outposts/Art/Shop.png" sourcerect="0,484,95,364" origin="0.5,0.5" />
             <!-- the actual sprite is empty as the item would otherwise always display in front of the character -->
-            <sprite texture="%ModDir%/Content/Items/Tools/LadderBlank.png" sourcerect="0,0,95,364" depth="0.501" premultiplyalpha="false" origin="0.5,0.5" />
+            <sprite texture="%ModDir%/Items/Tools/LadderBlank.png" sourcerect="0,0,95,364" depth="0.501" premultiplyalpha="false" origin="0.5,0.5" />
             <!-- decorative sprite is used to display the ladder sprite as it is displayed further back, allowing the character to be displayed in front of the item -->
             <DecorativeSprite texture="Content/Map/Outposts/Art/Shop.png" sourcerect="0,484,95,364" depth="0.52" premultiplyalpha="false" origin="0.5,0.5" />
             <Body width="161" height="364" bodytype="Static" />
@@ -1412,8 +1412,8 @@
                 <RequiredItem identifier="aluminium" amount="4" />
                 <RequiredItem identifier="sodium" amount="10" />
             </Fabricate>
-            <InventoryIcon texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="564,252,90,90" origin="0.5,0.5" />
-            <Sprite texture="%ModDir%/Content/Items/IR-ItemsAtlas.png" sourcerect="507,161,56,284" depth="0.55" />
+            <InventoryIcon texture="%ModDir%/Items/IR-ItemsAtlas.png" sourcerect="564,252,90,90" origin="0.5,0.5" />
+            <Sprite texture="%ModDir%/Items/IR-ItemsAtlas.png" sourcerect="507,161,56,284" depth="0.55" />
             <Body width="54" height="282" density="11.7" />
             <Holdable canbecombined="false" slots="LeftHand+RightHand" holdpos="30,15" handle1="17,-70" handle2="60,80" holdangle="285" msg="ItemMsgPickUpSelect">
                 <StatValue stattype="MovementSpeed" value="-0.4" />

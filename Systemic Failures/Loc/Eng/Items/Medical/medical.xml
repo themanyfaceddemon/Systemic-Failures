@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+    <entityname.potassiumiodidetablets>Potassium Iodide Tablets</entityname.potassiumiodidetablets>
+    <entitydescription.potassiumiodidetablets>Light protection from radiation, useful as a precaution of an imminent low radiation hazard. Reduces low amounts of contamination.</entitydescription.potassiumiodidetablets>
+
+    <entityname.activatedcarbontablets>Activated Carbon Tablets</entityname.activatedcarbontablets>
+    <entitydescription.activatedcarbontablets>Used to cure low amounts of poisoning and radiation. Useless against contamination. Excessive use can be harmful.</entitydescription.activatedcarbontablets>
+
+    <entityname.deconsoltank>Deconsol</entityname.deconsoltank>
+    <entitydescription.deconsoltank>A decontamination solution. Needs to be sprayed onto a contaminated person by using a sprayer.</entitydescription.deconsoltank>
+
+    <entityname.welderseyedrops>Welder's Eye Drops</entityname.welderseyedrops>
+    <entitydescription.welderseyedrops>Speeds up the healing process of Welder's Eye.</entitydescription.welderseyedrops>
+</infotexts>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
     <Item identifier="effect_trigger_radiation_low" tags="effect" scale="0.25" spritecolor="100,255,100,255" health="100" hiddeningame="true" damagedbyrepairtools="false" allowrotatingineditor="false" allowedlinks="gap,door" linkable="true">
-        <Sprite texture="%ModDir%/Content/Items/Effects/fxIcon.png" sourcerect="0,0,234,234" depth="0.001" origin="0.5,0.5" />
+        <Sprite texture="%ModDir%/Items/Effects/fxIcon.png" sourcerect="0,0,234,234" depth="0.001" origin="0.5,0.5" />
 
         <LightComponent lightcolor="0,0,0,0" IsOn="true" range="0" allowingameediting="false" canbeselected="false">
             <StatusEffect type="OnActive" target="This" interval="0.3" comparison="And" AllowWhenBroken="true">
@@ -27,7 +27,7 @@
     </Item>
 
     <Item identifier="effect_trigger_radiation_medium" tags="effect" scale="0.25" spritecolor="100,255,100,255" health="100" hiddeningame="true" damagedbyrepairtools="false" allowrotatingineditor="false" allowedlinks="gap,door" linkable="true">
-        <Sprite texture="%ModDir%/Content/Items/Effects/fxIcon.png" sourcerect="0,0,234,234" depth="0.001" origin="0.5,0.5" />
+        <Sprite texture="%ModDir%/Items/Effects/fxIcon.png" sourcerect="0,0,234,234" depth="0.001" origin="0.5,0.5" />
 
         <LightComponent lightcolor="0,0,0,0" IsOn="true" range="0" allowingameediting="false" canbeselected="false">
             <StatusEffect type="OnActive" target="This" interval="0.3" comparison="And" AllowWhenBroken="true">
@@ -53,7 +53,7 @@
     </Item>
 
     <Item identifier="effect_trigger_radiation_high" tags="effect" scale="0.25" spritecolor="100,255,100,255" health="100" hiddeningame="true" damagedbyrepairtools="false" allowrotatingineditor="false" allowedlinks="gap,door" linkable="true">
-        <Sprite texture="%ModDir%/Content/Items/Effects/fxIcon.png" sourcerect="0,0,234,234" depth="0.001" origin="0.5,0.5" />
+        <Sprite texture="%ModDir%/Items/Effects/fxIcon.png" sourcerect="0,0,234,234" depth="0.001" origin="0.5,0.5" />
 
         <LightComponent lightcolor="0,0,0,0" IsOn="true" range="0" allowingameediting="false" canbeselected="false">
             <StatusEffect type="OnActive" target="This" interval="0.3" comparison="And" AllowWhenBroken="true">

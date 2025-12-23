@@ -36,7 +36,7 @@
                     <Affliction identifier="burn" strength="5" />
                 </StatusEffect>
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
                 </StatusEffect>
                 <RequiredItem items="screwdriver" type="Equipped" />
                 <input name="power_in" displayname="connection.powerin" />
@@ -86,7 +86,7 @@
                     <Affliction identifier="burn" strength="5" />
                 </StatusEffect>
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
                 </StatusEffect>
                 <RequiredItem items="screwdriver" type="Equipped" />
                 <input name="power_in" displayname="connection.powerin" />

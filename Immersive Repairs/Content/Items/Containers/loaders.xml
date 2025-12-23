@@ -25,7 +25,7 @@
                     <Affliction identifier="stun" strength="4" />
                 </StatusEffect>
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
                 </StatusEffect>
             </Repairable>
             <ItemContainer hideitems="false" drawinventory="true" capacity="1" maxstacksize="1" slotsperrow="6" itempos="75,-270" iteminterval="0,0" itemrotation="0" canbeselected="true" msg="ItemMsgInteractSelect" containedspritedepth="0.79">
@@ -37,14 +37,14 @@
                     <Use />
                 </StatusEffect>
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir%/Content/Items/Containers/loader_open1.ogg" volume="1.5" range="250" selectionmode="Random" />
+                    <Sound file="%ModDir%/Items/Containers/loader_open1.ogg" volume="1.5" range="250" selectionmode="Random" />
                 </StatusEffect>
             </ItemContainer>
             <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
                 <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
                 <RequiredItem items="screwdriver" type="Equipped" />
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
                 </StatusEffect>
                 <output name="condition_out" displayname="connection.conditionout" />
                 <output name="contained_conditions" displayname="connection.ammunitionout" />
@@ -99,7 +99,7 @@
                     <Affliction identifier="stun" strength="4" />
                 </StatusEffect>
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
                 </StatusEffect>
             </Repairable>
             <ItemContainer hideitems="false" drawinventory="true" capacity="1" maxstacksize="1" slotsperrow="6" itempos="82,-270" iteminterval="0,0" itemrotation="0" canbeselected="true" msg="ItemMsgInteractSelect" containedspritedepth="0.79">
@@ -111,14 +111,14 @@
                     <Use />
                 </StatusEffect>
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir%/Content/Items/Containers/loader_open1.ogg" volume="1.5" range="250" selectionmode="Random" />
+                    <Sound file="%ModDir%/Items/Containers/loader_open1.ogg" volume="1.5" range="250" selectionmode="Random" />
                 </StatusEffect>
             </ItemContainer>
             <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
                 <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
                 <RequiredItem items="screwdriver" type="Equipped" />
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
                 </StatusEffect>
                 <output name="condition_out" displayname="connection.conditionout" />
                 <output name="contained_conditions" displayname="connection.ammunitionout" />
@@ -169,7 +169,7 @@
                     <Affliction identifier="stun" strength="4" />
                 </StatusEffect>
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
                 </StatusEffect>
             </Repairable>
             <ItemContainer hideitems="false" drawinventory="true" capacity="1" maxstacksize="1" slotsperrow="6" itempos="75,-258" iteminterval="0,0" itemrotation="0" canbeselected="true" msg="ItemMsgInteractSelect" containedspritedepth="0.79">
@@ -180,14 +180,14 @@
                     <Use />
                 </StatusEffect>
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir%/Content/Items/Containers/loader_open1.ogg" volume="1.5" range="250" selectionmode="Random" />
+                    <Sound file="%ModDir%/Items/Containers/loader_open1.ogg" volume="1.5" range="250" selectionmode="Random" />
                 </StatusEffect>
             </ItemContainer>
             <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
                 <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
                 <RequiredItem items="screwdriver" type="Equipped" />
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
                 </StatusEffect>
                 <output name="condition_out" displayname="connection.conditionout" />
                 <output name="contained_conditions" displayname="connection.ammunitionout" />
@@ -245,7 +245,7 @@
                     <Affliction identifier="stun" strength="4" />
                 </StatusEffect>
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
                 </StatusEffect>
             </Repairable>
             <ItemContainer hideitems="false" drawinventory="true" capacity="1" maxstacksize="1" slotsperrow="6" itempos="83,-260" iteminterval="0,0" itemrotation="0" canbeselected="true" msg="ItemMsgInteractSelect" containedspritedepth="0.75">
@@ -257,14 +257,14 @@
                     <Use />
                 </StatusEffect>
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir%/Content/Items/Containers/loader_open1.ogg" volume="1.5" range="250" selectionmode="Random" />
+                    <Sound file="%ModDir%/Items/Containers/loader_open1.ogg" volume="1.5" range="250" selectionmode="Random" />
                 </StatusEffect>
             </ItemContainer>
             <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
                 <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
                 <RequiredItem items="screwdriver" type="Equipped" />
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
                 </StatusEffect>
                 <output name="condition_out" displayname="connection.conditionout" />
                 <output name="contained_conditions" displayname="connection.ammunitionout" />
@@ -305,7 +305,7 @@
                 <GuiFrame relativesize="0.25,0.2" anchor="Center" style="ItemUI" />
                 <Containable items="railgunammo" />
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir%/Content/Items/Containers/loader_open1.ogg" volume="1.5" range="250" selectionmode="Random" />
+                    <Sound file="%ModDir%/Items/Containers/loader_open1.ogg" volume="1.5" range="250" selectionmode="Random" />
                 </StatusEffect>
             </ItemContainer>
             <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="20" mindeteriorationdelay="5" maxdeteriorationdelay="15" MinDeteriorationCondition="0" RepairThreshold="50" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
@@ -322,14 +322,14 @@
                     <Affliction identifier="stun" strength="4" />
                 </StatusEffect>
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
                 </StatusEffect>
             </Repairable>
             <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
                 <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
                 <RequiredItem items="screwdriver" type="Equipped" />
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
                 </StatusEffect>
                 <output name="condition_out" displayname="connection.conditionout" />
                 <output name="contained_conditions" displayname="connection.ammunitionout" />
@@ -381,7 +381,7 @@
                     <Affliction identifier="stun" strength="4" />
                 </StatusEffect>
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
                 </StatusEffect>
             </Repairable>
         </Item>
@@ -392,7 +392,7 @@
                 <GuiFrame relativesize="0.2,0.25" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
                 <Containable items="railgunammo" />
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir%/Content/Items/Containers/loader_open1.ogg" volume="1.5" range="250" selectionmode="Random" />
+                    <Sound file="%ModDir%/Items/Containers/loader_open1.ogg" volume="1.5" range="250" selectionmode="Random" />
                 </StatusEffect>
             </ItemContainer>
             <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="20" mindeteriorationdelay="5" maxdeteriorationdelay="15" MinDeteriorationCondition="0" RepairThreshold="50" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
@@ -409,7 +409,7 @@
                     <Affliction identifier="stun" strength="4" />
                 </StatusEffect>
                 <StatusEffect type="OnPicked" target="this">
-                    <Sound file="%ModDir%/Content/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
+                    <Sound file="%ModDir%/Items/Electricity/junctionbox_interact.ogg" volume="1" range="300" />
                 </StatusEffect>
             </Repairable>
         </Item>
