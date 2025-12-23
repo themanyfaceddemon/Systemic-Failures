@@ -172,14 +172,6 @@
                 <ParticleEmitter particle="damagebubbles" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemax="360" distancemax="100" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="80.0" />
                 <ParticleEmitter particle="DarkSmoke" particlespersecond="8" scalemin="1.8" scalemax="2.5" anglemax="360" distancemax="100" velocitymin="-50" velocitymax="50" mincondition="0.0" maxcondition="80.0" />
                 <ParticleEmitter particle="heavysmoke" particlespersecond="2" scalemin="1.0" scalemax="2.5" anglemax="360" distancemax="100" mincondition="0.0" maxcondition="15.0" />
-                <!-- repair failure when engine off 
-        <StatusEffect type="OnFailure" target="This,Character" targetlimbs="LeftHand,RightHand" AllowWhenBroken="true">
-          <Conditional force="eq 0" />
-          <Conditional Voltage="eq 0" />
-          <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
-          <Affliction identifier="lacerations" strength="5" />
-          <Affliction identifier="stun" strength="4" />
-        </StatusEffect>-->
                 <!-- repair the oil if engine is repaired by a bot for singleplayer compatibility -->
                 <StatusEffect type="OnFailure" target="Contained,Character" condition="100" setvalue="true" AllowWhenBroken="true">
                     <Conditional IsBot="eq true" />
@@ -498,14 +490,6 @@
                 <ParticleEmitter particle="damagebubbles" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemax="360" distancemax="100" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="80.0" />
                 <ParticleEmitter particle="DarkSmoke" particlespersecond="8" scalemin="1.8" scalemax="2.5" anglemax="360" distancemax="100" velocitymin="-50" velocitymax="50" mincondition="0.0" maxcondition="80.0" />
                 <ParticleEmitter particle="heavysmoke" particlespersecond="2" scalemin="1.0" scalemax="2.5" anglemax="360" distancemax="100" maxcondition="15.0" />
-                <!-- repair failure when engine off 
-        <StatusEffect type="OnFailure" target="This,Character" targetlimbs="LeftHand,RightHand" AllowWhenBroken="true">
-          <Conditional force="eq 0" />
-          <Conditional Voltage="eq 0" />
-          <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
-          <Affliction identifier="lacerations" strength="5" />
-          <Affliction identifier="stun" strength="4" />
-        </StatusEffect>-->
                 <!-- repair the oil if engine is repaired by a bot for singleplayer compatibility -->
                 <StatusEffect type="OnFailure" target="Contained,Character" condition="100" setvalue="true" AllowWhenBroken="true">
                     <Conditional IsBot="eq true" />
@@ -813,14 +797,6 @@
                 <ParticleEmitter particle="damagebubbles" particlespersecond="2" scalemin="0.5" scalemax="1.5" anglemax="360" distancemax="100" velocitymin="-10" velocitymax="10" mincondition="0.0" maxcondition="50.0" />
                 <ParticleEmitter particle="DarkSmoke" particlespersecond="8" scalemin="1.8" scalemax="2.5" anglemax="360" distancemax="100" velocitymin="-50" velocitymax="50" mincondition="0.0" maxcondition="50.0" />
                 <ParticleEmitter particle="heavysmoke" particlespersecond="2" scalemin="1.0" scalemax="2.5" anglemax="360" distancemax="100" maxcondition="15.0" />
-                <!-- repair failure when engine off 
-        <StatusEffect type="OnFailure" target="This,Character" targetlimbs="LeftHand,RightHand" AllowWhenBroken="true">
-          <Conditional force="eq 0" />
-          <Conditional Voltage="eq 0" />
-          <Sound file="Content/Items/MechanicalRepairFail.ogg" range="1000" />
-          <Affliction identifier="lacerations" strength="5" />
-          <Affliction identifier="stun" strength="4" />
-        </StatusEffect>-->
                 <!-- repair the oil if engine is repaired by a bot for singleplayer compatibility -->
                 <StatusEffect type="OnFailure" target="Contained,Character" condition="100" setvalue="true" AllowWhenBroken="true">
                     <Conditional IsBot="eq true" />

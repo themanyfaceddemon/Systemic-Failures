@@ -2,6 +2,7 @@
 <Randomevents>
     <!-- Events defined in <EventPrefabs> can only be triggered via a console command or with a TriggerEventAction -->
     <EventPrefabs>
+
         <ScriptedEvent identifier="resumedetoriation">
             <WaitAction time="3" />
             <TagAction criteria="player" tag="player" />
@@ -15,6 +16,7 @@
                 </StatusEffect>
             </StatusEffectAction>
         </ScriptedEvent>
+
         <!-- tag vents depending on their location -->
         <ScriptedEvent identifier="taggingvents">
             <WaitAction time="1" />
@@ -37,6 +39,7 @@
                 <StatusEffect target="This" tags="outpostoxygen" setvalue="true" />
             </StatusEffectAction>
         </ScriptedEvent>
+
         <ScriptedEvent identifier="oxygensmokeplayer">
             <SetDataAction identifier="oxygengeneratorfireplayer" operation="Set" value="1" />
             <TagAction criteria="itemtag:playersubvent" tag="playersubvent" submarinetype="player" ContinueIfNoTargetsFound="true" />
@@ -51,9 +54,6 @@
                         <StatusEffect target="This" disabledeltatime="true">
                             <SpawnItem identifier="effect_smokingvents" spawnposition="This" />
                         </StatusEffect>
-                        <!--StatusEffect target="This" tags="smoking" duration="1">
-              <ParticleEmitter particle="smoke" anglemax="360" velocitymin="50" velocitymax="200" particlespersecond="25" />
-            </StatusEffect>-->
                     </StatusEffectAction>
                     <WaitAction time="1" />
                     <GoTo name="restart" />
@@ -64,6 +64,7 @@
         <ScriptedEvent identifier="stopoxygensmokeplayer">
             <SetDataAction identifier="oxygengeneratorfireplayer" operation="Set" value="0" />
         </ScriptedEvent>
+
         <!-- arrest players cracking something on a station with the safe cracker -->
         <ScriptedEvent identifier="activedrill">
             <TagAction criteria="itemtag:safecracker" tag="activedrill" submarinetype="outpost" />
@@ -119,10 +120,11 @@
             </CheckVisibilityAction>
         </ScriptedEvent>
     </EventPrefabs>
-    <!-- locationtype="construction,outpost,settlement,colony,city,camp,base,military,blockade,survey,mine,study,research,clinic,hospital,hydroponics,factory,shipyard,huskchurch,sinkingcircus,pirateoutpost,lair,lairmudraptor,lairthresher,huskgroundsde,militaryforces" -->
+
     <EventSet identifier="ir.outpostevents" leveltype="outpost" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="80" chooserandom="false" ignorecooldown="true" additive="true" selectalways="true">
         <ScriptedEvent identifier="taggingvents" commonness="100" />
     </EventSet>
+
     <EventSet identifier="ir.transitevents" leveltype="locationconnection" allowatstart="true" minleveldifficulty="0" maxleveldifficulty="80" chooserandom="false" ignorecooldown="true" additive="true" selectalways="true" campaign="true">
         <ScriptedEvent identifier="resumedetoriation" commonness="100" />
     </EventSet>

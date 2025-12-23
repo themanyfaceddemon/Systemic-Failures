@@ -577,11 +577,6 @@
                 <StatusEffect type="OnContained" target="This" IsOn="True" tags="activefuelrod,provocative" setvalue="True">
                     <Conditional HasTag="eq deepdivinglarge" targetcontainer="True" />
                 </StatusEffect>
-                <!-- Eat the fuel rod -->
-                <!-- <StatusEffect type="OnUse" target="Character" disabledeltatime="true" setvalue="true" multiplyafflictionsbymaxvitality="true">
-          <Conditional HasTag="activefuelrod" targetcontaineditem="True" />
-          <Affliction identifier="fuelrodrage" amount="60" />
-        </StatusEffect> -->
                 <StatusEffect type="OnUse" target="This">
                     <Conditional HasTag="activefuelrod" />
                     <Sound file="%ModDir%/Content/Items/Tools/gulp.ogg" volume="1" loop="false" range="500" />
@@ -804,11 +799,6 @@
                 <StatusEffect type="OnContained" target="This" IsOn="True" tags="activefuelrod,provocative" setvalue="True">
                     <Conditional HasTag="eq deepdivinglarge" targetcontainer="True" />
                 </StatusEffect>
-                <!-- Eat the fuel rod -->
-                <!-- <StatusEffect type="OnUse" target="Character" disabledeltatime="true" setvalue="true" multiplyafflictionsbymaxvitality="true">
-          <Conditional HasTag="activefuelrod" targetcontaineditem="True" />
-          <Affliction identifier="fuelrodrage" amount="30" />
-        </StatusEffect> -->
                 <StatusEffect type="OnUse" target="This">
                     <Conditional HasTag="activefuelrod" />
                     <Sound file="%ModDir%/Content/Items/Tools/gulp.ogg" volume="1" loop="false" range="500" />
@@ -1032,11 +1022,6 @@
                 <StatusEffect type="OnContained" target="This" IsOn="True" tags="activefuelrod,provocative" setvalue="True">
                     <Conditional HasTag="eq deepdivinglarge" targetcontainer="True" />
                 </StatusEffect>
-                <!-- Eat the fuel rod -->
-                <!-- <StatusEffect type="OnUse" target="Character" disabledeltatime="true" setvalue="true" multiplyafflictionsbymaxvitality="true">
-          <Conditional HasTag="activefuelrod" targetcontaineditem="True" />
-          <Affliction identifier="fuelrodrage" amount="120" />
-        </StatusEffect> -->
                 <StatusEffect type="OnUse" target="This">
                     <Conditional HasTag="activefuelrod" />
                     <Sound file="%ModDir%/Content/Items/Tools/gulp.ogg" volume="1" loop="false" range="500" />
@@ -1243,11 +1228,6 @@
                 <StatusEffect type="OnContained" target="This" IsOn="True" tags="activefuelrod,provocative" setvalue="True">
                     <Conditional HasTag="eq deepdivinglarge" targetcontainer="True" />
                 </StatusEffect>
-                <!-- Eat the fuel rod -->
-                <!-- <StatusEffect type="OnUse" target="Character" disabledeltatime="true" setvalue="true" multiplyafflictionsbymaxvitality="true">
-          <Conditional HasTag="activefuelrod" targetcontaineditem="True" />
-          <Affliction identifier="fuelrodrage" amount="180" />
-        </StatusEffect> -->
                 <StatusEffect type="OnUse" target="This">
                     <Conditional HasTag="activefuelrod" />
                     <Sound file="%ModDir%/Content/Items/Tools/gulp.ogg" volume="1" loop="false" range="500" />
@@ -1403,11 +1383,6 @@
                     <Conditional HasStatusTag="neq containradiation" targetcontainer="true" />
                     <Affliction identifier="burn" amount="1.5" />
                 </StatusEffect>
-                <!-- Eat the fuel rod -->
-                <!-- <StatusEffect type="OnUse" target="Character" disabledeltatime="true" setvalue="true" multiplyafflictionsbymaxvitality="true">
-          <Conditional HasTag="activefuelrod" targetcontaineditem="True" />
-          <Affliction identifier="fuelrodrage" amount="60" />
-        </StatusEffect> -->
                 <StatusEffect type="OnUse" target="This" AllowWhenBroken="true">
                     <Conditional HasTag="activefuelrod" />
                     <Sound file="%ModDir%/Content/Items/Tools/gulp.ogg" volume="1" loop="false" range="500" />
@@ -1664,11 +1639,6 @@
                 <!-- activate the LightComponent to trigger the OnActive StatusEffects and visualize that the fission process has started when the fuel rod was used inside an exosuit -->
                 <StatusEffect type="OnContained" target="This" IsOn="True" tags="activefuelrod,provocative" setvalue="True">
                     <Conditional HasTag="eq deepdivinglarge" targetcontainer="True" />
-                </StatusEffect>
-                <!-- Eat the fuel rod -->
-                <StatusEffect type="OnUse" target="Character" disabledeltatime="true" setvalue="true" multiplyafflictionsbymaxvitality="true">
-                    <Conditional HasTag="activefuelrod" targetcontaineditem="True" />
-                    <Affliction identifier="fuelrodrage" amount="60" />
                 </StatusEffect>
                 <StatusEffect type="OnUse" target="This">
                     <Conditional HasTag="activefuelrod" />

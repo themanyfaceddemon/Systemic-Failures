@@ -697,20 +697,6 @@
                 <ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="MistSmoke" particlespersecond="20" anglemin="-10" anglemax="10" velocitymin="10" velocitymax="100" />
                 <ParticleEmitterHitCharacter particle="fleshsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="0" velocitymax="50" />
                 <sound file="Content/Items/Tools/WeldingLoop.ogg" type="OnUse" range="500.0" loop="true" />
-                <!-- 10% chance to start a fire when using outside of water every 1.5 seconds 
-        <StatusEffect type="OnUse" targettype="This" interval="1.5" spawnitemrandomly="true">
-          <Conditional InWater="false" />
-          <SpawnItem identifier="effect_none" spawnposition="This" />
-          <SpawnItem identifier="effect_none" spawnposition="This" />
-          <SpawnItem identifier="effect_none" spawnposition="This" />
-          <SpawnItem identifier="effect_none" spawnposition="This" />
-          <SpawnItem identifier="effect_none" spawnposition="This" />
-          <SpawnItem identifier="effect_none" spawnposition="This" />
-          <SpawnItem identifier="effect_none" spawnposition="This" />
-          <SpawnItem identifier="effect_none" spawnposition="This" />
-          <SpawnItem identifier="effect_none" spawnposition="This" />
-          <SpawnItem identifier="effect_firestarter" spawnposition="This" />
-        </StatusEffect>-->
                 <!-- when using, the contained welding rods and electrodes will deplete -->
                 <StatusEffect type="OnUse" targettype="Contained" targets="weldingrod" Condition="-2.0" />
                 <StatusEffect type="OnUse" targettype="Contained" targets="weldingcartridge" Condition="-1.0" />
@@ -1046,56 +1032,6 @@
                 </Containable>
             </ItemContainer>
         </Item>
-        <!--Item name="" identifier="weldingfueltank" category="Equipment,Fuel" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="1" Tags="smallitem,weldingtoolfuel,weldingfuel" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="weldingtool,flamer" spawnprobability="1"/>
-      <PreferredContainer primary="engcab" minamount="4" maxamount="6" spawnprobability="1" notcampaign="true"/>
-      <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" minamount="1" maxamount="3" spawnprobability="0.2"/>
-      <PreferredContainer primary="wreckstoragecab,abandonedstoragecab" amount="1" spawnprobability="0.05"/>
-      <PreferredContainer secondary="supplycab"/>
-      <Price baseprice="120" displaynonempty="true">
-        <Price storeidentifier="merchantoutpost" minavailable="6" />
-        <Price storeidentifier="merchantcity" minavailable="7" />
-        <Price storeidentifier="merchantresearch" multiplier="1.25" minavailable="3" />
-        <Price storeidentifier="merchantmilitary" multiplier="1.25" minavailable="3" />
-        <Price storeidentifier="merchantmine" multiplier="0.9" minavailable="15" />
-        <Price storeidentifier="merchantengineering" minavailable="10" multiplier="0.9"/>
-        <Price storeidentifier="merchanttutorial" multiplier="0.5" minavailable="3" />
-      </Price>
-      <Deconstruct time="10">
-        <Item identifier="aluminium" />
-      </Deconstruct>
-      <Fabricate suitablefabricators="fabricator" requiredtime="10" outcondition="1.0">
-        <RequiredSkill identifier="mechanical" level="20" />
-        <RequiredItem identifier="aluminium" amount="2" />
-        <RequiredItem identifier="ethanol" />
-      </Fabricate>
-      <Fabricate suitablefabricators="fabricator" displayname="recycleitem" requiredtime="5">
-        <RequiredSkill identifier="mechanical" level="15" />
-        <RequiredItem identifier="weldingfueltank" mincondition="0.0" maxcondition="0.1" usecondition="false"/>
-        <RequiredItem identifier="ethanol" />
-      </Fabricate>
-      <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="190" fabricationlimitmin="0" fabricationlimitmax="4" quality="0"/>
-      <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="960,0,64,64" origin="0.5,0.5" />
-      <Sprite texture="Content/Items/Tools/tools.png" sourcerect="436,71,22,66" depth="0.55" />
-      <Body width="20" height="65" density="9.7" />
-      <Holdable canbecombined="true" slots="Any,RightHand,LeftHand" holdpos="30,-15" handle1="0,5" handle2="0,-5" msg="ItemMsgPickUpSelect">
-        <StatusEffect type="OnFire" target="This" Condition="-10.0" tags="onfire" duration="1" stackable="false" />
-        <StatusEffect type="OnBroken" target="This" delay="1" stackable="false">
-          <Conditional HasStatusTag="onfire" />
-          <sound file="Content/Items/Weapons/ExplosionSmall1.ogg" range="2000" />
-          <sound file="Content/Items/Weapons/ExplosionSmall2.ogg" range="2000" />
-          <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" range="2000" />
-          <Explosion range="150.0" force="3">
-            <Affliction identifier="burn" strength="25" />
-            <Affliction identifier="stun" strength="5" />
-          </Explosion>
-        </StatusEffect>
-      </Holdable>
-      <Quality>
-        <QualityStat stattype="Condition" value="0.1"/>
-      </Quality>
-      <Upgrade gameversion="0.10.0.0" scale="0.5" />
-    </Item-->
         <Item name="Concentrated Welding Fuel Tank" identifier="concentratedweldingfueltank" category="Equipment,Fuel" health="200" maxstacksize="8" maxstacksizecharacterinventory="1" MaxStackSizeHoldableOrWearableInventory="1" Tags="smallitem,concentratedweldingfuel,weldingtoolfuel,weldingfuel,incendiumfueltank" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
             <PreferredContainer primary="weldingtool,engcab" />
             <PreferredContainer primary="wreckengcab,abandonedengcab,outpostengcab,beaconengcab" minamount="1" maxamount="3" spawnprobability="0.05" />

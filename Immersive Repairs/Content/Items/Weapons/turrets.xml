@@ -10,12 +10,14 @@
                 <SwapConnectedItem tag="periscope" swapto="blankperiscope" />
                 <SwapConnectedItem tag="turretammosource" swapto="blankloader" />
             </SwappableItem>
+
             <StaticBody width="80" radius="80" />
             <Turret rotationlimits="180,360" projectilecount="0" canbeselected="false" characterusable="false" linkable="true" barrelpos="128,-50">
                 <LightComponent LightColor="1.0,0.8,0.8,1.0" Flicker="0.0" range="2500" IsOn="true" drawbehindsubs="true" ignorecontinuoustoggle="true" InheritParentIsActive="false">
                     <LightTexture texture="Content/Lights/alphaOne.png" />
                 </LightComponent>
             </Turret>
+
             <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
                 <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
                 <RequiredItem items="screwdriver" type="Equipped" />
@@ -29,6 +31,7 @@
                 <output name="condition_out" displayname="connection.conditionout" />
             </ConnectionPanel>
         </Item>
+
         <Item name="" description="" identifier="largeturrethardpoint" Tags="turret,hardpoint" showinstatusmonitor="false" category="Machine,Weapon" interactthroughwalls="true" Scale="0.5" interactdistance="10" spritecolor="1.0,1.0,1.0,1.0" linkable="true" allowedlinks="turretammosource">
             <Sprite texture="Content/Items/Weapons/TurretsAndDepthCharges.png" depth="0.01" sourcerect="538,272,444,139" canflipy="false" />
             <UpgradePreviewSprite scale="3.5" texture="Content/UI/WeaponUI.png" sourcerect="834,806,84,68" origin="0.5,0.5" />
@@ -37,12 +40,14 @@
                 <SwapConnectedItem tag="periscope" swapto="blankperiscope" />
                 <SwapConnectedItem tag="turretammosource" swapto="blankloader" />
             </SwappableItem>
+
             <StaticBody width="80" radius="80" />
             <Turret rotationlimits="180,360" projectilecount="0" canbeselected="false" characterusable="false" linkable="true" barrelpos="220,-128">
                 <LightComponent LightColor="1.0,0.8,0.8,1.0" Flicker="0.0" range="2500" IsOn="true" drawbehindsubs="true" ignorecontinuoustoggle="true" InheritParentIsActive="false">
                     <LightTexture texture="Content/Lights/alphaOne.png" />
                 </LightComponent>
             </Turret>
+
             <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
                 <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
                 <RequiredItem items="screwdriver" type="Equipped" />
@@ -56,6 +61,7 @@
                 <output name="condition_out" displayname="connection.conditionout" />
             </ConnectionPanel>
         </Item>
+
         <!-- CHAINGUN -->
         <Item name="" description="" identifier="chaingun" Tags="turret" category="Machine,Weapon" interactthroughwalls="true" Scale="0.5" interactdistance="100" spritecolor="1.0,1.0,1.0,1.0" focusonselected="true" offsetonselected="750" linkable="true" allowedlinks="coilgunequipment" damagedbyexplosions="true" explosiondamagemultiplier="0.2" damagedbymonsters="true">
             <Sprite texture="Content/Items/Weapons/Loaders.png" depth="0.01" sourcerect="0,0,256,256" canflipy="false" />
@@ -65,6 +71,7 @@
                 <SwapConnectedItem tag="periscope" swapto="periscope" />
                 <SwapConnectedItem tag="turretammosource" swapto="chaingunloader" />
             </SwappableItem>
+
             <UpgradePreviewSprite scale="2.5" texture="Content/UI/WeaponUI.png" sourcerect="387,810,106,65" origin="0.5,0.5" />
             <StaticBody width="80" radius="80" />
             <Turret launchimpulse="100" spinningbarreldistance="45.0" firingrotationspeedmodifier="0.6" usefiringoffsetformuzzleflash="true" maxchargetime="1.0" canbeselected="false" firingoffset="-10,-370" characterusable="false" linkable="true" barrelpos="128,88" rotationlimits="180,360" powerconsumption="400.0" showchargeindicator="true" showprojectileindicator="true" recoildistance="50" reload="0.1" springstiffnesslowskill="2" springstiffnesshighskill="50" springdampinglowskill="0.5" springdampinghighskill="10" rotationspeedlowskill="1" rotationspeedhighskill="5" MaxAngleOffset="30" AICurrentTargetPriorityMultiplier="1.1">
@@ -84,21 +91,26 @@
                 <EndMoveSound file="Content/Items/Weapons/RailgunStop.ogg" />
                 <ChargeSound file="Content/Items/Weapons/WEAPONS_chargeUp.ogg" range="10000" />
                 <RequiredSkill identifier="weapons" level="50" />
+
                 <LightComponent LightColor="1.0,0.8,0.8,1.0" Flicker="0.0" range="2500" directional="true" IsOn="true" drawbehindsubs="true" ignorecontinuoustoggle="true">
                     <LightTexture texture="Content/Lights/lightcone.png" origin="0.0,0.5" size="1.0,1.0" />
                 </LightComponent>
+
                 <ParticleEmitter particle="muzzleflashchaingun" particleamount="1" velocitymin="0" velocitymax="0" distancemin="-50" distancemax="-50" />
                 <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" scalemin="2" scalemax="3" />
                 <ParticleEmitter particle="swirlysmoke" particleamount="10" velocitymin="0" velocitymax="0" scalemin="2" scalemax="3" distancemin="-100" distancemax="50" />
+
                 <StatusEffect type="OnUse" target="This">
                     <Explosion range="1500.0" structuredamage="0" force="0.0" camerashake="8" flames="false" smoke="false" sparks="false" underwaterbubble="false" />
                 </StatusEffect>
+
                 <StatusEffect type="OnUse" target="This" condition="-0.03" comparison="And">
                     <Conditional HiddenInGame="eq false" />
                     <Conditional noninteractable="eq false" />
                     <Conditional nonplayerteaminteractable="eq false" />
                 </StatusEffect>
             </Turret>
+
             <aitarget maxsightrange="3000" maxsoundrange="8000" fadeouttime="5" />
             <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
                 <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
@@ -112,6 +124,7 @@
                 <input name="toggle_auto_operate" displayname="connection.toggleautooperate" />
                 <output name="condition_out" displayname="connection.conditionout" />
             </ConnectionPanel>
+
             <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0" mindeteriorationdelay="5" maxdeteriorationdelay="15" MinDeteriorationCondition="0" RepairThreshold="99" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
                 <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="-0.1,0.27" style="ItemUI" />
                 <RequiredSkill identifier="mechanical" level="75" />
@@ -126,11 +139,14 @@
                     <Affliction identifier="stun" strength="4" />
                 </StatusEffect>
             </Repairable>
+
             <Upgrade gameversion="0.19.5.0">
                 <Turret rotationspeedhighskill="5" />
             </Upgrade>
+
             <SkillRequirementHint identifier="weapons" level="50" />
         </Item>
+        
         <!-- COILGUN -->
         <Item name="" description="" identifier="coilgun" Tags="turret" category="Machine,Weapon" interactthroughwalls="true" Scale="0.5" interactdistance="100" spritecolor="1.0,1.0,1.0,1.0" focusonselected="true" offsetonselected="750" linkable="true" allowedlinks="coilgunequipment" damagedbyexplosions="true" explosiondamagemultiplier="0.2" damagedbymonsters="true">
             <Sprite texture="Content/Items/Weapons/Turrets.png" depth="0.01" sourcerect="772,8,248,248" canflipy="false" />
