@@ -1,4 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <contentpackage name="Systemic Failures" corepackage="false" modversion="0.0.1" gameversion="1.11.4.1">
     <RandomEvents file="%ModDir%/Events/FixReactors.xml" />
+
+    <!-- Предметы -->
+    <Item file="%ModDir%/Items/Containers/containers.xml" />
+
+    <!-- Локализация -->
+    <!-- Английская -->
+    <Text file="%ModDir%/Loc/Eng/Items/Containers/containers.xml" />
 </contentpackage>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+    <entityname.radioactivematcrate>Radioactive Material Crate</entityname.radioactivematcrate>
+    <entitydescription.radioactivematcrate>Can safely store up to 9 stacks of radioactive ores or minerals.</entitydescription.radioactivematcrate>
+
+    <entityname.radioactivematcontainer>Radioactive Material Container</entityname.radioactivematcontainer>
+    <entitydescription.radioactivematcontainer>Can safely store up to 6 stacks of radioactive minerals.</entitydescription.radioactivematcontainer>
+
+    <entityname.fuelrodcrate>Fuel Rod Crate</entityname.fuelrodcrate>
+    <entitydescription.fuelrodcrate>Safely stores up to 8 fuel rods and prevents them from irradiating the surroundings.</entitydescription.fuelrodcrate>
+
+    <entityname.fuelrodcrateshelf>Fuel Rod Crate Shelf</entityname.fuelrodcrateshelf>
+    <entitydescription.fuelrodcrateshelf>Can hold up to 2 fuel rod crates.</entitydescription.fuelrodcrateshelf>
+</infotexts>
