@@ -5,9 +5,13 @@
     <!-- Предметы -->
     <Item file="%ModDir%/Items/Containers/containers.xml" />
 
+
     <!-- "Эффекты" -->
     <Item file="%ModDir%/Items/Effects/effects.xml" />
     <Item file="%ModDir%/Items/Effects/TriggerEffectItems.xml" />
+
+    <!-- Минералы овверрайд -->
+    <Item file="%ModDir%/Items/Materials/minerals.xml" />
 
     <!-- Локализация -->
     <!-- Английская -->
