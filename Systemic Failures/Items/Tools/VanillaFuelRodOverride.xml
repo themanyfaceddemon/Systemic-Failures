@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Override>
-    <!-- vanilla fuelrod replaces itself with modded variant or nuclear cartridge, depending on where it is located for compatibility with preplaced items -->
     <Items>
+        <!-- vanilla fuelrod replaces itself with modded variant or nuclear cartridge, depending on where it is located for compatibility with preplaced items -->
         <Item hideinmenus="true" name="" identifier="fuelrod" Category="Fuel" Tags="fuelroditem,smallitem,reactorfuel,nuclearcartridge,divingsuitfuel,mountableweapon" spritecolor="255,0,0,255" inventoryiconcolor="255,0,0,255" maxstacksize="1" cargocontaineridentifier="fuelrodcrate" scale="0.5" impactsoundtag="impact_fuelrod" requireaimtouse="true">
             <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="576,64,64,64" origin="0.5,0.5" />
             <Sprite texture="Content/Items/Tools/tools.png" depth="0.55" sourcerect="410,1,19,68" />

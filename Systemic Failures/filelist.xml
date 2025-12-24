@@ -10,7 +10,7 @@
     <Item file="%ModDir%/Items/Containers/containers.xml" />
     <Item file="%ModDir%/Items/Tools/GeigerCounter.xml" />
     <Item file="%ModDir%/Items/Tools/FuelRodTongs.xml" />
-    <Item file="%ModDir%/Items/Tools/FilelRod.xml" />
+    <Item file="%ModDir%/Items/Tools/FuelRod.xml" />
 
     <!-- Душ, отходы и ещё какая-то шляпа -->
     <Item file="%ModDir%/Items/Misc/RadioactiveWaste.xml" />
@@ -26,9 +26,6 @@
 
     <!-- Реактор -->
     <Item file="%ModDir%/Items/Reactor/reactor.xml" />
-
-    <!-- Стержни -->
-    <Item file="%ModDir%/Items/Tools/FuelRodsOverride.xml" />
 
     <!-- Минералы -->
     <Item file="%ModDir%/Items/Materials/minerals.xml" />
@@ -60,7 +57,7 @@
 
     <Text file="%ModDir%/Loc/Eng/Items/Misc/DecontaminationShower.xml" />
 
-    <Item file="%ModDir%/Loc/Eng/Items/Tools/FilelRod.xml" />
-    <Item file="%ModDir%/Loc/Eng/Items/Tools/FuelRodTongs.xml" />
-    <Item file="%ModDir%/Loc/Eng/Items/Tools/GeigerCounter.xml" />
+    <Text file="%ModDir%/Loc/Eng/Items/Tools/FuelRod.xml" />
+    <Text file="%ModDir%/Loc/Eng/Items/Tools/FuelRodTongs.xml" />
+    <Text file="%ModDir%/Loc/Eng/Items/Tools/GeigerCounter.xml" />
 </contentpackage>

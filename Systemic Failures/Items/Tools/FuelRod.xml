@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- cargoscooter tag is used to prevent storing the fuel rod in metal crates -->
 <Items>
+    <!-- cargoscooter tag is used to prevent storing the fuel rod in metal crates -->
     <Item name="" nameidentifier="fuelrod" descriptionidentifier="fuelrod" identifier="uraniumfuelrod_er" Category="Fuel" Tags="fuelrod,fuelroditem,mediumitem,reactorfuel,fuelroduranium,cargoscooter,mountableweapon" maxstacksize="8" cargocontaineridentifier="fuelrodcrate" scale="0.5" impactsoundtag="impact_fuelrod" requireaimtouse="true">
         <PreferredContainer primary="fuelrodcrate" secondary="reactorcab" />
         <PreferredContainer secondary="fuelrodcontainer" minamount="1" maxamount="3" spawnprobability="0.4" />
@@ -43,7 +43,7 @@
         <Body radius="6" height="55" density="13" />
 
         <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false">
-            <StatusEffect type="Always" target="This" interval="1" disabledeltatime="true">
+            <StatusEffect type="Always" target="This" interval="0.1" disabledeltatime="true">
                 <Hook name="SF.FuelRod" radiationSickness="1" contaminated="1" radiationSounds="3.5" overheating="1" burn="1" />
             </StatusEffect>
         </ItemComponent>
@@ -185,7 +185,7 @@
         <Body radius="6" width="21" height="71" density="13" />
 
         <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false">
-            <StatusEffect type="Always" target="This" interval="1" disabledeltatime="true">
+            <StatusEffect type="Always" target="This" interval="0.1" disabledeltatime="true">
                 <Hook name="SF.FuelRod" radiationSickness="0.5" contaminated="0.5" radiationSounds="2" overheating="1.5" burn="1" />
             </StatusEffect>
         </ItemComponent>
@@ -325,7 +325,7 @@
         <Body radius="6" height="55" density="13" />
 
         <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false">
-            <StatusEffect type="Always" target="This" interval="1" disabledeltatime="true">
+            <StatusEffect type="Always" target="This" interval="0.1" disabledeltatime="true">
                 <Hook name="SF.FuelRod" radiationSickness="2" contaminated="2" radiationSounds="4.5" overheating="2" burn="1" />
             </StatusEffect>
         </ItemComponent>
@@ -447,7 +447,7 @@
         <Body radius="6" height="55" density="13" />
 
         <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false">
-            <StatusEffect type="Always" target="This" interval="1" disabledeltatime="true">
+            <StatusEffect type="Always" target="This" interval="0.1" disabledeltatime="true">
                 <Hook name="SF.FuelRod" radiationSickness="3" contaminated="3" radiationSounds="5.5" overheating="3" burn="1" />
             </StatusEffect>
         </ItemComponent>
@@ -566,7 +566,7 @@
         <Body radius="6" height="55" density="13" />
 
         <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false">
-            <StatusEffect type="Always" target="This" interval="1" disabledeltatime="true">
+            <StatusEffect type="Always" target="This" interval="0.1" disabledeltatime="true">
                 <Hook name="SF.FuelRod" radiationSickness="0.1" contaminated="0.2" radiationSounds="1.5" overheating="0.2" burn="0.5" />
             </StatusEffect>
         </ItemComponent>
@@ -599,13 +599,6 @@
 
         <!-- Requires both <Holdable> to apply burn when held as this doesn't work in other components and <Throwable> to make it throwable -->
         <Holdable handle1="0,0" slots="RightHand,LeftHand" msg="ItemMsgPickUpSelect" canBeCombined="false" throwforce="3.5" aimpos="35,-10">
-
-            <StatusEffect type="OnUse" target="This" AllowWhenBroken="true">
-                <Conditional HasTag="activefuelrod" />
-                <Sound file="%ModDir%/Items/Tools/gulp.ogg" volume="1" loop="false" range="500" />
-                <Remove />
-            </StatusEffect>
-
             <StatusEffect type="OnContained" target="This" condition="0.0" setvalue="true" disabledeltatime="true" oneshot="true">
                 <Conditional condition="gt 0" />
             </StatusEffect>
@@ -660,7 +653,7 @@
         <Body radius="6" height="55" density="13" />
 
         <ItemComponent canbeselected="false" canbepicked="false" allowingameediting="false">
-            <StatusEffect type="Always" target="This" interval="1" disabledeltatime="true">
+            <StatusEffect type="Always" target="This" interval="0.1" disabledeltatime="true">
                 <Hook name="SF.FuelRod" radiationSickness="1" contaminated="1" radiationSounds="3.5" overheating="1" burn="1" />
             </StatusEffect>
         </ItemComponent>

@@ -101,7 +101,7 @@
                     <Conditional condition="eq 0" />
                 </StatusEffect>
 
-                <StatusEffect type="OnActive" target="This" interval="1" disabledeltatime="true" comparison="And">
+                <StatusEffect type="Always" target="This" interval="0.1" disabledeltatime="true" comparison="And">
                     <Conditional temperature="gt 40" />
                     <Hook name="SF.Overheating" />
                 </StatusEffect>
@@ -404,7 +404,7 @@
                     <Conditional temperature="gt 1" />
                 </StatusEffect>
 
-                <StatusEffect type="OnActive" target="This" interval="1" disabledeltatime="true" comparison="And">
+                <StatusEffect type="Always" target="This" interval="0.1" disabledeltatime="true" comparison="And">
                     <Conditional temperature="gt 40" />
                     <Hook name="SF.Overheating" />
                 </StatusEffect>

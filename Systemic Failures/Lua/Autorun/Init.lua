@@ -2,6 +2,9 @@ local path = table.pack(...)[1]
 
 SF = {}
 
+-- Ебаная магия луа
+LuaUserData.MakeMethodAccessible(Descriptors["Barotrauma.Explosion"], "GetObstacleDamageMultiplier")
+
 -- Блок инициализации функций мода
 dofile(path .. "/Lua/SharedFunc/AARFunc.lua")
 

@@ -24,7 +24,7 @@ Hook.Add("SF.FuelRod", "SF.XML.FuelRod", function(effect, deltaTime, item, targe
     local blocked = is_item_inventory and (owner.HasTag("deepdivinglarge") or owner.HasTag("containradiation"))
 
     if not blocked then
-        ApplyAfflictionRadius(worldPosition, 750, 1, 0, {
+        ApplyAfflictionRadius(item.WorldPosition, 750, 1, 0, {
             radiationSickness_prefab.Instantiate(radiationSickness),
             contaminated_prefab.Instantiate(contaminated),
             radiationSounds_prefab.Instantiate(1.25 * radiationSounds),
@@ -49,7 +49,7 @@ Hook.Add("SF.FuelRod", "SF.XML.FuelRod", function(effect, deltaTime, item, targe
     end
 
     if is_item_inventory and owner.GetComponentString("Reactor") and owner.ConditionPercentage < 75 then
-        ApplyAfflictionRadius(worldPosition, 750, 0.6, 0, {
+        ApplyAfflictionRadius(item.WorldPosition, 750, 0.6, 0, {
             radiationSickness_prefab.Instantiate((0.45 - owner.ConditionPercentage * 0.006) * radiationSickness),
             contaminated_prefab.Instantiate((0.45 - owner.ConditionPercentage * 0.006) * contaminated),
             radiationSounds_prefab.Instantiate((2.9 - owner.ConditionPercentage * 0.038) * radiationSounds),
