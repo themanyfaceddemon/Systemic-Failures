@@ -101,41 +101,17 @@
                 </StatusEffect>
 
                 <!-- produce heat around reactor in a 7.5m radius if the temperature is high -->
-                <StatusEffect type="OnActive" target="This" interval="0.9" comparison="And">
+                <StatusEffect type="OnActive" target="This" interval="1" disabledeltatime="true" comparison="And">
                     <Conditional temperature="gt 40" />
-                    <Explosion range="750" itemdamage="0.0" structuredamage="0.0" ballastfloradamage="0" camerashake="0" camerashakerange="0" explosiondamage="0" force="0" flames="false" smoke="false" shockwave="false" sparks="false" flash="false" underwaterbubble="false" playtinnitus="false">
-                        <Affliction identifier="overheating" strength="0.7" />
-                    </Explosion>
+                    <Hook name="SF.Overheating" maxdistance="750" wallPenetration="1" strength="0.11" />
                 </StatusEffect>
 
-                <!-- a 2/20 chance to cause a reactor malfunction if the reactor is active and its condition is below 65 when it's not flooded -->
-                <StatusEffect type="OnActive" target="This" interval="14.9" SpawnItemRandomly="True" comparison="And">
+                <StatusEffect type="OnActive" target="This" interval="14.9" comparison="And">
                     <Conditional InWater="false" />
                     <Conditional temperature="gt 1" />
                     <Conditional condition="lte 65" />
-                    <!-- 18/20 chance to do nothing -->
-                    <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-                    <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-                    <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-                    <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-                    <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-                    <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-                    <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-                    <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-                    <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-                    <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-                    <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-                    <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-                    <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-                    <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-                    <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-                    <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-                    <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-                    <SpawnItem identifier="effect_none" spawnposition="ThisInventory" />
-                    <!-- 1/20 chance to cause reduce the turbine output and disable automatic control -->
-                    <SpawnItem identifier="effect_reactormalfunction1" spawnposition="ThisInventory" />
-                    <!-- 1/20 chance to cause a temperature increase with blocked manual control -->
-                    <SpawnItem identifier="effect_reactormalfunction2" spawnposition="ThisInventory" />
+                    <Hook name="SF.Random" chance="0.05" type="spawnitem" identifier="effect_reactormalfunction1" sameinventory="true"/>
+                    <Hook name="SF.Random" chance="0.05" type="spawnitem" identifier="effect_reactormalfunction2" sameinventory="true"/>
                 </StatusEffect>
 
                 <TemperatureBoostSoundUp file="Content/Items/Reactor/ReactorTemperatureBoostUp.ogg" range="500.0" />
@@ -268,6 +244,7 @@
                 <StatusEffect type="OnBroken" target="Contained" Condition="0.0" delay="0.1" setvalue="true">
                     <Conditional fissionrate="gt 1.0" />
                 </StatusEffect>
+
                 <SkillRequirementHint identifier="electrical" level="50" />
             </Reactor>
 
@@ -431,11 +408,9 @@
                 </StatusEffect>
 
                 <!-- produce heat around reactor in a 7.5m radius if the temperature is high -->
-                <StatusEffect type="OnActive" target="This" interval="0.9" comparison="And">
+                <StatusEffect type="OnActive" target="This" interval="1" disabledeltatime="true" comparison="And">
                     <Conditional temperature="gt 40" />
-                    <Explosion range="750" itemdamage="0.0" structuredamage="0.0" ballastfloradamage="0" camerashake="0" camerashakerange="0" explosiondamage="0" force="0" flames="false" smoke="false" shockwave="false" sparks="false" flash="false" underwaterbubble="false" playtinnitus="false">
-                        <Affliction identifier="overheating" strength="0.7" />
-                    </Explosion>
+                    <Hook name="SF.Overheating" maxdistance="750" wallPenetration="1" strength="0.11" />
                 </StatusEffect>
 
                 <GuiFrame relativesize="0.5,0.45" minsize="700,350" maxsize="2688,1166" anchor="Center" relativeoffset="0.1,0" style="ItemUI" />

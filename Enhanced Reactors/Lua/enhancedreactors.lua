@@ -59,7 +59,6 @@ EnhancedReactors.ProcessItem = function (item)
 
     if fuelRods[item.Prefab.Identifier.Value] then
         item.AddTag("lua_managed")
-        -- item.AddTag("fuelrod")
         table.insert(EnhancedReactors.ManagedItems, item)
     end
 end
@@ -95,15 +94,6 @@ local radiationSounds = AfflictionPrefab.Prefabs["radiationsounds"]
 local burn = AfflictionPrefab.Prefabs["burn"]
 
 EnhancedReactors.ProcessItemUpdate = function (item)
-    local reactor = item.GetComponentString("Reactor")
-    if reactor then
-        if reactor.Temperature > 40 then
-            for character in Character.CharacterList do
-                EnhancedReactors.ApplyAfflictionRadius(item, character, 750, 1, 0, { overheating.Instantiate(0.1) })
-            end
-        end
-    end
-
     if item.HasTag("fuelroditem") and item.HasTag("activefuelrod") then
         local inventory = item.ParentInventory
 
@@ -118,14 +108,6 @@ EnhancedReactors.ProcessItemUpdate = function (item)
             end
         end
 
-        local reactor = parentItem and parentItem.GetComponentString("Reactor") or nil
-
-        -- if not parentItem then
-        --     if math.random() < 0.01 then
-        --         FireSource(item.WorldPosition)
-        --     end
-        -- end
-
         if not parentItem or (not parentItem.HasTag("deepdivinglarge") and not parentItem.HasTag("containradiation")) then
             local data = fuelRods[item.Prefab.Identifier.Value]
             for character in Character.CharacterList do
@@ -134,7 +116,7 @@ EnhancedReactors.ProcessItemUpdate = function (item)
                     contaminated.Instantiate(1 * data.contaminated),
                     radiationSounds.Instantiate(1.25 * data.radiationSounds),
                     overheating.Instantiate(0.05 * data.overheating)
-            })
+                })
             end
 
             if parentCharacter and not item.HasTag("emptyfuelrod") then
@@ -158,17 +140,16 @@ EnhancedReactors.ProcessItemUpdate = function (item)
             end
         end
 
-        if reactor then
-            if parentItem.ConditionPercentage < 75 and not parentItem.HasTag("extrashielding") then
-                local data = fuelRods[item.Prefab.Identifier.Value]
-                for character in Character.CharacterList do
-                    EnhancedReactors.ApplyAfflictionRadius(item, character, 750, 0.6, 0, {
-                        radiationSickness.Instantiate((0.45 - parentItem.ConditionPercentage * 0.006) * data.radiationSickness),
-                        contaminated.Instantiate((0.45 - parentItem.ConditionPercentage * 0.006) * data.contaminated),
-                        radiationSounds.Instantiate((2.9 - parentItem.ConditionPercentage * 0.038) * data.radiationSounds),
-                        overheating.Instantiate((0.18 - parentItem.ConditionPercentage * 0.0024) * data.overheating)
-                    })
-                end
+        local reactor = parentItem and parentItem.GetComponentString("Reactor") or nil
+        if reactor and parentItem.ConditionPercentage < 75 and not parentItem.HasTag("extrashielding") then
+            local data = fuelRods[item.Prefab.Identifier.Value]
+            for character in Character.CharacterList do
+                EnhancedReactors.ApplyAfflictionRadius(item, character, 750, 0.6, 0, {
+                    radiationSickness.Instantiate((0.45 - parentItem.ConditionPercentage * 0.006) * data.radiationSickness),
+                    contaminated.Instantiate((0.45 - parentItem.ConditionPercentage * 0.006) * data.contaminated),
+                    radiationSounds.Instantiate((2.9 - parentItem.ConditionPercentage * 0.038) * data.radiationSounds),
+                    overheating.Instantiate((0.18 - parentItem.ConditionPercentage * 0.0024) * data.overheating)
+                })
             end
         end
     end

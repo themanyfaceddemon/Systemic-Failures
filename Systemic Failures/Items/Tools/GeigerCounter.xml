@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
-    <Item name="Geiger Counter" identifier="geigercounter" category="Equipment,Electrical" maxstacksize="4" tags="smallitem,loadable,geigercounter,mountableweapon" scale="0.5" cargocontaineridentifier="metalcrate" description="Allows you to detect radiation. Can be used on characters." useinhealthinterface="true" impactsoundtag="impact_metal_light">
+    <Item identifier="geigercounter" category="Equipment,Electrical" maxstacksize="4" tags="smallitem,loadable,geigercounter,mountableweapon" scale="0.5" cargocontaineridentifier="metalcrate" useinhealthinterface="true" impactsoundtag="impact_metal_light">
         <PreferredContainer primary="batterycellrecharger" maxcondition="80" />
         <PreferredContainer primary="reactorcab" amount="1" spawnprobability="1" />
         <PreferredContainer secondary="abandonedengcab,wreckengcab,outpostengcab" minamount="1" maxamount="2" spawnprobability="0.1" />
@@ -27,6 +27,7 @@
             <RequiredItem identifier="plastic" amount="1" />
             <RequiredItem tag="mobilebattery" amount="1" />
         </Fabricate>
+
         <InventoryIcon texture="%ModDir%/Items/ER-ItemsAtlas.png" sourcerect="334,1,61,52" origin="0.5,0.5" />
         <Sprite texture="%ModDir%/Items/ER-ItemsAtlas.png" sourcerect="396,26,64,27" depth="0.6" origin="0.5,0.5" />
         <Body width="64" height="24" density="30" />

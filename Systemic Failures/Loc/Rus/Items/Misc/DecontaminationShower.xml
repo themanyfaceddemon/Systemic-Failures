@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<infotexts language="English" nowhitespace="false" translatedname="English">
-    <entityname.deconshower>Decontamination Shower</entityname.deconshower>
-    <entitydescription.deconshower>Decontaminates the user and automatically shuts off when the user is fully decontaminated. Requires Deconsol to decontaminate.</entitydescription.deconshower>
-</infotexts>
