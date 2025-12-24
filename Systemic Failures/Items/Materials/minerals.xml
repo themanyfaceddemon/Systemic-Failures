@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
+    <!-- Не вижу смысл менять тут что либо, по этому похуй, оставляем и не трогаем -->
     <Override>
         <!-- Thorium -->
         <Item name="" identifier="thorianite" category="Material" Tags="smallitem,ore,radioactivematerial" maxstacksize="32" maxstacksizecharacterinventory="8" canbepicked="true" description="" cargocontaineridentifier="radioactivematcrate" scale="0.5" impactsoundtag="impact_metal_light">
