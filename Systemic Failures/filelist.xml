@@ -1,11 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <contentpackage name="Systemic Failures" corepackage="false" modversion="0.0.1" gameversion="1.11.4.1">
     <RandomEvents file="%ModDir%/Events/FixReactors.xml" />
+    <Afflictions file="%ModDir%/Afflictions.xml" />
+
+    <!-- Таланты -->
+    <Talents file="%ModDir%/Talents/Engineer/TalentsEngineer.xml" />
 
     <!-- Предметы -->
     <Item file="%ModDir%/Items/Containers/containers.xml" />
     <Item file="%ModDir%/Items/Tools/GeigerCounter.xml" />
     <Item file="%ModDir%/Items/Tools/FuelRodTongs.xml" />
+    <Item file="%ModDir%/Items/Tools/FilelRod.xml" />
 
     <!-- Душ, отходы и ещё какая-то шляпа -->
     <Item file="%ModDir%/Items/Misc/RadioactiveWaste.xml" />
@@ -16,6 +21,9 @@
     <Item file="%ModDir%/Items/Effects/TriggerEffectItems.xml" />
 
     <!-- !Оверрайды! -->
+    <!-- Ванильный спеер -->
+    <Item file="%ModDir%/Items/Tools/tools.xml" />
+
     <!-- Реактор -->
     <Item file="%ModDir%/Items/Reactor/reactor.xml" />
 
@@ -33,7 +41,7 @@
     <Item file="%ModDir%/Items/Jobgear/Mechanic/mechanic_talent_items.xml" />
 
     <!-- Ванильное топливо -->
-    <Item file="%ModDir%/Items/Tools/tools.xml" />
+    <Item file="%ModDir%/Items/Tools/VanillaFuelRodOverride.xml" />
 
     <!-- Звуки -->
     <Sounds file="%ModDir%/Sounds/sounds.xml" />
@@ -43,9 +51,16 @@
 
     <!-- !Локализация! -->
     <!-- Английская -->
+    <Text file="%ModDir%/Loc/Eng/Afflictions.xml" />
+    <Text file="%ModDir%/Loc/Eng/DisplayNames.xml" />
+
     <Text file="%ModDir%/Loc/Eng/Items/Containers/containers.xml" />
+
     <Text file="%ModDir%/Loc/Eng/Items/Effects/TriggerEffectItems.xml" />
+
     <Text file="%ModDir%/Loc/Eng/Items/Misc/DecontaminationShower.xml" />
-    <Item file="%ModDir%/Loc/Eng/Items/Tools/GeigerCounter.xml" />
+
+    <Item file="%ModDir%/Loc/Eng/Items/Tools/FilelRod.xml" />
     <Item file="%ModDir%/Loc/Eng/Items/Tools/FuelRodTongs.xml" />
+    <Item file="%ModDir%/Loc/Eng/Items/Tools/GeigerCounter.xml" />
 </contentpackage>

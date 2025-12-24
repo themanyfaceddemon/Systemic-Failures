@@ -90,6 +90,7 @@
             <BrokenSprite texture="Content/Items/Reactor/reactor.png" sourcerect="0,338,528,336" depth="0.8" origin="0.5,0.45" maxcondition="40" fadein="true" />
             <BrokenSprite texture="Content/Items/Reactor/reactor.png" sourcerect="0,676,528,336" depth="0.8" origin="0.5,0.45" maxcondition="0" />
             <aitarget sightrange="500" soundrange="4000" />
+
             <Reactor canbeselected="true" firedelay="20" meltdowndelay="120" maxpoweroutput="5000" fuelconsumptionrate="0.2" vulnerabletoemp="false" msg="ItemMsgInteractSelect">
                 <StatusEffect type="InWater" target="This" condition="-0.5" comparison="And">
                     <Conditional condition="gt 10" />
@@ -100,10 +101,9 @@
                     <Conditional condition="eq 0" />
                 </StatusEffect>
 
-                <!-- produce heat around reactor in a 7.5m radius if the temperature is high -->
                 <StatusEffect type="OnActive" target="This" interval="1" disabledeltatime="true" comparison="And">
                     <Conditional temperature="gt 40" />
-                    <Hook name="SF.Overheating" maxdistance="750" wallPenetration="1" strength="0.11" />
+                    <Hook name="SF.Overheating" />
                 </StatusEffect>
 
                 <StatusEffect type="OnActive" target="This" interval="14.9" comparison="And">
@@ -397,20 +397,20 @@
             <BrokenSprite texture="Content/Map/Outposts/Art/GenericAssets2.png" sourcerect="473,1197,502,655" depth="0.79" maxcondition="50" offset="0,0" fadein="true" />
             <BrokenSprite texture="Content/Map/Outposts/Art/GenericAssets2.png" sourcerect="975,1197,502,690" depth="0.79" maxcondition="10" offset="0,0" fadein="true" />
             <aitarget sightrange="500" soundrange="7500" />
+
             <Reactor canbeselected="true" firedelay="20" meltdowndelay="120" maxpoweroutput="20000" fuelconsumptionrate="0.2" vulnerabletoemp="false" msg="ItemMsgInteractSelect">
                 <StatusEffect type="InWater" target="This" condition="-0.5" comparison="And">
                     <Conditional condition="gt 10" />
                     <Conditional temperature="gt 1" />
                 </StatusEffect>
 
-                <StatusEffect type="Always" target="This" tags="wreckreactor" setvalue="true" duration="0.2" interval="0.1" AllowWhenBroken="true">
-                    <Conditional condition="eq 0" />
-                </StatusEffect>
-
-                <!-- produce heat around reactor in a 7.5m radius if the temperature is high -->
                 <StatusEffect type="OnActive" target="This" interval="1" disabledeltatime="true" comparison="And">
                     <Conditional temperature="gt 40" />
-                    <Hook name="SF.Overheating" maxdistance="750" wallPenetration="1" strength="0.11" />
+                    <Hook name="SF.Overheating" />
+                </StatusEffect>
+
+                <StatusEffect type="Always" target="This" tags="wreckreactor" setvalue="true" duration="0.2" interval="0.1" AllowWhenBroken="true">
+                    <Conditional condition="eq 0" />
                 </StatusEffect>
 
                 <GuiFrame relativesize="0.5,0.45" minsize="700,350" maxsize="2688,1166" anchor="Center" relativeoffset="0.1,0" style="ItemUI" />

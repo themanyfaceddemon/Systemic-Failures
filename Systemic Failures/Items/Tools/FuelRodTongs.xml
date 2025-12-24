@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+    <Item identifier="fuelrodtongs" Category="Equipment" Tags="smallitem,tongs,mountableweapon" maxstacksize="1" cargocontaineridentifier="metalcrate" scale="0.5" spritecolor="255,255,255,255" impactsoundtag="impact_metal_light">
+        <PreferredContainer primary="reactorcab" amount="1" spawnprobability="1" />
+        <PreferredContainer secondary="wreckreactorcab,abandonedreactorcab" minamount="1" maxamount="2" spawnprobability="0.3" />
+        <InventoryIcon texture="%ModDir%/Items/ER-ItemsAtlas.png" sourcerect="1,366,94,94" origin="0.5,0.5" />
+        <Sprite texture="%ModDir%/Items/ER-ItemsAtlas.png" sourcerect="95,446,94,17" depth="0.6" origin="0.5,0.2" />
+        <Body width="92" height="15" density="25" />
+        <Price baseprice="160">
+            <Price storeidentifier="merchantoutpost" multiplier="0.9" minavailable="1" />
+            <Price storeidentifier="merchantcity" minavailable="4" />
+            <Price storeidentifier="merchantresearch" multiplier="1.2" minavailable="1" />
+            <Price storeidentifier="merchantmilitary" multiplier="1.1" />
+            <Price storeidentifier="merchantmine" minavailable="1" />
+            <Price storeidentifier="merchantengineering" multiplier="0.9" minavailable="6" />
+        </Price>
+
+        <Deconstruct time="5" />
+        <Fabricate suitablefabricators="fabricator" requiredtime="10">
+            <RequiredSkill identifier="mechanical" level="35" />
+            <RequiredItem identifier="titaniumaluminiumalloy" amount="1" />
+            <RequiredItem identifier="plastic" amount="1" />
+        </Fabricate>
+
+        <LightComponent range="750.0" lightcolor="40,255,0,175" IsOn="false" flicker="0.2" flickerspeed="0.3" castshadows="true" alphablend="false" allowingameediting="false" powerconsumption="0">
+            <StatusEffect type="OnActive" target="This" LightColor="255,255,255,0" IsOn="false" setvalue="true" interval="0.1">
+                <Conditional HasStatusTag="neq containing" />
+            </StatusEffect>
+        </LightComponent>
+
+        <Holdable canbeselected="true" slots="RightHand,LeftHand" HoldPos="10,-40" aimable="true" handle1="-32,-5" handle2="-32,-5" holdangle="50" msg="ItemMsgPickUpSelect">
+            <StatusEffect type="OnActive" target="This" LightColor="40,255,0,175" IsOn="true" tags="containing" setvalue="true" duration="0.1">
+                <RequiredItem items="fuelrod" type="Contained" />
+                <Conditional HasTag="activefuelrod" targetcontaineditem="true" />
+            </StatusEffect>
+
+            <StatusEffect type="OnActive" target="This" LightColor="255,125,30,175" IsOn="true" tags="containing" setvalue="true" duration="0.1">
+                <RequiredItem items="fulguriumfuelrod" type="Contained" />
+                <Conditional HasTag="activefuelrod" targetcontaineditem="true" />
+            </StatusEffect>
+
+            <StatusEffect type="OnActive" target="This" LightColor="225,150,255,175" IsOn="true" tags="containing" setvalue="true" duration="0.1">
+                <RequiredItem items="thoriumfuelrod" type="Contained" />
+                <Conditional HasTag="activefuelrod" targetcontaineditem="true" />
+            </StatusEffect>
+
+            <StatusEffect type="OnActive" target="This" LightColor="60,200,255,200" IsOn="true" tags="containing" setvalue="true" duration="0.1">
+                <RequiredItem items="fulguriumfuelrodvolatile" type="Contained" />
+                <Conditional HasTag="activefuelrod" targetcontaineditem="true" />
+            </StatusEffect>
+
+            <StatusEffect type="OnNotContained" target="This" interval="0.3">
+                <DropContainedItems />
+            </StatusEffect>
+
+            <StatusEffect type="Always" target="This" interval="0.3" comparison="Or">
+                <Conditional HasTag="mediumitem" targetcontainer="true" />
+                <Conditional HasTag="mobilecontainer" targetcontainer="true" />
+                <Conditional HasTag="container" targetcontainer="true" />
+                <DropContainedItems />
+            </StatusEffect>
+
+            <!-- simulate throwing actions -->
+            <StatusEffect type="OnSecondaryUse" target="This" aimpos="50,10" setvalue="true">
+                <Conditional targetitemcomponent="RangedWeapon" reloadtimer="gt 0.6" />
+            </StatusEffect>
+
+            <StatusEffect type="OnSecondaryUse" target="This" aimpos="-10,-30" setvalue="true">
+                <Conditional targetitemcomponent="RangedWeapon" reloadtimer="lt 0.6" />
+            </StatusEffect>
+
+            <StatusEffect type="OnUse" target="This" aimpos="50,10" setvalue="true" comparison="And">
+                <Conditional targetitemcomponent="RangedWeapon" reloadtimer="lt 0.1" />
+            </StatusEffect>
+        </Holdable>
+
+        <RangedWeapon barrelpos="0,0" spread="1" unskilledspread="20" reload="0.7" combatpriority="40" drawhudwhenequipped="true" crosshairscale="0.2">
+            <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
+            <RequiredItems items="reactorfuel,emptyfuelrod" type="Contained" />
+        </RangedWeapon>
+
+        <ItemContainer capacity="1" maxstacksize="1" canbeselected="true" hideitems="false" slotsperrow="1" itempos="35,-3" containedspritedepths="0.601" msg="ItemMsgInteractSelect">
+            <Containable items="reactorfuel,emptyfuelrod" />
+        </ItemContainer>
+    </Item>
+</Items>

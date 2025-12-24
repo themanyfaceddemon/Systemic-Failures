@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+    <afflictionname.radiationresistance>Radiation Resistance</afflictionname.radiationresistance>
+    <afflictiondescription.radiationresistance>You are more resistant to radiation, however you are not immune to it!</afflictiondescription.radiationresistance>
+    <afflictiondescription.radiationresistance.others>The patient has built up a decent resistance towards radiation.</afflictiondescription.radiationresistance.others>
+
+    <afflictionname.contaminated>Contaminated</afflictionname.contaminated>
+    <afflictiondescription.contaminated>The patient is slowly irradiating the area. It's better to treat this sooner rather than later.</afflictiondescription.contaminated>
+    <afflictiondescription.contaminated.high>The patient is severely contaminated and a massive health hazard to others. Caution while treating is advised!</afflictiondescription.contaminated.high>
+    <afflictioncauseofdeath.contaminated>Died of radiation sickness.</afflictioncauseofdeath.contaminated>
+    <afflictioncauseofdeathself.contaminated>You have died of radiation sickness.</afflictioncauseofdeathself.contaminated>
+
+    <afflictionname.overheating>Heat Stroke Risk</afflictionname.overheating>
+    <afflictiondescription.overheating.self>You're sweating. The surrouning air is way too hot. Better not stay here for too long!</afflictiondescription.overheating.self>
+    <afflictiondescription.overheating>The patient is sweating a lot! They should probably vacate the area and cool off for a bit.</afflictiondescription.overheating>
+    <afflictioncauseofdeath.overheating>Burned to death.</afflictioncauseofdeath.overheating>
+    <afflictioncauseofdeathself.overheating>You have burned to death.</afflictioncauseofdeathself.overheating>
+</infotexts>

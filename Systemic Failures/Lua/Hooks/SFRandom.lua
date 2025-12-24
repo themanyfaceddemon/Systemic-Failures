@@ -25,7 +25,7 @@ SFRandomDispatch["fire"] = function(ctx, item, action)
     fire.Size = Vector2(tonumber(action.GetAttributeString("size")), fire.Size.Y)
 end
 
--- Фактически, хук в xml в случае если это не nil возвращает значение. Позволяет по факту имитировать Conditional + какое-то поведение. Это всё равно лучше чем кидать кубик через спавн энтити, но выглядит проклято
+-- Фактически, хук при возращении bool(return value) != false то прерывает выполение кондишена. Позволяет по факту имитировать Conditional + какое-то поведение. Это всё равно лучше чем кидать кубик через спавн энтити, но выглядит проклято
 Hook.Add("SF.Random", "SF.XML.Random", function(effect, deltaTime, item, targets, worldPosition, element)
     local chance = tonumber(element.GetAttributeString("chance", "0"))
     if math.random() >= chance then return false end
