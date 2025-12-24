@@ -9,11 +9,23 @@
         <footstep_armor_exosuit_clown file="%ModDir%/Sounds/Footsteps/Armor/FootstepExoClown2.ogg" volume="1.5" range="700" />
         <footstep_armor_exosuit_clown file="%ModDir%/Sounds/Footsteps/Armor/FootstepExoClown3.ogg" volume="1.5" range="700" />
         <footstep_armor_exosuit_clown file="%ModDir%/Sounds/Footsteps/Armor/FootstepExoClown4.ogg" volume="1.5" range="700" />
+        <impact_extinguisher file="%ModDir%/Sounds/Impact/ImpactExtinguisher1.ogg" range="600" />
+        <impact_extinguisher file="%ModDir%/Sounds/Impact/ImpactExtinguisher2.ogg" range="600" />
+        <impact_extinguisher file="%ModDir%/Sounds/Impact/ImpactExtinguisher3.ogg" range="600" />
+        <impact_extinguisher file="%ModDir%/Sounds/Impact/ImpactExtinguisher4.ogg" range="600" />
+        <impact_extinguisher file="%ModDir%/Sounds/Impact/ImpactExtinguisher5.ogg" range="600" />
+        <impact_extinguisher file="%ModDir%/Sounds/Impact/ImpactExtinguisher6.ogg" range="600" />
         <impact_fuelrod file="%ModDir%/Sounds/Impact/FuelRodImpact1.ogg" range="600" />
         <impact_fuelrod file="%ModDir%/Sounds/Impact/FuelRodImpact2.ogg" range="600" />
         <impact_fuelrod file="%ModDir%/Sounds/Impact/FuelRodImpact3.ogg" range="600" />
         <impact_fuelrod file="%ModDir%/Sounds/Impact/FuelRodImpact4.ogg" range="600" />
         <impact_fuelrod file="%ModDir%/Sounds/Impact/FuelRodImpact5.ogg" range="600" />
         <impact_fuelrod file="%ModDir%/Sounds/Impact/FuelRodImpact6.ogg" range="600" />
+        <impact_fueltank file="%ModDir%/Sounds/Impact/FuelTankImpact1.ogg" range="600" />
+        <impact_fueltank file="%ModDir%/Sounds/Impact/FuelTankImpact2.ogg" range="600" />
+        <impact_fueltank file="%ModDir%/Sounds/Impact/FuelTankImpact3.ogg" range="600" />
+        <impact_fueltank file="%ModDir%/Sounds/Impact/FuelTankImpact4.ogg" range="600" />
+        <impact_fueltank file="%ModDir%/Sounds/Impact/FuelTankImpact5.ogg" range="600" />
+        <impact_fueltank file="%ModDir%/Sounds/Impact/FuelTankImpact6.ogg" range="600" />
     </sounds>
 </Override>

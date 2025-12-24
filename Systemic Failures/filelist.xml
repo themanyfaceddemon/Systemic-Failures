@@ -28,6 +28,12 @@
     <!-- Ванильное топливо -->
     <Item file="%ModDir%/Items/Tools/tools.xml" />
 
+    <!-- Звуки -->
+    <Sounds file="%ModDir%/Sounds/sounds.xml" />
+
+    <!-- Партиклы -->
+    <Particles file="%ModDir%/Particles/ParticlePrefabs.xml" />
+
     <!-- !Локализация! -->
     <!-- Английская -->
     <Text file="%ModDir%/Loc/Eng/Items/Containers/containers.xml" />

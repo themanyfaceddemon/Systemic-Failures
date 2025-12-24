@@ -4,16 +4,12 @@
     <Item file="%ModDir%/Items/Containers/containers.xml" />
     <Item file="%ModDir%/Items/Effects/effects.xml" />
     <Item file="%ModDir%/Items/Effects/TriggerEffectItems.xml" />
-
     <Item file="%ModDir%/Items/Materials/minerals.xml" />
     <Item file="%ModDir%/Items/Medical/medical.xml" />
-    
     <Item file="%ModDir%/Items/Reactor/reactor.xml" />
     <Item file="%ModDir%/Items/Reactor/reactor_ek.xml" />
     <Item file="%ModDir%/Items/Tools/tools.xml" />
-    <Particles file="%ModDir%/Particles/ParticlePrefabs.xml" />
     <RandomEvents file="%ModDir%/Events/Events.xml" />
-    <Sounds file="%ModDir%/Sounds/sounds.xml" />
     <Talents file="%ModDir%/Talents/Engineer/TalentsEngineer.xml" />
     <Text file="%ModDir%/Texts/English.xml" />
     <Text file="%ModDir%/Texts/Russian.xml" />
