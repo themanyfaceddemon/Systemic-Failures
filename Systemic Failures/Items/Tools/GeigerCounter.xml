@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+    <Item name="Geiger Counter" identifier="geigercounter" category="Equipment,Electrical" maxstacksize="4" tags="smallitem,loadable,geigercounter,mountableweapon" scale="0.5" cargocontaineridentifier="metalcrate" description="Allows you to detect radiation. Can be used on characters." useinhealthinterface="true" impactsoundtag="impact_metal_light">
+        <PreferredContainer primary="batterycellrecharger" maxcondition="80" />
+        <PreferredContainer primary="reactorcab" amount="1" spawnprobability="1" />
+        <PreferredContainer secondary="abandonedengcab,wreckengcab,outpostengcab" minamount="1" maxamount="2" spawnprobability="0.1" />
+        <PreferredContainer secondary="abandonedstoragecab,wreckstoragecabcab" minamount="1" maxamount="2" spawnprobability="0.05" />
+        <PreferredContainer secondary="outposttrashcan" amount="1" spawnprobability="0.1" />
+        <Price baseprice="190">
+            <Price storeidentifier="merchantoutpost" multiplier="0.9" minavailable="1" />
+            <Price storeidentifier="merchantcity" minavailable="4" />
+            <Price storeidentifier="merchantresearch" multiplier="1.2" minavailable="1" />
+            <Price storeidentifier="merchantmilitary" multiplier="1.1" />
+            <Price storeidentifier="merchantmine" minavailable="1" />
+            <Price storeidentifier="merchantengineering" multiplier="0.9" minavailable="6" />
+        </Price>
+
+        <Deconstruct time="10">
+            <Item identifier="plastic" />
+            <Item identifier="zinc" />
+            <Item identifier="lithium" />
+        </Deconstruct>
+
+        <Fabricate suitablefabricators="fabricator" requiredtime="10">
+            <RequiredSkill identifier="electrical" level="35" />
+            <RequiredItem identifier="fpgacircuit" amount="1" />
+            <RequiredItem identifier="plastic" amount="1" />
+            <RequiredItem tag="mobilebattery" amount="1" />
+        </Fabricate>
+        <InventoryIcon texture="%ModDir%/Items/ER-ItemsAtlas.png" sourcerect="334,1,61,52" origin="0.5,0.5" />
+        <Sprite texture="%ModDir%/Items/ER-ItemsAtlas.png" sourcerect="396,26,64,27" depth="0.6" origin="0.5,0.5" />
+        <Body width="64" height="24" density="30" />
+        <GreaterComponent allowingameediting="false" timeframe="0" />
+        <MeleeWeapon reload="1" slots="Any,RightHand,LeftHand" holdpos="25,35" handle1="10,-4" holdangle="260" aimpos="25,-45" aimangle="260" aimable="true" msg="ItemMsgPickUpSelect">
+            <StatusEffect type="Always" target="This,Character" tags="hasgeigercounter" interval="0.1" duration="0.2" setvalue="true" comparison="And">
+                <Conditional timeframe="eq 1" />
+                <Conditional condition="gt 0" />
+            </StatusEffect>
+
+            <StatusEffect type="Always" target="This" condition="-0.05" interval="0.9" disabledeltatime="true" comparison="And">
+                <Conditional timeframe="eq 1" />
+                <Conditional IsPlayer="eq true" targetcontainer="true" />
+                <Conditional HasTag="neq chargingdock" targetcontainer="true" />
+            </StatusEffect>
+
+            <StatusEffect type="OnSuccess" target="This,UseTarget" comparison="And">
+                <Conditional timeframe="eq 1" />
+                <Conditional condition="gt 0" />
+                <Affliction identifier="checkifcontaminated" amount="1" />
+            </StatusEffect>
+
+            <StatusEffect type="OnFailure" target="This,UseTarget" comparison="And">
+                <Conditional timeframe="eq 1" />
+                <Conditional condition="gt 0" />
+                <Affliction identifier="checkifcontaminated" amount="1" />
+            </StatusEffect>
+        </MeleeWeapon>
+
+        <CustomInterface canbeselected="false" drawhudwhenequipped="true">
+            <GuiFrame style="ItemUI" absoluteoffset="0,0" anchor="BottomCenter" relativesize="0.06,0.08" />
+            <Tickbox text="ON">
+                <StatusEffect type="OnUse" target="This" targetitemcomponent="GreaterComponent" timeframe="1" setvalue="true" />
+                <StatusEffect type="OnSecondaryUse" target="This" targetitemcomponent="GreaterComponent" timeframe="0" setvalue="true" />
+            </Tickbox>
+        </CustomInterface>
+
+        <Quality>
+            <QualityStat stattype="Condition" value="0.1" />
+        </Quality>
+    </Item>
+</Items>

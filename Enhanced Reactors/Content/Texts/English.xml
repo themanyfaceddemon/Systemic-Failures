@@ -14,8 +14,7 @@
     <entitydescription.hazmatsuit2>A modified hazmat suit.\nIt has been adjusted to protect against water pressure up to a depth of 6600m at the cost of some of its radiation shielding.</entitydescription.hazmatsuit2>
     <entityname.fuelrodtongs>Fuel Rod Tongs</entityname.fuelrodtongs>
     <entitydescription.fuelrodtongs>Required to move active fuel rods around without burning your hands in the process. Can be stored in a toolbelt.</entitydescription.fuelrodtongs>
-    <entityname.geigercounter>Geiger Counter</entityname.geigercounter>
-    <entitydescription.geigercounter>Allows you to detect radiation. Can be used on characters.</entitydescription.geigercounter>
+
     <entityname.fuelrodcrate>Fuel Rod Crate</entityname.fuelrodcrate>
     <entitydescription.fuelrodcrate>Safely stores up to 8 fuel rods and prevents them from irradiating the surroundings.</entitydescription.fuelrodcrate>
     <entityname.fuelrodcrateshelf>Fuel Rod Crate Shelf</entityname.fuelrodcrateshelf>

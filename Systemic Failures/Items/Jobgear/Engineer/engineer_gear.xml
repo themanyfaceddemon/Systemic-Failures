@@ -54,33 +54,40 @@
                 <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="morbusinepoisoning" damagemultiplier="0.5" />
                 <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="sufforinpoisoning" damagemultiplier="0.5" />
                 <damagemodifier armorsector="0.0,360.0" afflictiontypes="damage" damagemultiplier="0.7" />
+
                 <!-- For singleplayer compatibility | Give the suit pressure resistance if worn by a bot so they don't take it off -->
                 <StatusEffect type="OnWearing" target="Character" PressureProtection="6000.0" setvalue="true" disabledeltatime="true">
                     <Conditional IsPlayer="eq false" />
                 </StatusEffect>
+
                 <!-- For singleplayer compatibility | Provide oxygen for bots without reducing oxygen tank condition -->
                 <StatusEffect type="OnWearing" target="Character" OxygenAvailable="1000.0" comparison="And">
                     <Conditional IsDead="false" />
                     <Conditional IsPlayer="eq false" />
                     <RequiredItem items="oxygensource" type="Contained" />
                 </StatusEffect>
+
                 <!-- Prevent the wearer from breathing hull oxygen, requiring them to use oxygen tanks | Disabled for bots -->
                 <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false">
                     <Conditional IsPlayer="eq true" />
                 </StatusEffect>
+
                 <!-- Obstruct vision of the the wearer -->
                 <StatusEffect type="OnWearing" target="Character" ObstructVisionAmount="0.7" setvalue="true" />
+
                 <!-- Provide oxygen to wearer if any oxygensource is contained and drain the oxygen tank as fast as abyss diving suit | Disabled for bots -->
                 <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.15" comparison="And">
                     <Conditional IsDead="false" />
                     <Conditional IsPlayer="eq true" />
                     <RequiredItem items="oxygensource" type="Contained" />
                 </StatusEffect>
+
                 <!-- Suffocate the wearer if welding fuel is inserted -->
                 <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="-10.0" Condition="-0.5" interval="1" disabledeltatime="true">
                     <Conditional IsDead="false" />
                     <RequiredItem items="weldingfueltank" type="Contained" />
                 </StatusEffect>
+
                 <!-- Suffocate and burn the wearer if incendium fuel is inserted -->
                 <StatusEffect type="OnWearing" target="Contained,Character" targetlimbs="Torso" Oxygen="-10.0" Condition="-0.5" interval="1" disabledeltatime="true">
                     <Conditional IsDead="false" />
@@ -88,6 +95,7 @@
                     <Affliction identifier="burn" amount="3.0" />
                 </StatusEffect>
             </Wearable>
+
             <Holdable slots="LeftHand,RightHand" holdpos="0,-30" handle1="0,-30" aimable="false" pickkey="Use" msg="ItemMsgPickUpUse" />
             <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="tank" spawnwithid="oxygentank">
                 <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
@@ -99,11 +107,13 @@
                         <Sound file="Content/Items/WarningBeepSlow.ogg" range="250" loop="true" />
                     </StatusEffect>
                 </Containable>
+
                 <Containable items="oxygenitetank">
                     <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1.3" setvalue="true" targetslot="0">
                         <Conditional IsDead="false" />
                     </StatusEffect>
                 </Containable>
+
                 <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true">
                     <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
                     <Conditional condition="lte 0.0" />
@@ -111,6 +121,7 @@
                 </StatusEffect>
             </ItemContainer>
         </Item>
+
         <Item name="Hazmat Suit (Pressure Resistant)" identifier="hazmatsuit2" category="Equipment" tags="smallitem,clothing,radiationproof,deepdiving,divinggear_wearableindoors" fireproof="true" cargocontaineridentifier="metalcrate" description="A modified hazmat suit. It has been adjusted to protect against water pressure up to a depth of 6600m at the cost of some of its radiation shielding." scale="0.5" impactsoundtag="impact_metal_heavy" botpriority="5">
             <PreferredContainer primary="reactorcab" />
             <PreferredContainer secondary="crewcab" />
@@ -121,16 +132,19 @@
                 <Price storeidentifier="merchantmilitary" />
                 <Price storeidentifier="merchantmine" />
             </Price>
+
             <Deconstruct time="20">
                 <Item identifier="hazmatsuit1" />
                 <Item identifier="rubber" />
             </Deconstruct>
+
             <Fabricate suitablefabricators="fabricator" requiredtime="45">
                 <RequiredSkill identifier="mechanical" level="60" />
                 <Item identifier="hazmatsuit1" amount="1" />
                 <Item identifier="titaniumaluminiumalloy" amount="1" />
                 <Item identifier="rubber" amount="2" />
             </Fabricate>
+
             <InventoryIcon name="Engineer Hazmat Icon" texture="%ModDir%/Items/Jobgear/Engineer/HazmatSuitItem2.png" sourcerect="0,0,190,116" origin="0.5,0.5" />
             <Sprite name="Engineer Hazmat" texture="%ModDir%/Items/Jobgear/Engineer/HazmatSuitItem.png" sourcerect="0,0,190,116" depth="0.6" origin="0.5,0.5" />
             <ContainedSprite name="Respawn Diving Suit In Vertical Locker" allowedcontainertags="divingsuitcontainervertical" texture="Content/Items/Diving/RespawnSuit_Items.png" sourcerect="181,0,70,192" depth="0.55" origin="0.5,0.5" />
@@ -168,18 +182,22 @@
                     <TriggerAnimation Type="Walk" FileName="HumanWalkDivingSuit" priority="1" ExpectedSpecies="Human" />
                     <TriggerAnimation Type="Run" FileName="HumanRunDivingSuit" priority="1" ExpectedSpecies="Human" />
                 </StatusEffect>
+
                 <!-- Prevent the wearer from breathing hull oxygen, requiring them to use oxygen tanks -->
                 <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" UseHullOxygen="false" />
+
                 <!-- Provide oxygen to wearer if any oxygensource is contained and drain the oxygen tank as fast as abyss diving suit -->
                 <StatusEffect type="OnWearing" target="Contained,Character" OxygenAvailable="1000.0" Condition="-0.15" comparison="And">
                     <Conditional IsDead="false" />
                     <RequiredItem items="oxygensource" type="Contained" />
                 </StatusEffect>
+
                 <!-- Suffocate the wearer if welding fuel is inserted -->
                 <StatusEffect type="OnWearing" target="Contained,Character" Oxygen="-10.0" Condition="-0.5" interval="1" disabledeltatime="true">
                     <Conditional IsDead="false" />
                     <RequiredItem items="weldingfueltank" type="Contained" />
                 </StatusEffect>
+
                 <!-- Suffocate and burn the wearer if incendium fuel is inserted -->
                 <StatusEffect type="OnWearing" target="Contained,Character" targetlimbs="Torso" Oxygen="-10.0" Condition="-0.5" interval="1" disabledeltatime="true">
                     <Conditional IsDead="false" />
@@ -187,6 +205,7 @@
                     <Affliction identifier="burn" amount="3.0" />
                 </StatusEffect>
             </Wearable>
+
             <Holdable slots="LeftHand,RightHand" holdpos="0,-30" handle1="0,-30" aimable="false" pickkey="Use" msg="ItemMsgPickUpUse" />
             <ItemContainer capacity="1" maxstacksize="1" hideitems="true" containedstateindicatorstyle="tank" spawnwithid="oxygentank">
                 <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
@@ -198,11 +217,13 @@
                         <Sound file="Content/Items/WarningBeepSlow.ogg" range="250" loop="true" />
                     </StatusEffect>
                 </Containable>
+
                 <Containable items="oxygenitetank">
                     <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1.3" setvalue="true" targetslot="0">
                         <Conditional IsDead="false" />
                     </StatusEffect>
                 </Containable>
+
                 <StatusEffect type="OnWearing" target="Contained" playsoundonrequireditemfailure="true">
                     <RequiredItem items="oxygensource" type="Contained" matchonempty="true" />
                     <Conditional condition="lte 0.0" />

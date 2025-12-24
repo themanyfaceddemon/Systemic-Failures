@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
     <Override>
-        <!--TODO: change the priority to 2.5 when the bots can switch the batteries-->
         <Item name="" identifier="clownexosuit" category="Diving,Equipment" tags="clowngear,diving,deepdiving,deepdivinglarge,clowns,human,containradiation" scale="0.5" fireproof="true" description="" isshootable="true" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy" botpriority="0.01" cargocontaineridentifier="">
             <Price baseprice="1500" canbespecial="false" sold="false" />
             <Deconstruct time="30">

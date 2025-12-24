@@ -4,21 +4,40 @@
 
     <!-- Предметы -->
     <Item file="%ModDir%/Items/Containers/containers.xml" />
+    <Item file="%ModDir%/Items/Tools/GeigerCounter.xml" />
 
+    <!-- Душ, отходы и ещё какая-то шляпа -->
+    <Item file="%ModDir%/Items/Misc/RadioactiveWaste.xml" />
+    <Item file="%ModDir%/Items/Misc/DecontaminationShower.xml" />
 
     <!-- "Эффекты" -->
     <Item file="%ModDir%/Items/Effects/effects.xml" />
     <Item file="%ModDir%/Items/Effects/TriggerEffectItems.xml" />
 
-    <!-- Минералы овверрайд -->
+    <!-- !Оверрайды! -->
+    <!-- Минералы -->
     <Item file="%ModDir%/Items/Materials/minerals.xml" />
 
-    <!-- Локализация -->
+    <!-- Одежды ванильной и прочего -->
+    <Item file="%ModDir%/Items/Jobgear/Clown/clown.xml" />
+    <Item file="%ModDir%/Items/Jobgear/Engineer/engineer_gear.xml" />
+    <Item file="%ModDir%/Items/Jobgear/Engineer/engineer_talent_items.xml" />
+    <Item file="%ModDir%/Items/Jobgear/Mechanic/mechanic_gear.xml" />
+    <Item file="%ModDir%/Items/Jobgear/Mechanic/mechanic_talent_items.xml" />
+
+    <!-- Ванильное топливо -->
+    <Item file="%ModDir%/Items/Tools/tools.xml" />
+
+    <!-- !Локализация! -->
     <!-- Английская -->
     <Text file="%ModDir%/Loc/Eng/Items/Containers/containers.xml" />
     <Text file="%ModDir%/Loc/Eng/Items/Effects/TriggerEffectItems.xml" />
+    <Text file="%ModDir%/Loc/Eng/Items/Misc/DecontaminationShower.xml" />
+    <Item file="%ModDir%/Loc/Eng/Items/Tools/GeigerCounter.xml" />
 
     <!-- Русская -->
     <Text file="%ModDir%/Loc/Rus/Items/Containers/containers.xml" />
     <Text file="%ModDir%/Loc/Rus/Items/Effects/TriggerEffectItems.xml" />
+    <Text file="%ModDir%/Loc/Rus/Items/Misc/DecontaminationShower.xml" />
+    <Item file="%ModDir%/Loc/Rus/Items/Tools/GeigerCounter.xml" />
 </contentpackage>

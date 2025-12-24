@@ -10,17 +10,20 @@
                 <Price storeidentifier="merchantmilitary" />
                 <Price storeidentifier="merchantmine" multiplier="1.2" />
             </Price>
+
             <Deconstruct time="20">
                 <Item identifier="rubber" />
                 <Item identifier="steel" />
                 <Item identifier="organicfiber" />
             </Deconstruct>
+
             <Fabricate suitablefabricators="fabricator" requiredtime="30" requiresrecipe="true">
                 <RequiredSkill identifier="mechanical" level="25" />
                 <RequiredItem identifier="rubber" amount="2" />
                 <RequiredItem identifier="steel" />
                 <RequiredItem identifier="organicfiber" amount="2" />
             </Fabricate>
+
             <InventoryIcon texture="Content/Items/JobGear/TalentGear.png" sourcerect="198,132,67,57" origin="0.5,0.5" />
             <Sprite texture="Content/Items/JobGear/TalentGear.png" sourcerect="58,326,143,40" depth="0.6" origin="0.5,0.5" />
             <Body width="120" height="35" density="15" />
@@ -40,6 +43,7 @@
             </Wearable>
         </Item>
     </Override>
+
     <Override>
         <Item name="" identifier="makeshiftarmor" category="Equipment" tags="smallitem,clothing" scale="0.5" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_metal_heavy">
             <PreferredContainer primary="secarmcab" amount="0" notcampaign="true" />
@@ -52,16 +56,19 @@
                 <Price storeidentifier="merchantmine" />
                 <Price storeidentifier="merchantarmory" multiplier="0.9" />
             </Price>
+
             <Deconstruct time="40">
                 <Item identifier="organicfiber" amount="1" />
                 <Item identifier="iron" amount="4" />
             </Deconstruct>
+
             <Fabricate suitablefabricators="fabricator" requiredtime="30" requiresrecipe="true">
                 <RequiredSkill identifier="weapons" level="20" />
                 <RequiredSkill identifier="mechanical" level="20" />
                 <RequiredItem identifier="organicfiber" amount="2" />
                 <RequiredItem identifier="iron" amount="6" />
             </Fabricate>
+
             <InventoryIcon texture="Content/Items/Diving/MakeshiftArmor.png" sourcerect="448,0,64,64" origin="0.5,0.5" />
             <Sprite name="Makeshift Armor Item" texture="Content/Items/Diving/MakeshiftArmor.png" sourcerect="167,25,86,126" depth="0.55" origin="0.5,0.5" />
             <Body width="62" height="120" density="30" />
@@ -89,7 +96,7 @@
             </Wearable>
         </Item>
     </Override>
-    <!--TODO: change the priority to 2.5 when the bots can switch the batteries-->
+
     <Override>
         <Item name="" identifier="exosuit" category="Diving,Equipment" tags="diving,deepdiving,deepdivinglarge,human,containradiation" scale="0.605" fireproof="true" description="" isshootable="true" allowdroppingonswapwith="diving" impactsoundtag="impact_metal_heavy" botpriority="0.01" cargocontaineridentifier="">
             <Price baseprice="80" canbespecial="false" sold="false" />
@@ -100,11 +107,13 @@
                 <Item identifier="rubber" />
                 <Item identifier="rubber" />
             </Deconstruct>
+
             <Fabricate suitablefabricators="fabricator" requiredtime="45" requiresrecipe="true">
                 <RequiredSkill identifier="mechanical" level="60" />
                 <RequiredItem identifier="titaniumaluminiumalloy" amount="4" />
                 <RequiredItem identifier="rubber" amount="3" />
             </Fabricate>
+
             <InventoryIcon texture="Content/Items/Jobgear/Mechanic/Exosuit.png" sourcerect="384,384,128,128" origin="0.5,0.5" />
             <Sprite name="Exosuit Item" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" sourcerect="2,266,203,244" depth="0.55" origin="0.5,0.5" />
             <Body width="150" height="230" density="30" />
@@ -115,6 +124,7 @@
                         <LightTexture texture="Content/Lights/divinghelmetlight.png" origin="0.05, 0.5" size="1.0,1.0" />
                     </LightComponent>
                 </sprite>
+
                 <sprite name="Exosuit Right Hand" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" SourceRect="383,160,64,48" />
                 <sprite name="Exosuit Left Hand" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" SourceRect="447,160,64,48" />
                 <sprite name="Exosuit Right Upper Arm" texture="Content/Items/Jobgear/Mechanic/Exosuit.png" limb="RightArm" depthlimb="Head" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="false" inheritlimbdepth="true" SourceRect="383,0,64,96" />
@@ -135,22 +145,27 @@
                     <TriggerAnimation Type="Walk" FileName="HumanWalkExosuit" priority="1" ExpectedSpecies="Human" />
                     <TriggerAnimation Type="Run" FileName="HumanRunExosuit" priority="1" ExpectedSpecies="Human" />
                 </StatusEffect>
+
                 <!-- no HMG stun -->
                 <StatusEffect type="OnWearing" target="Character" interval="0.9" disabledeltatime="true">
                     <Affliction identifier="recoilstabilized" amount="1" />
                 </StatusEffect>
+
                 <!-- slow movement -->
                 <StatusEffect type="OnWearing" target="This,Character" setvalue="true" disabledeltatime="true">
                     <Conditional Voltage="gt 0.5" />
                 </StatusEffect>
+
                 <StatusEffect type="OnWearing" target="Contained,Character" Condition="-0.1" interval="1" disabledeltatime="true" targetslot="1" comparison="Or">
                     <Conditional IsDead="false" />
                     <RequiredItem items="divingsuitfuel" targetslot="1" type="Contained" />
                 </StatusEffect>
+
                 <!-- 0 movement speed when out of fuel-->
                 <StatusEffect type="OnWearing" target="This,Character" SpeedMultiplier="-10.0" setvalue="true" disabledeltatime="true">
                     <Conditional Voltage="lte 0.5" />
                 </StatusEffect>
+
                 <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="blunttrauma,gunshotwound,lacerations,explosiondamage" damagemultiplier="0.2" damagesound="LimbArmor" deflectprojectiles="true" />
                 <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bitewounds, bleeding" damagemultiplier="0.25" probabilitymultiplier="0.5" damagesound="LimbArmor" deflectprojectiles="true" />
                 <damagemodifier armorsector="0.0,360.0" afflictiontypes="stun" damagemultiplier="0.5" probabilitymultiplier="0.25" damagesound="LimbArmor" deflectprojectiles="true" />
@@ -162,6 +177,7 @@
                 <sound file="Content/Items/Weapons/WEAPONS_chargeUp.ogg" type="OnWearing" range="500.0" volumeproperty="Speed" volume="0.2" loop="true" frequencymultiplier="0.5" />
                 <StatValue stattype="FlowResistance" value="0.9" />
             </Wearable>
+
             <ItemContainer canbeselected="true" selectkey="Use" capacity="0" hideitems="true" containedstateindicatorstyle="tank" containedstateindicatorslot="0">
                 <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
                 <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="192,448,64,64" origin="0.5,0.5" />
@@ -170,6 +186,7 @@
                     <Conditional condition="lte 0.0" />
                     <Sound file="Content/Items/WarningBeep.ogg" range="500" loop="true" />
                 </StatusEffect>
+
                 <SubContainer capacity="1" maxstacksize="1">
                     <Containable items="oxygensource,weldingtoolfuel" />
                     <Containable items="oxygensource">
@@ -179,11 +196,13 @@
                             <Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
                             <Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
                         </StatusEffect>
+
                         <StatusEffect type="OnWearing" target="Contained">
                             <Conditional condition="lt 5.0" />
                             <Sound file="Content/Items/WarningBeepSlow.ogg" range="250" loop="true" />
                         </StatusEffect>
                     </Containable>
+
                     <Containable items="oxygenitetank">
                         <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1.2" setvalue="true" targetslot="0" comparison="And">
                             <Conditional IsDead="false" />
@@ -191,24 +210,28 @@
                             <Conditional NeedsAir="true" />
                         </StatusEffect>
                     </Containable>
+
                     <Containable items="weldingfueltank">
                         <StatusEffect type="OnWearing" target="Contained" Condition="-0.5" comparison="And">
                             <Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
                             <Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
                             <Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
                         </StatusEffect>
+
                         <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" Oxygen="-5.0" comparison="And">
                             <Conditional IsDead="false" />
                             <Conditional DecreasedOxygenConsumption="lt 99" />
                             <Conditional NeedsAir="true" />
                         </StatusEffect>
                     </Containable>
+
                     <Containable items="incendiumfueltank">
                         <StatusEffect type="OnWearing" target="Contained" Condition="-0.5" comparison="And">
                             <Conditional TargetContainer="true" TargetGrandparent="true" IsDead="false" />
                             <Conditional TargetContainer="true" TargetGrandparent="true" DecreasedOxygenConsumption="lt 99" />
                             <Conditional TargetContainer="true" TargetGrandparent="true" NeedsAir="true" />
                         </StatusEffect>
+
                         <StatusEffect type="OnWearing" target="Character" OxygenAvailable="-100.0" comparison="And" targetlimb="Torso">
                             <Affliction identifier="burn" amount="20.0" />
                             <Conditional IsDead="false" />
@@ -217,6 +240,7 @@
                         </StatusEffect>
                     </Containable>
                 </SubContainer>
+
                 <SubContainer capacity="1" maxstacksize="1">
                     <Containable items="divingsuitfuel">
                         <StatusEffect type="OnContaining" target="This,Character" Voltage="1.0" setvalue="true">
@@ -224,6 +248,7 @@
                         </StatusEffect>
                     </Containable>
                 </SubContainer>
+
                 <SubContainer capacity="10" maxstacksize="32">
                     <Containable items="smallitem" />
                 </SubContainer>
